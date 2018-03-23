@@ -1,0 +1,54 @@
+﻿<UserControl
+    x:Class="TravelApplication.Controls.UserAccountMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TravelApplication.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <!--Text Style Template applied to all text blocks-->
+        <Style x:Name="MenuBtnStyle" TargetType="MenuFlyoutItem">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value ="Black"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <!-- Button Style to be applied to all buttons in the stack-->
+        <Style x:Name="OptionBtnStyle" TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="MaxHeight" Value="50"/>
+            <Setter Property="MaxWidth" Value="50"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="Transparent">
+        <!--Info Button Set-up -->
+        <Button x:Name="MyAcctButton"
+                    ToolTipService.ToolTip="Account Settings" 
+                    Style="{StaticResource OptionBtnStyle}" >
+            <Image Source="ms-appx:///Assets/Buttons/Button Icons/MyActImage.png" 
+                   MaxHeight="50"
+                   MaxWidth="50"/>
+            <Button.Flyout>
+                <!-- Flyout Menu of User Account Choices-->
+                <MenuFlyout Placement="Top">
+                    <MenuFlyoutItem Text="Log-Out" Visibility="Collapsed" x:Name="AcctSignOutOpt"/>
+                    <MenuFlyoutItem Text="Log-In or Sign-Up"/>
+                    <MenuFlyoutSeparator Visibility="Collapsed" x:Name="ActSeparator"/>
+                    <MenuFlyoutSubItem Text="Account Settings" Visibility="Collapsed" x:Name="AcctSettingsMenuOpt"/>
+                    <MenuFlyoutItem Text=" My Travel Preferences" Visibility="Collapsed" x:Name="TravelPreferencesMenuOpt"/>
+                    <MenuFlyoutItem Text="My Favorites" Visibility="Collapsed" x:Name="MyFavoritesMenuOpt"/>
+                </MenuFlyout>
+            </Button.Flyout>
+        </Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="TravelApplication.Pages.InitialPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TravelApplication.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" BorderBrush="Black" BorderThickness="2">
+        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                       BorderBrush="DarkSlateGray" BorderThickness="2" Padding="10" Background="LightBlue">
+            <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                       BorderBrush="DarkSlateGray" BorderThickness="2">
+                <RelativePanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </RelativePanel.Background>
+                <Image MaxWidth="450">
+                    <Image.Source>
+                        <BitmapImage UriSource="ms-appx:///Assets/Travel.gif"/>
+                    </Image.Source>
+                </Image>
+            </RelativePanel>
+        </RelativePanel>
+    </Grid>
+</Page>
