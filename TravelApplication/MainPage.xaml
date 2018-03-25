@@ -7,37 +7,125 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <!--Reusable Text Style for Page -->
+        <Style x:Name="MainPageTextStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Page.Resources>
+    <!--Main Page Grid -->
     <Grid x:Name="MainGrid"
           HorizontalAlignment="Stretch" 
           VerticalAlignment="Stretch" 
           Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <FlyoutBase.AttachedFlyout>
-            <MenuFlyout/>
-        </FlyoutBase.AttachedFlyout>
+        <!--Stack Panel to Vertically lay out Main Page components-->
         <StackPanel x:Name="MainStackPanel" 
                     Orientation="Vertical" 
                     VerticalAlignment="Stretch" 
                     HorizontalAlignment="Stretch">
-            <SplitView x:Name="MainSplitView" 
-                   IsPaneOpen="True"
-                   DisplayMode="Inline"
+            <!--Top Application Border Bar -->
+            <Border x:Name="TravelAppBorder" Background="MidnightBlue">
+                <StackPanel Orientation="Horizontal" x:Name="BorderStack">
+                    <RelativePanel HorizontalAlignment="Right" VerticalAlignment="Center"
+                       BorderBrush="MidnightBlue" BorderThickness="2" Padding="10" Background="LightBlue">
+                        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                       BorderBrush="MidnightBlue" BorderThickness="2">
+                            <RelativePanel.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </RelativePanel.Background>
+                            <!-- Image is set to Button. When User clicks it takes them back to home page-->
+                            <Button x:Name="HomeBtn" Click="HomeBtn_Click">
+                                <Image MaxWidth="50">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="ms-appx:///Assets/Travel.gif"/>
+                                    </Image.Source>
+                                </Image>
+                            </Button>
+                        </RelativePanel>
+                    </RelativePanel>
+                    <TextBlock Text="Travel Application" 
+                               FontFamily="Georgia" FontSize="32" 
+                               FontWeight="Bold"
+                               Foreground="White" Margin="10,0,0,0"
+                               Padding="5"
+                               x:Name="BorderText" 
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            <!-- Top Menu Bar -->
+            <Border x:Name="TopMenuBorder" Background="White" BorderBrush="MidnightBlue" BorderThickness="2">
+                <StackPanel x:Name="TopMenuBarStack" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <!--Travel Package Button -->
+                    <RelativePanel Padding="5" x:Name="TravelBtnStack">
+                        <AppBarButton x:Name="TravelPackagesBtn" Background="Transparent" 
+                                      ToolTipService.ToolTip="View all Travel Packages"                           
+                                      Icon="World"
+                                      MaxHeight="50"
+                                      MaxWidth="35"
+                                      RelativePanel.AlignLeftWithPanel="True"
+                                      RelativePanel.AlignVerticalCenterWithPanel="True"
+                                      >
+                        </AppBarButton>
+                        <TextBlock RelativePanel.RightOf="TravelPackagesBtn" RelativePanel.AlignVerticalCenterWith="TravelPackagesBtn"  x:Name="TravelBtnText" Text="Travel Packages" Style="{StaticResource MainPageTextStyle}"/>
+                    </RelativePanel>
+                    <!--Hotel Options Button -->
+                    <RelativePanel Padding="5" x:Name="HotelBtnPanel">
+                        <AppBarButton x:Name="HotelBtn" Background="Transparent" 
+                                      ToolTipService.ToolTip="View all Travel Packages"                           
+                                      Icon="Home"
+                                      MaxHeight="50"
+                                      MaxWidth="35"
+                                      RelativePanel.AlignLeftWithPanel="True"
+                                      RelativePanel.AlignVerticalCenterWithPanel="True"
+                                      >
+                        </AppBarButton>
+                        <TextBlock RelativePanel.RightOf="HotelBtn" RelativePanel.AlignVerticalCenterWith="HotelBtn"  x:Name="HotelBtnText" Text="Hotels" Style="{StaticResource MainPageTextStyle}"/>
+                    </RelativePanel>
+                    <!--Flight Options Button -->
+                    <RelativePanel Padding="5" x:Name="FlightBtnPanel">
+                        <AppBarButton x:Name="FlightBtn" Background="Transparent" 
+                                      ToolTipService.ToolTip="View Flight Offerings"                           
+                                      Icon="Map"
+                                      MaxHeight="50"
+                                      MaxWidth="35"
+                                      RelativePanel.AlignLeftWithPanel="True"
+                                      RelativePanel.AlignVerticalCenterWithPanel="True"
+                                      >
+                        </AppBarButton>
+                        <TextBlock RelativePanel.RightOf="FlightBtn" RelativePanel.AlignVerticalCenterWith="FlightBtn" 
+                                   x:Name="FlightBtnText" Text="Flights" 
+                                   Style="{StaticResource MainPageTextStyle}"/>
+                    </RelativePanel>
+                    <!--Search Travel Options Button -->
+                    <RelativePanel Padding="5" x:Name="SearchBtnPanel">
+                        <AppBarButton x:Name="SearchBtn" Background="Transparent" 
+                                      ToolTipService.ToolTip="Search Travel Package Offerings"                           
+                                      Icon="Find"
+                                      MaxHeight="50"
+                                      MaxWidth="35"
+                                      RelativePanel.AlignLeftWithPanel="True"
+                                      RelativePanel.AlignVerticalCenterWithPanel="True"
+                                      >
+                        </AppBarButton>
+                        <TextBlock RelativePanel.RightOf="SearchBtn" RelativePanel.AlignVerticalCenterWith="SearchBtn" 
+                                   x:Name="SearchBtnText" Text="Search Travel Packages" 
+                                   Style="{StaticResource MainPageTextStyle}"/>
+                    </RelativePanel>
+                </StackPanel>
+            </Border>
+            <Frame x:Name="MainFrame" 
+                   VerticalAlignment="Stretch" 
                    HorizontalAlignment="Stretch"
-                   VerticalAlignment="Stretch"
-                   MinHeight="580">
-                <SplitView.Pane>
-                    <control:LeftSideNavControl 
-                        x:Name="LeftSideNav" 
-                        Padding="20" 
-                        HorizontalAlignment="Stretch" 
-                        VerticalAlignment="Stretch"/>
-                </SplitView.Pane>
-                <Frame x:Name="MainFrame" 
-                       VerticalAlignment="Stretch" 
-                       HorizontalAlignment="Stretch"/>
-            </SplitView>
+                   MinHeight="475"/>
             <control:AppOptionsControl 
-                x:Name="AppOptionsCntrl" 
-                MaxHeight="60"/>
+                x:Name="AppOptionsCntrl" />
         </StackPanel>
     </Grid>
 </Page>

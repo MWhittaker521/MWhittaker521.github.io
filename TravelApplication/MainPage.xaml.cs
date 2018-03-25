@@ -28,28 +28,12 @@ namespace TravelApplication
         {
             this.InitializeComponent();
             MainFrame.Navigate(typeof(InitialPage), null);
-            //Delegates the rest of the About Button Click to this Page
-            InformationControl.OnAboutBtnClick += OnAboutBtnClick;
-            //Delegates the rest of the FAQ menu Button Click to this Page
-            InformationControl.OnFAQBtnClick += OnFAQBtnClick;
-            //Delegates the rest of the Help menu Button Click to this Page
-            InformationControl.OnHelpBtnClick += OnHelpBtnClick; 
         }
-        //Loads the Help Page into the Main Frame when the Help menu button is clicked
-        private void OnHelpBtnClick()
+        //Navigates back to the home page when the Main Icon is clicked
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(HelpPage));
-           
-        }
-        //Loads the FAQ Page into the Main Frame when the FAQ menu button is clicked
-        private void OnFAQBtnClick()
-        {
-            MainFrame.Navigate(typeof(FAQPage));
-        }
-        //Loads the About Page into the Main Frame when the About menu button is clicked
-        private void OnAboutBtnClick()
-        {
-            MainFrame.Navigate(typeof(AboutPage));
+            MainFrame.Navigate(typeof(InitialPage), null);
+
         }
     }
 }

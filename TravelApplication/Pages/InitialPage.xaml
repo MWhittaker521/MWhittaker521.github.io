@@ -5,25 +5,69 @@
     xmlns:local="using:TravelApplication.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" BorderBrush="Black" BorderThickness="2">
-        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
-                       BorderBrush="DarkSlateGray" BorderThickness="2" Padding="10" Background="LightBlue">
-            <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
-                       BorderBrush="DarkSlateGray" BorderThickness="2">
-                <RelativePanel.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="White" Offset="1"/>
-                    </LinearGradientBrush>
-                </RelativePanel.Background>
-                <Image MaxWidth="450">
-                    <Image.Source>
-                        <BitmapImage UriSource="ms-appx:///Assets/Travel.gif"/>
-                    </Image.Source>
-                </Image>
+    mc:Ignorable="d" Width="Auto" Height="Auto" HorizontalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch">
+    <Page.Resources>
+        <!--Reusable Text Style for Page -->
+        <Style x:Name="InitialPageTextStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Page.Resources>
+    <!--Initial Page Main Grid-->
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" 
+          BorderBrush="Black" BorderThickness="2"
+          VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+          MinHeight="400">
+        <!--Main Page Menu Grid-->
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <!--Grid Row Definitions to set number of rows and columns and set height and width to auto-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!--Log In Button-->
+            <RelativePanel x:Name="LogInBtnPanel" Grid.Column="0" Grid.Row="0"
+                           HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="LogInBtn" Background="Transparent" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <Image Source="ms-appx:///Assets/Buttons/Navigation/BlueNavButton.png" MaxWidth="400" />
+                </Button>
+                <TextBlock x:Name="LogInText" Text="Log-In" 
+                           Style="{StaticResource InitialPageTextStyle}"
+                           RelativePanel.AlignHorizontalCenterWith="LogInBtn"
+                           RelativePanel.AlignVerticalCenterWith="LogInBtn"/>
             </RelativePanel>
-        </RelativePanel>
+            <!--Sign-Up Button-->
+            <RelativePanel x:Name="SignUpBtnPanel" Grid.Column="0" Grid.Row="1"
+                           HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="SignUpBtn" Background="Transparent" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <Image Source="ms-appx:///Assets/Buttons/Navigation/BlueNavButton.png" MaxWidth="400" />
+                </Button>
+                <TextBlock x:Name="SignUpText" Text="Sign-Up" 
+                           RelativePanel.AlignHorizontalCenterWith="SignUpBtn"
+                           RelativePanel.AlignVerticalCenterWith="SignUpBtn"
+                           Style="{StaticResource InitialPageTextStyle}"/>
+            </RelativePanel>
+            <!--Continue As Guest Button-->
+            <RelativePanel x:Name="GuestBtnPanel" Grid.Column="0" Grid.Row="2"
+                           HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="GuestBtn" Background="Transparent" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <Image Source="ms-appx:///Assets/Buttons/Navigation/BlueNavButton.png" MaxWidth="400" />
+                </Button>
+                <TextBlock x:Name="GuestText" Text="Continue as Guest" 
+                           RelativePanel.AlignHorizontalCenterWith="GuestBtn"
+                           RelativePanel.AlignVerticalCenterWith="GuestBtn"
+                           Style="{StaticResource InitialPageTextStyle}"/>
+            </RelativePanel>
+        </Grid>
     </Grid>
 </Page>

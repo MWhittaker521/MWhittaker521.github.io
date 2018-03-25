@@ -98,15 +98,6 @@
     <Compile Include="Controls\AppOptionsControl.xaml.cs">
       <DependentUpon>AppOptionsControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\InformationControl.xaml.cs">
-      <DependentUpon>InformationControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\LeftSideNavControl.xaml.cs">
-      <DependentUpon>LeftSideNavControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\UserAccountMenu.xaml.cs">
-      <DependentUpon>UserAccountMenu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -122,6 +113,9 @@
     <Compile Include="Pages\InitialPage.xaml.cs">
       <DependentUpon>InitialPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TravelContentPage.xaml.cs">
+      <DependentUpon>TravelContentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +130,7 @@
     <Content Include="Assets\Buttons\Button Icons\InformationImage.png" />
     <Content Include="Assets\Buttons\Button Icons\MyActImage.png" />
     <Content Include="Assets\Buttons\Button Icons\plane-clipart-free-16.png" />
+    <Content Include="Assets\Buttons\Button Icons\Plane03.png" />
     <Content Include="Assets\Buttons\NavButton_Green.png" />
     <Content Include="Assets\Buttons\Navigation\BlueNavButton.png" />
     <Content Include="Assets\DesignElements\Arrow.png" />
@@ -173,18 +168,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\InformationControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\LeftSideNavControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\UserAccountMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -202,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\InitialPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TravelContentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
