@@ -7,30 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid >
-        <RelativePanel HorizontalAlignment="Center"
+    <Grid x:Name="AboutGrid" >
+        <ScrollViewer x:Name="AboutScrollViewer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                      ScrollViewer.IsVerticalScrollChainingEnabled="True" >
+            <RelativePanel HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       BorderBrush="DarkSlateGray"
+                       BorderBrush="MidnightBlue"
                        BorderThickness="2"
                        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <Image Source="ms-appx:///Assets/Backgrounds/Notebook4.jpg"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
-            <StackPanel Orientation="Vertical" Margin="25,20,25,20" RelativePanel.AlignLeftWithPanel="True" 
+                <StackPanel Orientation="Vertical" Margin="10,10,10,10" RelativePanel.AlignLeftWithPanel="True" 
                         RelativePanel.AlignRightWithPanel="True">
-                <StackPanel Orientation="Horizontal" Padding="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="SecondStack">
-                    <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                    <StackPanel Orientation="Horizontal" Padding="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="SecondStack">
+                        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
                                    x:Name="TopPanel">
-                        <Image x:Name="MyCrew" Source="ms-appx:///Assets/Pictures/MyCrew.jpg"
-                               MaxWidth="525"
+                            <Image x:Name="MyCrew" Source="ms-appx:///Assets/Pictures/MyCrew.jpg"
+                               MaxWidth="300"
                                MinWidth="200"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                Margin="10"
                                RelativePanel.AlignLeftWithPanel="True"/>
-                        <StackPanel RelativePanel.AlignRightWithPanel="True"
+                            <StackPanel RelativePanel.AlignRightWithPanel="True"
                                     RelativePanel.RightOf="MyCrew">
-                            <TextBlock 
+                                <TextBlock 
                                    TextWrapping="Wrap"                           
                                    Padding="50,50,50,10"
                                    MaxWidth="525"
@@ -41,17 +40,17 @@
                                    FontWeight="ExtraBold"
                                    TextAlignment="Center" 
                                    Margin="0,0,30,0"/>
-                            <TextBlock TextWrapping="Wrap"
+                                <TextBlock TextWrapping="Wrap"
                                        Padding="50,0,50,0"
                                        MaxWidth="450"
                                        Text="You are probably wondering who the crazy bunch of people is on the Left side of this page. They are my reasons. Reasons for deciding to continue my education after the age of 30. Reasons I stay up way too late every night working on homework. Reasons I go to work exhausted every day (for more reason than one). Reasons I am even in this class to build this Travel Application. So it was only fitting that they, more than I, be present in a section about this Application. Oh, and I'm down there on the bottom right too. " 
                                        Margin="0,0,30,0"/>
-                        </StackPanel>
-                    </RelativePanel>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Padding="10,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="FourthStack">
-                    <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Image x:Name="Us" Source="ms-appx:///Assets/Pictures/Us2.jpg"
+                            </StackPanel>
+                        </RelativePanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Padding="10,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="FourthStack">
+                        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image x:Name="Us" Source="ms-appx:///Assets/Pictures/Us2.jpg"
                                MinWidth="150"
                                MinHeight="100"
                                MaxHeight="200" 
@@ -60,49 +59,24 @@
                                VerticalAlignment="Center"
                                Margin="5"
                                RelativePanel.AlignLeftWithPanel="True"/>
-                    </RelativePanel>
-                    <StackPanel Orientation="Vertical">
-                        <Image x:Name="ThreeKids" Source="ms-appx:///Assets/Pictures/ThreeKids.jpg"
-                               MaxHeight="125" 
-                               MinWidth="100"
-                               MaxWidth="400"
-                               MinHeight="75"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Top"
-                               Margin="10"
-                               RelativePanel.AlignLeftWithPanel="True"/>
-                        <Image x:Name="Padme" Source="ms-appx:///Assets/Pictures/Padme.jpg"
-                               MaxHeight="90" 
-                               MaxWidth="200"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Top"
-                               Margin="5"
-                               RelativePanel.AlignLeftWithPanel="True"/>
-                    </StackPanel>
-                    <Image x:Name="Lane" Source="ms-appx:///Assets/Pictures/Lane.jpg"
-                               MaxHeight="300" 
-                               MaxWidth="125"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Margin="10"
-                               RelativePanel.AlignLeftWithPanel="True"/>
-                    <Grid  Padding="75,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Author: " 
+                        </RelativePanel>
+                        <Grid  Padding="75,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="0" Grid.Row="0" Text="Author: " 
                                    FontFamily="Georgia" 
                                    FontSize="18" 
                                    FontWeight="SemiBold"
                                    x:Name="Author"
                                    TextAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text="Melissa A. Whittaker " 
+                            <TextBlock Grid.Column="1" Grid.Row="0" Text="Melissa A. Whittaker " 
                                    FontFamily="Georgia" 
                                    FontStyle="Italic"
                                    FontSize="18" 
@@ -110,13 +84,13 @@
                                    x:Name="Me"
                                    TextAlignment="Left" 
                                    Margin="10,0,0,0"/>
-                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Date: " 
+                            <TextBlock Grid.Column="0" Grid.Row="1" Text="Date: " 
                                    FontFamily="Georgia" 
                                    FontSize="18" 
                                    FontWeight="SemiBold"
                                    x:Name="Date"
                                    TextAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="03.28.2018 " 
+                            <TextBlock Grid.Column="1" Grid.Row="1" Text="03.28.2018 " 
                                    FontFamily="Georgia" 
                                    FontStyle="Italic"
                                    FontSize="18" 
@@ -124,13 +98,13 @@
                                    x:Name="ThisDate"
                                    TextAlignment="Left" 
                                    Margin="10,0,0,0"/>
-                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Class: " 
+                            <TextBlock Grid.Column="0" Grid.Row="2" Text="Class: " 
                                    FontFamily="Georgia" 
                                    FontSize="18" 
                                    FontWeight="SemiBold"
                                    x:Name="Class"
                                    TextAlignment="Right"/>
-                        <TextBlock Grid.Column="1" Grid.Row="2" Text="CS-499" 
+                            <TextBlock Grid.Column="1" Grid.Row="2" Text="CS-499" 
                                    FontFamily="Georgia" 
                                    FontStyle="Italic"
                                    FontSize="18" 
@@ -138,12 +112,14 @@
                                    x:Name="ThisClass"
                                    TextAlignment="Left" 
                                    Margin="10,0,0,0"/>
-                    </Grid>
-                    <Image Source="ms-appx:///Assets/Pictures/Melissa.jpg" MaxHeight="190" MaxWidth="200" 
-                           VerticalAlignment="Stretch" HorizontalAlignment="Right"
-                           Margin="0,15,15,0"/>
+                        </Grid>
+                        <RelativePanel HorizontalAlignment="Right">
+                            <Image Source="ms-appx:///Assets/Pictures/Melissa.jpg" MaxHeight="190" MaxWidth="200" 
+                           VerticalAlignment="Stretch" Margin="20" RelativePanel.AlignRightWithPanel="True"/>
+                        </RelativePanel>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-        </RelativePanel>
+            </RelativePanel>
+        </ScrollViewer>
     </Grid>
 </Page>

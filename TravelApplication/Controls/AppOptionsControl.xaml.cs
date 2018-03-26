@@ -67,7 +67,7 @@ namespace TravelApplication.Controls
         //FAQ Button Click Event sets page variable to FAQPage and kicks off delegate event
         private void FAQ_Click(object sender, RoutedEventArgs e)
         {
-            page = "FAQPage.xaml";
+            page = "FAQPage";
             RoutedEventArgs newArgs = new RoutedEventArgs();
             OnBottomMenuSelection(sender, page, newArgs);
         }
