@@ -63,34 +63,44 @@
             <Border x:Name="TopMenuBorder" Background="White" BorderBrush="MidnightBlue" BorderThickness="2">
                 <StackPanel x:Name="TopMenuBarStack" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <!--Travel Package Button -->
-                    <RelativePanel Padding="5" x:Name="TravelBtnStack">
-                        <AppBarButton x:Name="TravelPackagesBtn" Background="Transparent" 
+                    <Button Padding="5" x:Name="TravelBtn" Background="Transparent" Click="TravelPackagesBtn_Click">
+                        <RelativePanel x:Name="TravelBtnStack">
+                            <AppBarButton x:Name="TravelPackagesBtn" Background="Transparent" 
                                       ToolTipService.ToolTip="View all Travel Packages"                           
                                       Icon="World"
                                       MaxHeight="50"
                                       MaxWidth="35"
                                       RelativePanel.AlignLeftWithPanel="True"
-                                      RelativePanel.AlignVerticalCenterWithPanel="True"
-                                      >
-                        </AppBarButton>
-                        <TextBlock RelativePanel.RightOf="TravelPackagesBtn" RelativePanel.AlignVerticalCenterWith="TravelPackagesBtn"  x:Name="TravelBtnText" Text="Travel Packages" Style="{StaticResource MainPageTextStyle}"/>
-                    </RelativePanel>
+                                      RelativePanel.AlignVerticalCenterWithPanel="True" >
+                            </AppBarButton>
+                            <TextBlock RelativePanel.RightOf="TravelPackagesBtn" RelativePanel.AlignVerticalCenterWith="TravelPackagesBtn"  x:Name="TravelBtnText"
+                                       Text="Travel Packages"
+                                       Style="{StaticResource MainPageTextStyle}"/>
+                        </RelativePanel>
+                    </Button>
+                    
                     <!--Hotel Options Button -->
-                    <RelativePanel Padding="5" x:Name="HotelBtnPanel">
-                        <AppBarButton x:Name="HotelBtn" Background="Transparent" 
+                    <Button Padding="5" x:Name="HotelOptionBtn" 
+                            Background="Transparent" Click="HotelBtn_Click">
+                        <RelativePanel x:Name="HotelBtnPanel">
+                            <AppBarButton x:Name="HotelBtn" Background="Transparent" 
                                       ToolTipService.ToolTip="View all Travel Packages"                           
                                       Icon="Home"
                                       MaxHeight="50"
                                       MaxWidth="35"
                                       RelativePanel.AlignLeftWithPanel="True"
-                                      RelativePanel.AlignVerticalCenterWithPanel="True"
-                                      >
-                        </AppBarButton>
-                        <TextBlock RelativePanel.RightOf="HotelBtn" RelativePanel.AlignVerticalCenterWith="HotelBtn"  x:Name="HotelBtnText" Text="Hotels" Style="{StaticResource MainPageTextStyle}"/>
-                    </RelativePanel>
+                                      RelativePanel.AlignVerticalCenterWithPanel="True">
+                            </AppBarButton>
+                            <TextBlock RelativePanel.RightOf="HotelBtn" RelativePanel.AlignVerticalCenterWith="HotelBtn"  
+                                       x:Name="HotelBtnText" Text="Hotels" 
+                                       Style="{StaticResource MainPageTextStyle}"/>
+                        </RelativePanel>
+                    </Button>
                     <!--Flight Options Button -->
-                    <RelativePanel Padding="5" x:Name="FlightBtnPanel">
-                        <AppBarButton x:Name="FlightBtn" Background="Transparent" 
+                    <Button Padding="5" x:Name="FlightOptionBtn" 
+                            Background="Transparent" Click="FlightBtn_Click">
+                        <RelativePanel  x:Name="FlightBtnPanel">
+                            <AppBarButton x:Name="FlightBtn" Background="Transparent" 
                                       ToolTipService.ToolTip="View Flight Offerings"                           
                                       Icon="Map"
                                       MaxHeight="50"
@@ -98,34 +108,75 @@
                                       RelativePanel.AlignLeftWithPanel="True"
                                       RelativePanel.AlignVerticalCenterWithPanel="True"
                                       >
-                        </AppBarButton>
-                        <TextBlock RelativePanel.RightOf="FlightBtn" RelativePanel.AlignVerticalCenterWith="FlightBtn" 
+                            </AppBarButton>
+                            <TextBlock RelativePanel.RightOf="FlightBtn" RelativePanel.AlignVerticalCenterWith="FlightBtn" 
                                    x:Name="FlightBtnText" Text="Flights" 
                                    Style="{StaticResource MainPageTextStyle}"/>
-                    </RelativePanel>
+                        </RelativePanel>
+                    </Button>
                     <!--Search Travel Options Button -->
-                    <RelativePanel Padding="5" x:Name="SearchBtnPanel">
-                        <AppBarButton x:Name="SearchBtn" Background="Transparent" 
+                    <Button Padding="5" x:Name="SearchOptBtn" 
+                            Background="Transparent" Click="SearchBtn_Click">
+                        <RelativePanel  x:Name="SearchBtnPanel">
+                            <AppBarButton x:Name="SearchBtn" Background="Transparent" 
                                       ToolTipService.ToolTip="Search Travel Package Offerings"                           
                                       Icon="Find"
                                       MaxHeight="50"
                                       MaxWidth="35"
                                       RelativePanel.AlignLeftWithPanel="True"
                                       RelativePanel.AlignVerticalCenterWithPanel="True"
-                                      >
-                        </AppBarButton>
-                        <TextBlock RelativePanel.RightOf="SearchBtn" RelativePanel.AlignVerticalCenterWith="SearchBtn" 
+                                     >
+                            </AppBarButton>
+                            <TextBlock RelativePanel.RightOf="SearchBtn" RelativePanel.AlignVerticalCenterWith="SearchBtn" 
                                    x:Name="SearchBtnText" Text="Search Travel Packages" 
-                                   Style="{StaticResource MainPageTextStyle}"/>
-                    </RelativePanel>
+                                   Style="{StaticResource MainPageTextStyle}"
+                                   Margin="0,0,10,0"/>
+                        </RelativePanel>
+                    </Button>
                 </StackPanel>
             </Border>
             <Frame x:Name="MainFrame" 
                    VerticalAlignment="Stretch" 
                    HorizontalAlignment="Stretch"
-                   MinHeight="475"/>
-            <control:AppOptionsControl 
-                x:Name="AppOptionsCntrl" />
+                   MinHeight="475"
+                   />
+            <Border x:Name="BottomMenuBorder" Background="White" BorderBrush="MidnightBlue" BorderThickness="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical" Margin="5,0,5,0">
+                            <AppBarButton Icon="Previous" x:Name="PreviousArrow" 
+                                          Click="PreviousArrow_Click"
+                                          BorderBrush="MidnightBlue"
+                                          BorderThickness="1"
+                                          Background="MidnightBlue"
+                                          Foreground="White"/>
+                            <TextBlock x:Name="Previous" Text="Previous" 
+								       Style="{StaticResource MainPageTextStyle}"
+							           VerticalAlignment="Center"
+								       HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="5,0,5,0" >
+                            <AppBarButton Icon="Next" x:Name="NextArrow" 
+                                          Click="NextArrow_Click"
+                                          BorderBrush="MidnightBlue"
+                                          BorderThickness="1"
+                                          Background="MidnightBlue"
+                                          Foreground="White"/>
+                            <TextBlock x:Name="Next" Text="Next" 
+                                      Style="{StaticResource MainPageTextStyle}"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <control:AppOptionsControl  x:Name="AppOptionsCntrl"
+                                                Grid.Column="1"/>
+                </Grid>
+            </Border>
         </StackPanel>
     </Grid>
 </Page>

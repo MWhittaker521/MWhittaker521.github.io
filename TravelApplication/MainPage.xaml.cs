@@ -28,12 +28,113 @@ namespace TravelApplication
         {
             this.InitializeComponent();
             MainFrame.Navigate(typeof(InitialPage), null);
+            //Delegate method that listens for event from AppOptionsControl
+            AppOptionsControl.OnBottomMenuSelection += OnBottomMenuSelection;
+            //Delegate method that listens for the SignUpHere event from the Log-in Page
+            LogInPage.OnSignUpHere += OnSignUpHere;
+            //Delegate method that listens for Log In Button Push event from the Initial Page. 
+            InitialPage.OnLogInButtonPushed += OnLogInButtonPushed;
+            //Delegate method that listens for Sign In Button Push event from the Initial Page. 
+            InitialPage.OnSignUpButtonPushed += OnSignUpButtonPushed;
+            //Delegate method that listens for Guest Button Push event from the Initial Page. 
+            InitialPage.OnGuestButtonPushed += OnGuestButtonPushed; 
         }
+
+        private void OnGuestButtonPushed(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(TravelPackagesPage), e); 
+        }
+
+        private void OnSignUpButtonPushed(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(SignUpPage), e); 
+        }
+
+        private void OnLogInButtonPushed(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(LogInPage), e); 
+        }
+
+        private void OnSignUpHere(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(SignUpPage), e); 
+        }
+
+        //Delegate method that receives the pageName from the AppOptionsControl and then sets the
+        //Main Frame content to the correct page. 
+        private void OnBottomMenuSelection(object sender, string pageName, RoutedEventArgs e)
+        {
+            //Sets the newPage based on the sent pageName
+            string newPage = pageName; 
+            if (newPage == "LogInPage")
+            {
+                MainFrame.Navigate(typeof(LogInPage), e); 
+            }
+            else if (newPage == "SignUpPage")
+            {
+                MainFrame.Navigate(typeof(SignUpPage), e); 
+            }
+            else if (newPage == "AccountOverviewPage")
+            {
+                MainFrame.Navigate(typeof(AccountOverviewPage), e); 
+            }
+            else if (newPage == "AccountPrefPage")
+            {
+                MainFrame.Navigate(typeof(AccountPrefPage), e); 
+            }
+            else if (newPage == "AboutPage")
+            {
+                MainFrame.Navigate(typeof(AboutPage), e); 
+            }
+            else if (newPage == "FAQPage")
+            {
+                MainFrame.Navigate(typeof(FAQPage), e); 
+            }  
+        }
+
         //Navigates back to the home page when the Main Icon is clicked
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        { 
+            MainFrame.Navigate(typeof(InitialPage), e);
+        }
+        //Navigates to the Travel Packages Page
+        private void TravelPackagesBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(InitialPage), null);
+            MainFrame.Navigate(typeof(TravelPackagesPage), e);
+        }
+        //Navigates to the Hotels Page
+        private void HotelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(HotelsPage), e);
+        }
+        //Navigates to the Flights Page
+        private void FlightBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(FlightsPage), e);
+        }
+        //Navigates to the Search Page
+        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(SearchPage), e);
+        }
 
+        //Previous button click Navigates to the last Frame history item
+        private void PreviousArrow_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }           
+        }
+
+        //Next Button click Navigates to the last forward frame history item. 
+        private void NextArrow_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoForward)
+            {
+                MainFrame.GoForward(); 
+            }
+          
         }
     }
 }

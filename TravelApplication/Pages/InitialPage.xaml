@@ -36,7 +36,8 @@
             <RelativePanel x:Name="LogInBtnPanel" Grid.Column="0" Grid.Row="0"
                            HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button x:Name="LogInBtn" Background="Transparent" RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        RelativePanel.AlignVerticalCenterWithPanel="True">
+                        RelativePanel.AlignVerticalCenterWithPanel="True" 
+                        Click="LogInBtn_Click">
                     <Image Source="ms-appx:///Assets/Buttons/Navigation/BlueNavButton.png" MaxWidth="400" />
                 </Button>
                 <TextBlock x:Name="LogInText" Text="Log-In" 
@@ -48,7 +49,8 @@
             <RelativePanel x:Name="SignUpBtnPanel" Grid.Column="0" Grid.Row="1"
                            HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button x:Name="SignUpBtn" Background="Transparent" RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        RelativePanel.AlignVerticalCenterWithPanel="True">
+                        RelativePanel.AlignVerticalCenterWithPanel="True"
+                        Click="SignUpBtn_Click">
                     <Image Source="ms-appx:///Assets/Buttons/Navigation/BlueNavButton.png" MaxWidth="400" />
                 </Button>
                 <TextBlock x:Name="SignUpText" Text="Sign-Up" 
@@ -60,7 +62,8 @@
             <RelativePanel x:Name="GuestBtnPanel" Grid.Column="0" Grid.Row="2"
                            HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button x:Name="GuestBtn" Background="Transparent" RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        RelativePanel.AlignVerticalCenterWithPanel="True">
+                        RelativePanel.AlignVerticalCenterWithPanel="True"
+                        Click="GuestBtn_Click">
                     <Image Source="ms-appx:///Assets/Buttons/Navigation/BlueNavButton.png" MaxWidth="400" />
                 </Button>
                 <TextBlock x:Name="GuestText" Text="Continue as Guest" 

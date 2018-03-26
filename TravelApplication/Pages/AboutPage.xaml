@@ -22,8 +22,8 @@
                     <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
                                    x:Name="TopPanel">
                         <Image x:Name="MyCrew" Source="ms-appx:///Assets/Pictures/MyCrew.jpg"
-                               MaxHeight="300" 
-                               MaxWidth="300"
+                               MaxWidth="525"
+                               MinWidth="200"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                Margin="10"
@@ -52,8 +52,10 @@
                 <StackPanel Orientation="Horizontal" Padding="10,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="FourthStack">
                     <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Image x:Name="Us" Source="ms-appx:///Assets/Pictures/Us2.jpg"
-                               MaxHeight="150" 
-                               MaxWidth="150"
+                               MinWidth="150"
+                               MinHeight="100"
+                               MaxHeight="200" 
+                               MaxWidth="250"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                Margin="5"
@@ -61,28 +63,30 @@
                     </RelativePanel>
                     <StackPanel Orientation="Vertical">
                         <Image x:Name="ThreeKids" Source="ms-appx:///Assets/Pictures/ThreeKids.jpg"
-                               MaxHeight="75" 
-                               MaxWidth="125"
+                               MaxHeight="125" 
+                               MinWidth="100"
+                               MaxWidth="400"
+                               MinHeight="75"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
-                               Margin="5"
+                               Margin="10"
                                RelativePanel.AlignLeftWithPanel="True"/>
                         <Image x:Name="Padme" Source="ms-appx:///Assets/Pictures/Padme.jpg"
-                               MaxHeight="85" 
-                               MaxWidth="85"
+                               MaxHeight="90" 
+                               MaxWidth="200"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top"
                                Margin="5"
                                RelativePanel.AlignLeftWithPanel="True"/>
                     </StackPanel>
                     <Image x:Name="Lane" Source="ms-appx:///Assets/Pictures/Lane.jpg"
-                               MaxHeight="150" 
-                               MaxWidth="100"
+                               MaxHeight="300" 
+                               MaxWidth="125"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
-                               Margin="5"
+                               Margin="10"
                                RelativePanel.AlignLeftWithPanel="True"/>
-                    <Grid  Padding="20,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid  Padding="75,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -135,9 +139,9 @@
                                    TextAlignment="Left" 
                                    Margin="10,0,0,0"/>
                     </Grid>
-                    <Image Source="ms-appx:///Assets/Pictures/Melissa.jpg" MaxHeight="75" MaxWidth="75" 
-                           VerticalAlignment="Stretch" 
-                           Margin="0,50,25,0"/>
+                    <Image Source="ms-appx:///Assets/Pictures/Melissa.jpg" MaxHeight="190" MaxWidth="200" 
+                           VerticalAlignment="Stretch" HorizontalAlignment="Right"
+                           Margin="0,15,15,0"/>
                 </StackPanel>
             </StackPanel>
         </RelativePanel>

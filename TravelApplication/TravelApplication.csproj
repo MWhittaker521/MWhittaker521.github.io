@@ -104,17 +104,35 @@
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AccountOverviewPage.xaml.cs">
+      <DependentUpon>AccountOverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AccountPrefPage.xaml.cs">
+      <DependentUpon>AccountPrefPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\FAQPage.xaml.cs">
       <DependentUpon>FAQPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\HelpPage.xaml.cs">
-      <DependentUpon>HelpPage.xaml</DependentUpon>
+    <Compile Include="Pages\FlightsPage.xaml.cs">
+      <DependentUpon>FlightsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HotelsPage.xaml.cs">
+      <DependentUpon>HotelsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\InitialPage.xaml.cs">
       <DependentUpon>InitialPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TravelContentPage.xaml.cs">
-      <DependentUpon>TravelContentPage.xaml</DependentUpon>
+    <Compile Include="Pages\LogInPage.xaml.cs">
+      <DependentUpon>LogInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TravelPackagesPage.xaml.cs">
+      <DependentUpon>TravelPackagesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -136,6 +154,7 @@
     <Content Include="Assets\DesignElements\Arrow.png" />
     <Content Include="Assets\DesignElements\ArrowDown.png" />
     <Content Include="Assets\DesignElements\DownArrow.png" />
+    <Content Include="Assets\DesignElements\Plane_01.png" />
     <Content Include="Assets\DesignElements\SideBar.png" />
     <Content Include="Assets\NavButton.png" />
     <Content Include="Assets\NavButtonGreen.png" />
@@ -176,11 +195,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AccountOverviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AccountPrefPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\FAQPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\HelpPage.xaml">
+    <Page Include="Pages\FlightsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HotelsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,7 +219,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\TravelContentPage.xaml">
+    <Page Include="Pages\LogInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TravelPackagesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

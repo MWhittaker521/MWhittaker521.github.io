@@ -20,52 +20,55 @@
     </UserControl.Resources>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Border x:Name="BottomMenuBorder" Background="White" BorderBrush="MidnightBlue" BorderThickness="2">
-            <StackPanel x:Name="BottomMenuBarStack" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+        <StackPanel x:Name="BottomMenuBarStack" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                 <!--User Account Button -->
-                <RelativePanel Padding="5" x:Name="UserActStack">
+            <Button x:Name="UserActButton" Padding="5" Background="Transparent">
+                <RelativePanel x:Name="UserActStack">
                     <AppBarButton x:Name="UserActBtn" Background="Transparent" 
-                                      ToolTipService.ToolTip="My Account"                           
-                                      Icon="People"
-                                      MaxHeight="50"
-                                      MaxWidth="35"
-                                      RelativePanel.AlignLeftWithPanel="True"
-                                      RelativePanel.AlignVerticalCenterWithPanel="True"
-                                      >
-                        <AppBarButton.Flyout>
-                            <MenuFlyout Placement="Top">
-                                <MenuFlyoutItem Text="Log-In" />
-                                <MenuFlyoutItem Text="Sign-Up"/>
-                                <MenuFlyoutItem Text="Account Overview"/>
-                                <MenuFlyoutItem Text="Account Preferences"/>
-                            </MenuFlyout>
-                        </AppBarButton.Flyout>
+                                  ToolTipService.ToolTip="My Account"                           
+                                  Icon="People"
+                                  MaxHeight="50"
+                                  MaxWidth="35"
+                                  RelativePanel.AlignLeftWithPanel="True"
+                                  RelativePanel.AlignVerticalCenterWithPanel="True">
                     </AppBarButton>
                     <TextBlock RelativePanel.RightOf="UserActBtn" 
                                RelativePanel.AlignVerticalCenterWith="UserActBtn" 
                                x:Name="UserActText" Text="My Account" Style="{StaticResource AppControlTextStyle}"/>
                 </RelativePanel>
-                <!--Application Information Button -->
+                <Button.Flyout>
+                    <MenuFlyout Placement="Top">
+                        <MenuFlyoutItem Text="Log-In" Click="LogIn_Click"/>
+                        <MenuFlyoutItem Text="Sign-Up" Click="SignUp_Click"/>
+                        <MenuFlyoutItem Text="Account Overview" Click="ActOverview_Click"/>
+                        <MenuFlyoutItem Text="Account Preferences" Click="ActPreferences_Click"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+            <!--Application Information Button -->
+            <Button x:Name="InfoButton" Padding="5" Background="Transparent">
                 <RelativePanel Padding="5" x:Name="AppInfoStack">
                     <AppBarButton x:Name="AppInfoBtn" Background="Transparent" 
-                                      ToolTipService.ToolTip="Application Information"                           
-                                      Icon="Help"
-                                      MaxHeight="50"
-                                      MaxWidth="35"
-                                      RelativePanel.AlignLeftWithPanel="True"
-                                      RelativePanel.AlignVerticalCenterWithPanel="True" >
-                        <AppBarButton.Flyout>
-                            <MenuFlyout Placement="Top">
-                                <MenuFlyoutItem Text="About This Application" />
-                                <MenuFlyoutItem Text="FAQs"/>
-                            </MenuFlyout>
-                        </AppBarButton.Flyout>
+                                  ToolTipService.ToolTip="Application Information"                           
+                                  Icon="Help"
+                                  MaxHeight="50"
+                                  MaxWidth="35"
+                                  RelativePanel.AlignLeftWithPanel="True"
+                                  RelativePanel.AlignVerticalCenterWithPanel="True">
                     </AppBarButton>
                     <TextBlock RelativePanel.RightOf="AppInfoBtn" 
                                RelativePanel.AlignVerticalCenterWith="AppInfoBtn" 
-                               x:Name="AppInfoText" Text="Help" Style="{StaticResource AppControlTextStyle}"/>
+                               x:Name="AppInfoText" Text="Help" Style="{StaticResource AppControlTextStyle}"
+                               Margin="0,0,10,0"/>
                 </RelativePanel>
+                <Button.Flyout>
+                    <MenuFlyout Placement="Top">
+                        <MenuFlyoutItem Text="About This Application" Click="AboutBtn_Click"/>
+                        <MenuFlyoutItem Text="FAQs" Click="FAQ_Click"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+                
             </StackPanel>
-        </Border>
     </Grid>
 </UserControl>
