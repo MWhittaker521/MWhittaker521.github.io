@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Collections\TravelPackages.cs" />
     <Compile Include="Controls\AppOptionsControl.xaml.cs">
       <DependentUpon>AppOptionsControl.xaml</DependentUpon>
     </Compile>
@@ -128,6 +129,9 @@
     <Compile Include="Pages\SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SearchResults.xaml.cs">
+      <DependentUpon>SearchResults.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
@@ -154,6 +158,7 @@
     <Content Include="Assets\DesignElements\Arrow.png" />
     <Content Include="Assets\DesignElements\ArrowDown.png" />
     <Content Include="Assets\DesignElements\DownArrow.png" />
+    <Content Include="Assets\DesignElements\Plane02.png" />
     <Content Include="Assets\DesignElements\Plane_01.png" />
     <Content Include="Assets\DesignElements\SideBar.png" />
     <Content Include="Assets\NavButton.png" />
@@ -224,6 +229,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SearchResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
