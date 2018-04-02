@@ -26,5 +26,24 @@ namespace TravelApplication.Pages
         {
             this.InitializeComponent();
         }
+
+        private void HealthWellness_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Family_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Adventure_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DestinationWedding_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

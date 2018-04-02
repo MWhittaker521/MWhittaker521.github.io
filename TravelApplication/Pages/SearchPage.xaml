@@ -10,13 +10,46 @@
         <!--Reusable Text Style for Page -->
         <Style x:Name="SearchPageTextStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Georgia"/>
-            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
         </Style>
+        <!--Reusable Text Style for Headers -->
+        <Style x:Name="SearchPageHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="Coming Soon: Search Page" Style="{StaticResource SearchPageTextStyle}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition  Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                       Padding="25">
+            <TextBlock Text="Travel Category" x:Name="TravelCategoryText" Style="{StaticResource SearchPageHeaderStyle}"/>
+            <RadioButton x:Name="HealthWellness" GroupName="CategoryGroup" RelativePanel.Below="TravelCategoryText"  Click="HealthWellness_Click">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Health and Wellness"/>
+            </RadioButton>
+            <RadioButton x:Name="Family" GroupName="CategoryGroup" RelativePanel.Below="HealthWellness"  Click="Family_Click">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Family Friendly"/>
+            </RadioButton>
+            <RadioButton x:Name="Adventure" GroupName="CategoryGroup" RelativePanel.Below="Family"  Click="Adventure_Click">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Adventure"/>
+            </RadioButton>
+            <RadioButton x:Name="DestinationWedding" GroupName="CategoryGroup" RelativePanel.Below="Adventure"  Click="DestinationWedding_Click">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Destination Wedding"/>
+            </RadioButton>
+        </RelativePanel>
     </Grid>
 </Page>

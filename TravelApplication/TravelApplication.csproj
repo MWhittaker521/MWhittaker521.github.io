@@ -113,8 +113,8 @@
     <Compile Include="Pages\FAQPage.xaml.cs">
       <DependentUpon>FAQPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FlightsPage.xaml.cs">
-      <DependentUpon>FlightsPage.xaml</DependentUpon>
+    <Compile Include="Pages\FeaturedDestPage.xaml.cs">
+      <DependentUpon>FeaturedDestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\HotelsPage.xaml.cs">
       <DependentUpon>HotelsPage.xaml</DependentUpon>
@@ -207,7 +207,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FlightsPage.xaml">
+    <Page Include="Pages\FeaturedDestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -20,9 +20,9 @@ namespace TravelApplication.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class FlightsPage : Page
+    public sealed partial class FeaturedDestPage : Page
     {
-        public FlightsPage()
+        public FeaturedDestPage()
         {
             this.InitializeComponent();
         }

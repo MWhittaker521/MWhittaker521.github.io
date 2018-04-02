@@ -108,9 +108,9 @@ namespace TravelApplication
             MainFrame.Navigate(typeof(HotelsPage), e);
         }
         //Navigates to the Flights Page
-        private void FlightBtn_Click(object sender, RoutedEventArgs e)
+        private void FeaturedBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(FlightsPage), e);
+            MainFrame.Navigate(typeof(FeaturedDestPage), e);
         }
         //Navigates to the Search Page
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
