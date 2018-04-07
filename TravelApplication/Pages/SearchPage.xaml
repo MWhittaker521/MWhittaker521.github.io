@@ -10,7 +10,7 @@
         <!--Reusable Text Style for Page -->
         <Style x:Name="SearchPageTextStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Georgia"/>
-            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -50,10 +50,14 @@
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Family Friendly"/>
             </RadioButton>
             <RadioButton x:Name="Adventure" GroupName="CategoryGroup" RelativePanel.Below="Family"  Click="Adventure_Click"
-                          Padding="3">
+                          Padding="3" VerticalAlignment="Bottom">
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Adventure" />
             </RadioButton>
-            <RadioButton x:Name="DestinationWedding" GroupName="CategoryGroup" RelativePanel.Below="Adventure"  Click="DestinationWedding_Click"
+            <RadioButton x:Name="Cruises" GroupName="CategoryGroup" RelativePanel.Below="Adventure"  Click="Cruise_Click"
+                          Padding="3">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Cruises" />
+            </RadioButton>
+            <RadioButton x:Name="DestinationWedding" GroupName="CategoryGroup" RelativePanel.Below="Cruises"  Click="DestinationWedding_Click"
                           Padding="3">
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Destination Wedding" />
             </RadioButton>

@@ -37,24 +37,31 @@ namespace TravelApplication
             //Delegate method that listens for Sign In Button Push event from the Initial Page. 
             InitialPage.OnSignUpButtonPushed += OnSignUpButtonPushed;
             //Delegate method that listens for Guest Button Push event from the Initial Page. 
-            InitialPage.OnGuestButtonPushed += OnGuestButtonPushed; 
+            InitialPage.OnGuestButtonPushed += OnGuestButtonPushed;
+            SearchPage.OnSearchButtonPushed += OnSearchButtonPushed; 
         }
 
+        //Opens the search results in the Main Frame upon search button pushed event. 
+        private void OnSearchButtonPushed(object sender, string category, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(SearchResults), e); 
+        }
+        //Opens the Generic search in the Main Frame upon guest button pushed event. 
         private void OnGuestButtonPushed(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(TravelPackagesPage), e); 
         }
-
+        //Opens the sign-up in the Main Frame upon Sign-up button pushed event. 
         private void OnSignUpButtonPushed(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(SignUpPage), e); 
         }
-
+        //Opens the Log-in page in the Main Frame upon Log-in button pushed event. 
         private void OnLogInButtonPushed(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(LogInPage), e); 
         }
-
+        //Opens the sign-up page in the Main Frame upon sign-up link pushed event. 
         private void OnSignUpHere(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(SignUpPage), e); 
@@ -117,15 +124,13 @@ namespace TravelApplication
         {
             MainFrame.Navigate(typeof(SearchPage), e);
         }
-
         //Previous button click Navigates to the last Frame history item
         private void PreviousArrow_Click(object sender, RoutedEventArgs e)
         {
             if (MainFrame.CanGoBack)
             {
                 MainFrame.GoBack();
-            }           
-        }
+            }                   }
 
         //Next Button click Navigates to the last forward frame history item. 
         private void NextArrow_Click(object sender, RoutedEventArgs e)
@@ -133,8 +138,7 @@ namespace TravelApplication
             if (MainFrame.CanGoForward)
             {
                 MainFrame.GoForward(); 
-            }
-          
+            }         
         }
     }
 }

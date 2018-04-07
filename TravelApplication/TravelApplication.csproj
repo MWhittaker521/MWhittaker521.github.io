@@ -95,7 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Collections\TravelPackages.cs" />
+    <Compile Include="Collections\TravelCollection.cs" />
+    <Compile Include="Controls\AllResultsControl.xaml.cs">
+      <DependentUpon>AllResultsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AppOptionsControl.xaml.cs">
       <DependentUpon>AppOptionsControl.xaml</DependentUpon>
     </Compile>
@@ -188,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\AllResultsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AppOptionsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -249,7 +256,14 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.8</Version>
     </PackageReference>
+    <PackageReference Include="ReadyRoll.MSBuild">
+      <Version>1.16.18088.9228</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>4.4.3</Version>
+    </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
