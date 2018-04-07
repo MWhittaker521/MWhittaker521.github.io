@@ -13,18 +13,16 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace TravelApplication.Pages
+namespace TravelApplication.Controls
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class FlightsPage : Page
+    public sealed partial class AllResultsControl : UserControl
     {
-        public FlightsPage()
+        public AllResultsControl()
         {
             this.InitializeComponent();
+            ResultsListView.ItemsSource = GetTravelPackages((App.Current as App).ConnectionString); 
         }
     }
 }

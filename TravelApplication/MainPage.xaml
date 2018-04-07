@@ -96,11 +96,11 @@
                                        Style="{StaticResource MainPageTextStyle}"/>
                         </RelativePanel>
                     </Button>
-                    <!--Flight Options Button -->
-                    <Button Padding="5" x:Name="FlightOptionBtn" 
-                            Background="Transparent" Click="FlightBtn_Click">
-                        <RelativePanel  x:Name="FlightBtnPanel">
-                            <AppBarButton x:Name="FlightBtn" Background="Transparent" 
+                    <!--Featured Destination Option Button -->
+                    <Button Padding="5" x:Name="FeaturedOptionBtn" 
+                            Background="Transparent" Click="FeaturedBtn_Click">
+                        <RelativePanel  x:Name="FeatureBtnPanel">
+                            <AppBarButton x:Name="FeaturedBtn" Background="Transparent" 
                                       ToolTipService.ToolTip="View Flight Offerings"                           
                                       Icon="Map"
                                       MaxHeight="50"
@@ -109,8 +109,8 @@
                                       RelativePanel.AlignVerticalCenterWithPanel="True"
                                       >
                             </AppBarButton>
-                            <TextBlock RelativePanel.RightOf="FlightBtn" RelativePanel.AlignVerticalCenterWith="FlightBtn" 
-                                   x:Name="FlightBtnText" Text="Flights" 
+                            <TextBlock RelativePanel.RightOf="FeaturedBtn" RelativePanel.AlignVerticalCenterWith="FeaturedBtn" 
+                                   x:Name="FeatureBtnText" Text="Featured Destination" 
                                    Style="{StaticResource MainPageTextStyle}"/>
                         </RelativePanel>
                     </Button>

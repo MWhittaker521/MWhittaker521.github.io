@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -14,6 +16,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Data.Common;
+using System.Diagnostics;
+using System.Data.SqlClient; 
 
 namespace TravelApplication
 {
@@ -96,5 +101,56 @@ namespace TravelApplication
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+        //Connection String points to the TravelAppDB in a SQL Server Instance
+        private string connectionString = @"Data Source=(localdb)\ProjectsV12;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
+        
+    }
+    public class TravelPack : INotifyPropertyChanged
+    {
+        public int Dest_Id { get; set; }
+        public string Dest_Code { get; set; }
+        public string Dest_Name { get; set; }
+        public string Dest_Location { get; set; }
+        public string Dest_Description { get; set; }
+        public int HW_Rank { get; set; }
+        public int FAM_Rank { get; set; }
+        public int ADV_Rank { get; set; }
+        public int CRU_Rank { get; set; }
+        public int WED_Rank { get; set; }
+        public bool AMN_SPA { get; set; }
+        public bool AMN_POOL { get; set; }
+        public bool AMN_SAUNA { get; set; }
+        public bool AMN_NUTRITION { get; set; }
+        public bool AMN_FITNESS { get; set; }
+        public bool AMN_DANCE { get; set; }
+        public bool AMN_ENTERTAINMENT { get; set; }
+        public bool AMN_FINEDINE { get; set; }
+        public bool AMN_CAMPING { get; set; }
+        public bool AMN_AMUSEMENT { get; set; }
+        public bool AMN_MUSEUM_ART { get; set; }
+        public bool AMN_HISTORIC { get; set; }
+        public bool AMN_BEACH { get; set; }
+        public bool AMN_ZOO { get; set; }
+        public bool AMN_GOLF { get; set; }
+        public bool AMN_SAILING { get; set; }
+        public bool AMN_SNORKELING { get; set; }
+        public bool HEALTHWELL { get; set; }
+        public bool FAMILY { get; set; }
+        public bool ADVENTURE { get; set; }
+        public bool CRUISE { get; set; }
+        public bool DESTWEDDING { get; set; }
+        public int DEST_PRICE { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }     
     }
 }

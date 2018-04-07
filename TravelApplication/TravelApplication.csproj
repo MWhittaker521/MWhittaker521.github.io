@@ -95,6 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Collections\TravelCollection.cs" />
+    <Compile Include="Controls\AllResultsControl.xaml.cs">
+      <DependentUpon>AllResultsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AppOptionsControl.xaml.cs">
       <DependentUpon>AppOptionsControl.xaml</DependentUpon>
     </Compile>
@@ -113,8 +117,8 @@
     <Compile Include="Pages\FAQPage.xaml.cs">
       <DependentUpon>FAQPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FlightsPage.xaml.cs">
-      <DependentUpon>FlightsPage.xaml</DependentUpon>
+    <Compile Include="Pages\FeaturedDestPage.xaml.cs">
+      <DependentUpon>FeaturedDestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\HotelsPage.xaml.cs">
       <DependentUpon>HotelsPage.xaml</DependentUpon>
@@ -127,6 +131,9 @@
     </Compile>
     <Compile Include="Pages\SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchResults.xaml.cs">
+      <DependentUpon>SearchResults.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
@@ -154,6 +161,7 @@
     <Content Include="Assets\DesignElements\Arrow.png" />
     <Content Include="Assets\DesignElements\ArrowDown.png" />
     <Content Include="Assets\DesignElements\DownArrow.png" />
+    <Content Include="Assets\DesignElements\Plane02.png" />
     <Content Include="Assets\DesignElements\Plane_01.png" />
     <Content Include="Assets\DesignElements\SideBar.png" />
     <Content Include="Assets\NavButton.png" />
@@ -183,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\AllResultsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AppOptionsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -207,7 +219,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FlightsPage.xaml">
+    <Page Include="Pages\FeaturedDestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,6 +239,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\SearchResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -240,7 +256,14 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.8</Version>
     </PackageReference>
+    <PackageReference Include="ReadyRoll.MSBuild">
+      <Version>1.16.18088.9228</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>4.4.3</Version>
+    </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
