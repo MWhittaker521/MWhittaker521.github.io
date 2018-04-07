@@ -22,7 +22,6 @@ namespace TravelApplication.Controls
         public AllResultsControl()
         {
             this.InitializeComponent();
-            ResultsListView.ItemsSource = GetTravelPackages((App.Current as App).ConnectionString); 
         }
     }
 }

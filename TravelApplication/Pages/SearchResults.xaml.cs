@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TravelApplication.Collections;
+using TravelApplication; 
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,9 +26,12 @@ namespace TravelApplication.Pages
     {
         public SearchResults()
         {
-            this.InitializeComponent();
- 
+            this.InitializeComponent();   
+        }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //ResultsListView.ItemsSource = App.SEARCH_VIEW_MODEL.GetPackages();       
         }
     }
 }

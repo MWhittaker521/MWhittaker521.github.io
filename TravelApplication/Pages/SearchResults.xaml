@@ -64,13 +64,13 @@
                     </DataTemplate>
                 </ListView.HeaderTemplate>
                 <ListView.ItemTemplate>
-                    <DataTemplate x:Name="ResultDataTemplate" x:DataType="local:TravelPack">
+                    <DataTemplate x:Name="ResultDataTemplate">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Name="DestID" Text="{x:Bind Dest_Id}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestCode" Text="{x:Bind Dest_Code}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestName" Text="{x:Bind Dest_Name}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestLoc" Text="{x:Bind Dest_Location}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestDescription" Text="{x:Bind Dest_Description}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestID" Text="{Binding ElementName=DestID}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestCode" Text="{Binding ElementName=DestCode}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestName" Text="{Binding ElementName=DestName}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestLoc" Text="{Binding ElementName=DestLoc}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestDescription" Text="{Binding ElementName=DestDescription}" Style="{StaticResource SearchResultTextStyle}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -43,30 +43,6 @@
         </Style>
     </UserControl.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="ResultsListView" ScrollViewer.IsVerticalRailEnabled="True" ScrollViewer.VerticalScrollMode="Auto" Margin="10">
-            <ListView.HeaderTemplate>
-                <!-- Data Template for ListView Items-->
-                <DataTemplate x:Name="ResultHeaderDataTemplate" >
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="ID" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                        <TextBlock Text="Code" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                        <TextBlock Text="Name" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                        <TextBlock Text="Location" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                        <TextBlock Text="Description" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}" Width="300"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.HeaderTemplate>
-            <ListView.ItemTemplate>
-                <DataTemplate x:Name="ResultDataTemplate" x:DataType="local:TravelPack">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Name="DestID" Text="{x:Bind Dest_Id}" Style="{StaticResource SearchResultTextStyle}"/>
-                        <TextBlock Name="DestCode" Text="{x:Bind Dest_Code}" Style="{StaticResource SearchResultTextStyle}"/>
-                        <TextBlock Name="DestName" Text="{x:Bind Dest_Name}" Style="{StaticResource SearchResultTextStyle}"/>
-                        <TextBlock Name="DestLoc" Text="{x:Bind Dest_Location}" Style="{StaticResource SearchResultTextStyle}"/>
-                        <TextBlock Name="DestDescription" Text="{x:Bind Dest_Description}" Style="{StaticResource SearchResultTextStyle}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+
     </Grid>
 </UserControl>
