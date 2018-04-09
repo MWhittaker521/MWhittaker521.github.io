@@ -1,0 +1,75 @@
+﻿<UserControl
+    x:Class="TravelApplication.Controls.AppOptionsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="using:TravelApplication.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <!--Reusable Text Style for Page -->
+        <Style x:ConnectionId='1' x:Name="AppControlTextStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel x:ConnectionId='2' x:Name="BottomMenuBarStack" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <!--User Account Button -->
+            <Button x:ConnectionId='3' x:Name="UserActButton" Padding="5" Background="Transparent">
+                <RelativePanel x:ConnectionId='10' x:Name="UserActStack">
+                    <AppBarButton x:ConnectionId='11' x:Name="UserActBtn" Background="Transparent" 
+                                  ToolTipService.ToolTip="My Account"                           
+                                  Icon="People"
+                                  MaxHeight="50"
+                                  MaxWidth="35"
+                                  RelativePanel.AlignLeftWithPanel="True"
+                                  RelativePanel.AlignVerticalCenterWithPanel="True">
+                    </AppBarButton>
+                    <TextBlock x:ConnectionId='12' RelativePanel.RightOf="UserActBtn" 
+                               RelativePanel.AlignVerticalCenterWith="UserActBtn" 
+                               x:Name="UserActText" Text="My Account" Style="{StaticResource AppControlTextStyle}"/>
+                </RelativePanel>
+                <Button.Flyout>
+                    <MenuFlyout Placement="Top">
+                        <MenuFlyoutItem x:ConnectionId='13' Text="Log-In"                    />
+                        <MenuFlyoutItem x:ConnectionId='14' Text="Sign-Up"                     />
+                        <MenuFlyoutItem x:ConnectionId='15' Text="Account Overview"                          />
+                        <MenuFlyoutItem x:ConnectionId='16' Text="Account Preferences"                             />
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+            <!--Application Information Button -->
+            <Button x:ConnectionId='4' x:Name="InfoButton" Padding="5" Background="Transparent">
+                <RelativePanel x:ConnectionId='5' Padding="5" x:Name="AppInfoStack">
+                    <AppBarButton x:ConnectionId='6' x:Name="AppInfoBtn" Background="Transparent" 
+                                  ToolTipService.ToolTip="Application Information"                           
+                                  Icon="Help"
+                                  MaxHeight="50"
+                                  MaxWidth="35"
+                                  RelativePanel.AlignLeftWithPanel="True"
+                                  RelativePanel.AlignVerticalCenterWithPanel="True">
+                    </AppBarButton>
+                    <TextBlock x:ConnectionId='7' RelativePanel.RightOf="AppInfoBtn" 
+                               RelativePanel.AlignVerticalCenterWith="AppInfoBtn" 
+                               x:Name="AppInfoText" Text="Help" Style="{StaticResource AppControlTextStyle}"
+                               Margin="0,0,10,0"/>
+                </RelativePanel>
+                <Button.Flyout>
+                    <MenuFlyout Placement="Top">
+                        <MenuFlyoutItem x:ConnectionId='8' Text="About This Application"                       />
+                        <MenuFlyoutItem x:ConnectionId='9' Text="FAQs"                  />
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+                
+            </StackPanel>
+    </Grid>
+</UserControl>
+

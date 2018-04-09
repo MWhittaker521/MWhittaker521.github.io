@@ -1,0 +1,139 @@
+﻿<Page
+    x:Class="TravelApplication.Pages.SearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TravelApplication.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <!--Reusable Text Style for Page -->
+        <Style x:ConnectionId='1' x:Name="SearchPageTextStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="3,0,0,5"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <!--Reusable Text Style for Headers -->
+        <Style x:ConnectionId='2' x:Name="SearchPageHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="38"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition  Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,5,5,5">
+            <TextBlock x:ConnectionId='23' Text="Travel Category" x:Name="TravelCategoryText" Style="{StaticResource SearchPageHeaderStyle}" 
+                       RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <RadioButton x:ConnectionId='24' x:Name="HealthWellness" GroupName="CategoryGroup" RelativePanel.Below="TravelCategoryText"                               
+                        Padding="3">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Health and Wellness"/>
+            </RadioButton>
+            <RadioButton x:ConnectionId='25' x:Name="Family" GroupName="CategoryGroup" RelativePanel.Below="HealthWellness"                       
+                          Padding="3">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Family Friendly"/>
+            </RadioButton>
+            <RadioButton x:ConnectionId='26' x:Name="Adventure" GroupName="CategoryGroup" RelativePanel.Below="Family"                         
+                          Padding="3" VerticalAlignment="Bottom">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Adventure" />
+            </RadioButton>
+            <RadioButton x:ConnectionId='27' x:Name="Cruises" GroupName="CategoryGroup" RelativePanel.Below="Adventure"                      
+                          Padding="3">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Cruises" />
+            </RadioButton>
+            <RadioButton x:ConnectionId='28' x:Name="DestinationWedding" GroupName="CategoryGroup" RelativePanel.Below="Cruises"                                  
+                          Padding="3">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Destination Wedding" />
+            </RadioButton>
+            <RadioButton x:ConnectionId='29' x:Name="AllTravelPackages" GroupName="CategoryGroup" RelativePanel.Below="DestinationWedding" 
+                          Padding="3">
+                <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="All Travel Packages" />
+            </RadioButton>
+            <StackPanel RelativePanel.Below="AllTravelPackages" Orientation="Horizontal" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                <RadioButton GroupName="ReturnGroup">Top Five List</RadioButton>
+                <RadioButton GroupName="ReturnGroup">All Results for Category</RadioButton>
+            </StackPanel>
+        </RelativePanel>
+        <RelativePanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                       Margin="10,5,5,5">
+            <TextBlock x:ConnectionId='15' Text="Activities" x:Name="ActivitiesText" Style="{StaticResource SearchPageHeaderStyle}" 
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <Grid x:ConnectionId='16' x:Name="AmenitiesGrid" RelativePanel.Below="ActivitiesText" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:ConnectionId='17' Grid.Column="0" x:Name="AmenitiesStack1" Padding="3" Margin="0,0,10,5">
+                    <CheckBox x:ConnectionId='18' x:Name="SpaCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Spa, Sauna, or Pool"/>
+                    </CheckBox>
+                    <CheckBox x:ConnectionId='19' x:Name="AmusementCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Amusement or Water Park"/>
+                    </CheckBox>
+                    <CheckBox x:ConnectionId='20' x:Name="HistCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="History, Museums, or Art Gallerires"/>
+                    </CheckBox>
+                    <CheckBox x:ConnectionId='21' x:Name="CampCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Camping"/>
+                    </CheckBox>
+                    <CheckBox x:ConnectionId='22' x:Name="EntertainmentCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Entertainment (i.e. Shows, Comedy, Concerts, etc.)"/>
+                    </CheckBox>
+                </StackPanel>
+                
+            </Grid>
+           
+        </RelativePanel>
+        <RelativePanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                       Margin="20,5,5,5">
+            <TextBlock x:ConnectionId='3' Text="Price Range" x:Name="PriceText" Style="{StaticResource SearchPageHeaderStyle}" 
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <StackPanel x:ConnectionId='4' RelativePanel.Below="PriceText" x:Name="PricePanel">
+                <RadioButton x:ConnectionId='9' x:Name="ZeroUp" GroupName="PriceGroup" Padding="3">
+                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$0 - $249"/>
+                </RadioButton>
+                <RadioButton x:ConnectionId='10' x:Name="TwoFiftyUp" GroupName="PriceGroup" Padding="3">
+                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$250 - $499"/>
+                </RadioButton>
+                <RadioButton x:ConnectionId='11' x:Name="FiveUp" GroupName="PriceGroup" Padding="3">
+                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$500 - $749"/>
+                </RadioButton>
+                <RadioButton x:ConnectionId='12' x:Name="SevenFiftyUp" GroupName="PriceGroup" Padding="3">
+                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$750 - $999"/>
+                </RadioButton>
+                <RadioButton x:ConnectionId='13' x:Name="OneThousandUp" GroupName="PriceGroup" Padding="3">
+                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$1000 - $1499"/>
+                </RadioButton>
+                <RadioButton x:ConnectionId='14' x:Name="FifteenUp" GroupName="PriceGroup" Padding="3">
+                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$1500 - UP"/>
+                </RadioButton>
+            </StackPanel>
+            <Button x:ConnectionId='5' x:Name="StartSearchBtn" Background="MidnightBlue" Padding="5" RelativePanel.Below="PricePanel" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" 
+                    BorderBrush="MidnightBlue" BorderThickness="2"                              Margin="0,75,-1,0">
+                <RelativePanel>
+                    <Image x:ConnectionId='7' x:Name="SearchIcon" RelativePanel.AlignLeftWithPanel="True" Source="ms-appx:///Assets/Buttons/Button Icons/Plane03.png" Width="45"/>
+                    <TextBlock x:ConnectionId='8' RelativePanel.RightOf="SearchIcon" Padding="5"  x:Name="StartText" Text="Search Now" Style="{StaticResource SearchPageTextStyle}" Foreground="White"/>
+                </RelativePanel>
+            </Button>
+            <TextBlock x:ConnectionId='6' RelativePanel.Below="StartSearchBtn" RelativePanel.AlignHorizontalCenterWithPanel="True" x:Name="ResultText" Text="" Style="{StaticResource SearchPageTextStyle}" Margin="5,10,5,5"/>
+
+        </RelativePanel>
+    </Grid>
+</Page>
+

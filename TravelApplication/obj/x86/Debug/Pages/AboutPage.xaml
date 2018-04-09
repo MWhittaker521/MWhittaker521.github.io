@@ -1,0 +1,126 @@
+﻿<Page
+    x:Class="TravelApplication.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TravelApplication"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:ConnectionId='1' x:Name="AboutGrid" >
+        <ScrollViewer x:ConnectionId='2' x:Name="AboutScrollViewer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                      ScrollViewer.IsVerticalScrollChainingEnabled="True" >
+            <RelativePanel HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       BorderBrush="MidnightBlue"
+                       BorderThickness="2"
+                       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <StackPanel Orientation="Vertical" Margin="10,10,10,10" RelativePanel.AlignLeftWithPanel="True" 
+                        RelativePanel.AlignRightWithPanel="True">
+                    <StackPanel x:ConnectionId='3' Orientation="Horizontal" Padding="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="SecondStack">
+                        <RelativePanel x:ConnectionId='12' HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   x:Name="TopPanel">
+                            <Image x:ConnectionId='13' x:Name="MyCrew" Source="ms-appx:///Assets/Pictures/MyCrew.jpg"
+                               MaxWidth="300"
+                               MinWidth="200"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="10"
+                               RelativePanel.AlignLeftWithPanel="True"/>
+                            <StackPanel RelativePanel.AlignRightWithPanel="True"
+                                    RelativePanel.RightOf="MyCrew">
+                                <TextBlock 
+                                   TextWrapping="Wrap"                           
+                                   Padding="50,50,50,10"
+                                   MaxWidth="525"
+                                   Text="About this Travel Application"
+                                   FontFamily="Georgia"
+                                   FontSize="24"
+                                   FontStyle="Normal"
+                                   FontWeight="ExtraBold"
+                                   TextAlignment="Center" 
+                                   Margin="0,0,30,0"/>
+                                <TextBlock TextWrapping="Wrap"
+                                       Padding="50,0,50,0"
+                                       MaxWidth="450"
+                                       Text="You are probably wondering who the crazy bunch of people is on the Left side of this page. They are my reasons. Reasons for deciding to continue my education after the age of 30. Reasons I stay up way too late every night working on homework. Reasons I go to work exhausted every day (for more reason than one). Reasons I am even in this class to build this Travel Application. So it was only fitting that they, more than I, be present in a section about this Application. Oh, and I'm down there on the bottom right too. " 
+                                       Margin="0,0,30,0"/>
+                            </StackPanel>
+                        </RelativePanel>
+                    </StackPanel>
+                    <StackPanel x:ConnectionId='4' Orientation="Horizontal" Padding="10,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="FourthStack">
+                        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image x:ConnectionId='11' x:Name="Us" Source="ms-appx:///Assets/Pictures/Us2.jpg"
+                               MinWidth="150"
+                               MinHeight="100"
+                               MaxHeight="200" 
+                               MaxWidth="250"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="5"
+                               RelativePanel.AlignLeftWithPanel="True"/>
+                        </RelativePanel>
+                        <Grid  Padding="75,0,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock x:ConnectionId='5' Grid.Column="0" Grid.Row="0" Text="Author: " 
+                                   FontFamily="Georgia" 
+                                   FontSize="18" 
+                                   FontWeight="SemiBold"
+                                   x:Name="Author"
+                                   TextAlignment="Right"/>
+                            <TextBlock x:ConnectionId='6' Grid.Column="1" Grid.Row="0" Text="Melissa A. Whittaker " 
+                                   FontFamily="Georgia" 
+                                   FontStyle="Italic"
+                                   FontSize="18" 
+                                   FontWeight="SemiBold"
+                                   x:Name="Me"
+                                   TextAlignment="Left" 
+                                   Margin="10,0,0,0"/>
+                            <TextBlock x:ConnectionId='7' Grid.Column="0" Grid.Row="1" Text="Date: " 
+                                   FontFamily="Georgia" 
+                                   FontSize="18" 
+                                   FontWeight="SemiBold"
+                                   x:Name="Date"
+                                   TextAlignment="Right"/>
+                            <TextBlock x:ConnectionId='8' Grid.Column="1" Grid.Row="1" Text="03.28.2018 " 
+                                   FontFamily="Georgia" 
+                                   FontStyle="Italic"
+                                   FontSize="18" 
+                                   FontWeight="SemiBold"
+                                   x:Name="ThisDate"
+                                   TextAlignment="Left" 
+                                   Margin="10,0,0,0"/>
+                            <TextBlock x:ConnectionId='9' Grid.Column="0" Grid.Row="2" Text="Class: " 
+                                   FontFamily="Georgia" 
+                                   FontSize="18" 
+                                   FontWeight="SemiBold"
+                                   x:Name="Class"
+                                   TextAlignment="Right"/>
+                            <TextBlock x:ConnectionId='10' Grid.Column="1" Grid.Row="2" Text="CS-499" 
+                                   FontFamily="Georgia" 
+                                   FontStyle="Italic"
+                                   FontSize="18" 
+                                   FontWeight="SemiBold"
+                                   x:Name="ThisClass"
+                                   TextAlignment="Left" 
+                                   Margin="10,0,0,0"/>
+                        </Grid>
+                        <RelativePanel HorizontalAlignment="Right">
+                            <Image Source="ms-appx:///Assets/Pictures/Melissa.jpg" MaxHeight="190" MaxWidth="200" 
+                           VerticalAlignment="Stretch" Margin="20" RelativePanel.AlignRightWithPanel="True"/>
+                        </RelativePanel>
+                    </StackPanel>
+                </StackPanel>
+            </RelativePanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
+

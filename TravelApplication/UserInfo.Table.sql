@@ -1,4 +1,0 @@
-﻿CREATE TABLE [dbo].[UserInfoTable]
-(
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY
-)
