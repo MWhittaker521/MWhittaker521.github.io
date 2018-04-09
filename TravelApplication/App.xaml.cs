@@ -19,21 +19,15 @@ using Windows.UI.Xaml.Navigation;
 using System.Data.Common;
 using System.Diagnostics;
 using System.Data.SqlClient;
-using TravelApplication.Models;
-using DataPackageLibrary; 
+using Microsoft.Data.Sqlite;
 
 namespace TravelApplication
-{
+{ 
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
     {
-        //Creates a public static instance of the View model to be consumed throughout the application
-        public static SearchViewModel SEARCH_VIEW_MODEL = new SearchViewModel();
-
-        //Creates a public static instance of the Collection to be consumed throughut the app
-        public static ObservableCollection<Package> SEARCH_RESULT_PACKAGES = new ObservableCollection<Package>(); 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -43,9 +37,10 @@ namespace TravelApplication
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-            //Calls the Initialize database method of the DataAccess Class
-            DataAccess.InitializeDatabase(); 
+            //Calls the Initialize database method of the Package.cs class
+            Package.InitializeDatabase();    
         }
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

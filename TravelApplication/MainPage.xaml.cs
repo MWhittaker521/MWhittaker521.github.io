@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -14,7 +15,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using DataPackageLibrary; 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -45,7 +45,7 @@ namespace TravelApplication
         //Opens the search results in the Main Frame upon search button pushed event. 
         private void OnSearchButtonPushed(object sender, string category, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(SearchResults), e); 
+            MainFrame.Navigate(typeof(SearchResult), e); 
         }
         //Opens the Generic search in the Main Frame upon guest button pushed event. 
         private void OnGuestButtonPushed(object sender, RoutedEventArgs e)

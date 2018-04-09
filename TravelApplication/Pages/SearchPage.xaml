@@ -70,86 +70,40 @@
                 <RadioButton GroupName="ReturnGroup">All Results for Category</RadioButton>
             </StackPanel>
         </RelativePanel>
-        <RelativePanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+        <RelativePanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                        Margin="10,5,5,5">
-            <TextBlock Text="Amenities" x:Name="AmenitiesText" Style="{StaticResource SearchPageHeaderStyle}" 
+            <TextBlock Text="Activities" x:Name="ActivitiesText" Style="{StaticResource SearchPageHeaderStyle}" 
                        RelativePanel.AlignHorizontalCenterWithPanel="True"/>
-            <Grid x:Name="AmenitiesGrid" RelativePanel.Below="AmenitiesText" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid x:Name="AmenitiesGrid" RelativePanel.Below="ActivitiesText" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" x:Name="AmenitiesStack1" Padding="3" Margin="0,0,10,5">
-                <CheckBox x:Name="SpaCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Spa"/>
-                </CheckBox>
-                    <CheckBox x:Name="SaunaCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Sauna"/>
-                </CheckBox>
-                    <CheckBox x:Name="PoolCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Pool"/>
-                </CheckBox>
-                    <CheckBox x:Name="NutritionCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Nutrition"/>
-                </CheckBox>
-                    <CheckBox x:Name="FitnessCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Fitness"/>
-                </CheckBox>
-                    <CheckBox x:Name="DanceCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Dancing"/>
-                </CheckBox>
-                    <CheckBox x:Name="FineDineCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Fine Dining"/>
-                </CheckBox>
-                    <CheckBox x:Name="CampCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Camping"/>
-                </CheckBox>
-                    <CheckBox x:Name="AmusementCheck" Padding="0,3,3,3">
-                    <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Amusement Park/Rides"/>
-                </CheckBox>
-                    <CheckBox x:Name="MuseumArtCheck" Padding="0,3,3,3">
-                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Museum/Art Galleries"/>
+                    <CheckBox x:Name="SpaCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Spa, Sauna, or Pool"/>
                     </CheckBox>
-                </StackPanel>
-                <StackPanel Grid.Column="1" x:Name="AmenitiesStack2" Margin="0,0,10,5" Padding="3,3,3,0">
+                    <CheckBox x:Name="AmusementCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Amusement or Water Park"/>
+                    </CheckBox>
+                    <CheckBox x:Name="HistCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="History, Museums, or Art Gallerires"/>
+                    </CheckBox>
+                    <CheckBox x:Name="CampCheck" Padding="0,3,3,3">
+                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Camping"/>
+                    </CheckBox>
                     <CheckBox x:Name="EntertainmentCheck" Padding="0,3,3,3">
                         <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Entertainment (i.e. Shows, Comedy, Concerts, etc.)"/>
                     </CheckBox>
-                    <CheckBox x:Name="ZooCheck" Padding="0,3,3,3">
-                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Zoo"/>
-                    </CheckBox>
-                    <CheckBox x:Name="GolfCheck" Padding="0,3,3,3">
-                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Golf"/>
-                    </CheckBox>
-                    <CheckBox x:Name="BeachOceanCheck" Padding="0,3,3,3">
-                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Beach/Ocean"/>
-                    </CheckBox>
-                    <CheckBox x:Name="SailingParasailingCheck" Padding="0,3,3,3">
-                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Sailing/Parasailing"/>
-                    </CheckBox>
-                    <CheckBox x:Name="SnorkelingCheck" Padding="0,3,3,3">
-                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Snorkeling"/>
-                    </CheckBox>
-                    <CheckBox x:Name="HistoricCheck" Padding="0,3,3,3">
-                        <TextBlock Style="{StaticResource SearchPageTextStyle}" Text=" History/Historic Location"/>
-                    </CheckBox>
                 </StackPanel>
+                
             </Grid>
-            <Button x:Name="StartSearchBtn" Background="MidnightBlue" Padding="5" RelativePanel.Below="AmenitiesGrid" RelativePanel.AlignHorizontalCenterWithPanel="True"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" 
-                    BorderBrush="MidnightBlue" BorderThickness="2" Click="StartSearchBtn_Click" Margin="0,10,-1,0">
-                <RelativePanel>
-                    <Image x:Name="SearchIcon" RelativePanel.AlignLeftWithPanel="True" Source="ms-appx:///Assets/Buttons/Button Icons/Plane03.png" Width="45"/>
-                    <TextBlock RelativePanel.RightOf="SearchIcon" Padding="5"  x:Name="StartText" Text="Search Now" Style="{StaticResource SearchPageTextStyle}" Foreground="White"/>
-                </RelativePanel>
-            </Button>
-            <TextBlock RelativePanel.Below="StartSearchBtn" RelativePanel.AlignHorizontalCenterWithPanel="True" x:Name="ResultText" Text="" Style="{StaticResource SearchPageTextStyle}" Margin="5,10,5,5"/>
+           
         </RelativePanel>
-        <RelativePanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+        <RelativePanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                        Margin="20,5,5,5">
             <TextBlock Text="Price Range" x:Name="PriceText" Style="{StaticResource SearchPageHeaderStyle}" 
                        RelativePanel.AlignHorizontalCenterWithPanel="True"/>
-            <StackPanel RelativePanel.Below="PriceText">
+            <StackPanel RelativePanel.Below="PriceText" x:Name="PricePanel">
                 <RadioButton x:Name="ZeroUp" GroupName="PriceGroup" Padding="3">
                     <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$0 - $249"/>
                 </RadioButton>
@@ -169,6 +123,16 @@
                     <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="$1500 - UP"/>
                 </RadioButton>
             </StackPanel>
+            <Button x:Name="StartSearchBtn" Background="MidnightBlue" Padding="5" RelativePanel.Below="PricePanel" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" 
+                    BorderBrush="MidnightBlue" BorderThickness="2" Click="StartSearchBtn_Click" Margin="0,75,-1,0">
+                <RelativePanel>
+                    <Image x:Name="SearchIcon" RelativePanel.AlignLeftWithPanel="True" Source="ms-appx:///Assets/Buttons/Button Icons/Plane03.png" Width="45"/>
+                    <TextBlock RelativePanel.RightOf="SearchIcon" Padding="5"  x:Name="StartText" Text="Search Now" Style="{StaticResource SearchPageTextStyle}" Foreground="White"/>
+                </RelativePanel>
+            </Button>
+            <TextBlock RelativePanel.Below="StartSearchBtn" RelativePanel.AlignHorizontalCenterWithPanel="True" x:Name="ResultText" Text="" Style="{StaticResource SearchPageTextStyle}" Margin="5,10,5,5"/>
+
         </RelativePanel>
     </Grid>
 </Page>

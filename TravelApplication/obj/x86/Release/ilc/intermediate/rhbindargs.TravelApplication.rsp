@@ -1,0 +1,16 @@
+/osver:6.2
+/appcontainer
+/runtime:mrt100_app
+/eh:clr
+/pdb
+"/nativeLink:C:\Program Files\Microsoft SDKs\NuGetPackagesFallback\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Native\vmath.lib"
+/customImports
+/methodBodyFolding
+"C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Release\ilc\intermediate\MDIL\TravelApplication.mdilexe"
+"/i:C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Release\ilc\intermediate\MDIL"
+"/out:C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Release\ilc\intermediate\Native\TravelApplication.exe"
+"/pdbAltPath:C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Release\ilc"
+"/res:C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Release\ilc\intermediate\Native.res"
+"/i:C:\Program Files\Microsoft SDKs\NuGetPackagesFallback\microsoft.net.native.sharedlibrary-x86\1.7.0\tools\SharedLibrary\ret\MDIL"
+/shimexe
+"/classlib:SharedLibrary"

@@ -92,22 +92,27 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Pages\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Collections\Class1.cs" />
     <Compile Include="Controls\AllResultsControl.xaml.cs">
       <DependentUpon>AllResultsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\AppOptionsControl.xaml.cs">
       <DependentUpon>AppOptionsControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\Adventure.cs" />
+    <Compile Include="Data\Cruises.cs" />
+    <Compile Include="Data\Family.cs" />
+    <Compile Include="Data\HealthWellness.cs" />
+    <Compile Include="Data\Wedding.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AboutPage.xaml.cs">
-      <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Data\Package.cs" />
     <Compile Include="Pages\AccountOverviewPage.xaml.cs">
       <DependentUpon>AccountOverviewPage.xaml</DependentUpon>
     </Compile>
@@ -132,16 +137,16 @@
     <Compile Include="Pages\SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SearchResults.xaml.cs">
-      <DependentUpon>SearchResults.xaml</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\TravelPackagesPage.xaml.cs">
+      <DependentUpon>TravelPackagesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TravelPackagesPage.xaml.cs">
-      <DependentUpon>TravelPackagesPage.xaml</DependentUpon>
+    <Compile Include="Pages\SearchResult.xaml.cs">
+      <DependentUpon>SearchResult.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -191,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AllResultsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -202,10 +211,6 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\AboutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AccountOverviewPage.xaml">
       <SubType>Designer</SubType>
@@ -235,15 +240,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Package.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\SearchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SearchResults.xaml">
+    <Page Include="Pages\TravelPackagesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -251,7 +252,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\TravelPackagesPage.xaml">
+    <Page Include="Pages\SearchResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TravelResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -269,12 +274,6 @@
     <PackageReference Include="System.Data.SqlClient">
       <Version>4.4.3</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataPackageLibrary\DataPackageLibrary.csproj">
-      <Project>{f9bd0e49-5820-461b-a0a0-8bd7b25f8de5}</Project>
-      <Name>DataPackageLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
