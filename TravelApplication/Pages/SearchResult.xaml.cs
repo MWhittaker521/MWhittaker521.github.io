@@ -26,7 +26,7 @@ namespace TravelApplication
         public SearchResult()
         {
             this.InitializeComponent();
-
+            ResultsListView.ItemsSource = DatabaseHelper.GetData(); 
         }
     }
 }

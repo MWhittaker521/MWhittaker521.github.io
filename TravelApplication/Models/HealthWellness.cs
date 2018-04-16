@@ -2,18 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace TravelApplication
 {
-    public class HealthWellness : IComparable
+    public class HealthWellness : IComparable, INotifyPropertyChanged
     {
         public ObservableCollection<HealthWellness> wellnessPackages = new ObservableCollection<HealthWellness>();
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+        public string packageinfo; 
 
         ObservableCollection<HealthWellness> GetData()
         {
+
             using (SqliteConnection db = new SqliteConnection("Filename=PackageData.db"))
             {
                 db.Open(); 
@@ -40,17 +45,22 @@ namespace TravelApplication
                     int Lowprice = query.GetInt32(20);
                     int Highprice = query.GetInt32(21);
                     string Link = query.GetString(23);
-                    var package = IdReader.ToString() + ", " + Code + ", " + Destination + ", " + Location +
+                    packageinfo = IdReader.ToString() + ", " + Code + ", " + Destination + ", " + Location +
                         ", " + Description + ", " + Rank.ToString() + ", " + Spa.ToString() + ", " + Amusement.ToString() +
                         ", " + History.ToString() + ", " + Camping.ToString() + ", " + Entertainment.ToString() + ", " + Category.ToString() +
                         ", " + Lowprice.ToString() + ", " + Highprice.ToString() + ", " + Link;
-                    wellnessPackages.Add(new HealthWellness(IdReader, Code, Destination, Location, Description, Rank, Spa, Amusement, History, Camping, Entertainment, Category, Lowprice, Highprice, Link));
-
+                    wellnessPackages.Add(new HealthWellness(IdReader, Code, Destination, Location, Description, Rank, Spa, Amusement, History, Camping, Entertainment, Category, Lowprice, Highprice, Link)); 
                 }
+                
                 db.Close();
-
             }
             return wellnessPackages;
+        }
+
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            //Rase the PropertyChanged event, passing the name of the property whose value has changed.
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public HealthWellness(object IdReader, string Code, string Destination, string Location, string Description,
@@ -74,7 +84,17 @@ namespace TravelApplication
             this.refLink = Link;
         }
 
-        public object idreader { get; set; }
+        public object idreader
+        {
+            get
+            {
+                return this.idreader;
+            }
+            set
+            { this.idreader = value;
+                this.OnPropertyChanged(); 
+            }
+        }
         public string dcode { get; set; }
         public string dest { get; set; }
         public string locate { get; set; }

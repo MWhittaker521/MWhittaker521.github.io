@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>e0e7b7d0-fb18-4d18-b7e8-2856601d2e4e</PackageIdentityName>
     <PackageIdentityPublisher>CN=melis</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>270D8E3B4674B70B4D586E5166E0887B58400511324EBB914714150E1C27B0E7</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>e0e7b7d0-fb18-4d18-b7e8-2856601d2e4e_1.0.0.0_x86__3xc9w9vd514j8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>e0e7b7d0-fb18-4d18-b7e8-2856601d2e4e_3xc9w9vd514j8!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T02:36:47.617</Modified>
+      <Modified>2018-04-16T00:52:59.383</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\TravelApplication.exe">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\TravelApplication.exe">
       <PackagePath>entrypoint\TravelApplication.exe</PackagePath>
-      <Modified>2018-04-09T02:36:38.858</Modified>
+      <Modified>2018-04-16T00:52:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\NuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -523,168 +523,168 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-12T05:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Backgrounds\Notebook2.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Backgrounds\Notebook2.png">
       <PackagePath>Assets\Backgrounds\Notebook2.png</PackagePath>
-      <Modified>2018-03-23T20:18:05.979</Modified>
+      <Modified>2018-04-09T04:13:14.149</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\InformationImage.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\InformationImage.png">
       <PackagePath>Assets\Buttons\Button Icons\InformationImage.png</PackagePath>
-      <Modified>2018-03-23T17:26:51.839</Modified>
+      <Modified>2018-04-09T04:13:14.149</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\MyActImage.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\MyActImage.png">
       <PackagePath>Assets\Buttons\Button Icons\MyActImage.png</PackagePath>
-      <Modified>2018-03-23T17:25:48.203</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\plane-clipart-free-16.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\plane-clipart-free-16.png">
       <PackagePath>Assets\Buttons\Button Icons\plane-clipart-free-16.png</PackagePath>
-      <Modified>2018-03-23T17:46:36.030</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\Plane03.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\Plane03.png">
       <PackagePath>Assets\Buttons\Button Icons\Plane03.png</PackagePath>
-      <Modified>2018-03-26T02:51:55.961</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\NavButton_Green.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\NavButton_Green.png">
       <PackagePath>Assets\Buttons\NavButton_Green.png</PackagePath>
-      <Modified>2018-03-22T18:17:24.975</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Navigation\BlueNavButton.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Navigation\BlueNavButton.png">
       <PackagePath>Assets\Buttons\Navigation\BlueNavButton.png</PackagePath>
-      <Modified>2018-03-23T17:31:31.079</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\Arrow.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\Arrow.png">
       <PackagePath>Assets\DesignElements\Arrow.png</PackagePath>
-      <Modified>2018-03-23T18:35:45.760</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\ArrowDown.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\ArrowDown.png">
       <PackagePath>Assets\DesignElements\ArrowDown.png</PackagePath>
-      <Modified>2018-03-23T18:55:04.433</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\DownArrow.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\DownArrow.png">
       <PackagePath>Assets\DesignElements\DownArrow.png</PackagePath>
-      <Modified>2018-03-23T18:40:21.913</Modified>
+      <Modified>2018-04-09T04:13:14.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\Plane02.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\Plane02.png">
       <PackagePath>Assets\DesignElements\Plane02.png</PackagePath>
-      <Modified>2018-04-07T16:28:35.750</Modified>
+      <Modified>2018-04-09T04:13:14.196</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\Plane_01.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\Plane_01.png">
       <PackagePath>Assets\DesignElements\Plane_01.png</PackagePath>
-      <Modified>2018-03-26T02:51:55.993</Modified>
+      <Modified>2018-04-09T04:13:14.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\SideBar.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\SideBar.png">
       <PackagePath>Assets\DesignElements\SideBar.png</PackagePath>
-      <Modified>2018-03-23T17:44:34.939</Modified>
+      <Modified>2018-04-09T04:13:14.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\NavButton.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\NavButton.png">
       <PackagePath>Assets\NavButton.png</PackagePath>
-      <Modified>2018-03-22T18:01:21.834</Modified>
+      <Modified>2018-04-09T04:13:14.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\NavButtonGreen.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\NavButtonGreen.png">
       <PackagePath>Assets\NavButtonGreen.png</PackagePath>
-      <Modified>2018-03-22T18:09:49.784</Modified>
+      <Modified>2018-04-09T04:13:14.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\TravelLogo.PNG">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\TravelLogo.PNG">
       <PackagePath>Assets\TravelLogo.PNG</PackagePath>
-      <Modified>2018-03-22T16:27:33.866</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2018-03-21T20:08:34.950</Modified>
+      <Modified>2018-04-09T04:13:14.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-21T20:08:34.950</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-21T20:08:34.950</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-21T20:08:34.950</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-21T20:08:34.950</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-21T20:08:34.950</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-21T20:08:34.950</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Backgrounds\Notebook4.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Backgrounds\Notebook4.jpg">
       <PackagePath>Assets\Backgrounds\Notebook4.jpg</PackagePath>
-      <Modified>2018-03-23T20:18:35.008</Modified>
+      <Modified>2018-04-09T04:13:14.149</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Lane.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Lane.jpg">
       <PackagePath>Assets\Pictures\Lane.jpg</PackagePath>
-      <Modified>2018-03-23T21:14:47.294</Modified>
+      <Modified>2018-04-09T04:13:14.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Me.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Me.jpg">
       <PackagePath>Assets\Pictures\Me.jpg</PackagePath>
-      <Modified>2018-03-23T20:24:29.836</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Melissa.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Melissa.jpg">
       <PackagePath>Assets\Pictures\Melissa.jpg</PackagePath>
-      <Modified>2018-03-23T21:36:55.104</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\MyCrew.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\MyCrew.jpg">
       <PackagePath>Assets\Pictures\MyCrew.jpg</PackagePath>
-      <Modified>2018-03-23T20:24:29.844</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Padme.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Padme.jpg">
       <PackagePath>Assets\Pictures\Padme.jpg</PackagePath>
-      <Modified>2018-03-23T21:14:56.278</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\ThreeKids.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\ThreeKids.jpg">
       <PackagePath>Assets\Pictures\ThreeKids.jpg</PackagePath>
-      <Modified>2018-03-23T20:24:29.849</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Us.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Us.jpg">
       <PackagePath>Assets\Pictures\Us.jpg</PackagePath>
-      <Modified>2018-03-23T20:24:29.854</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Us2.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Us2.jpg">
       <PackagePath>Assets\Pictures\Us2.jpg</PackagePath>
-      <Modified>2018-03-23T20:24:29.859</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\TravelLogo.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\TravelLogo.jpg">
       <PackagePath>Assets\TravelLogo.jpg</PackagePath>
-      <Modified>2018-03-22T16:27:33.862</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Travel.gif">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Travel.gif">
       <PackagePath>Assets\Travel.gif</PackagePath>
-      <Modified>2018-03-22T16:27:33.857</Modified>
+      <Modified>2018-04-09T04:13:14.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-03-22T15:15:25.341</Modified>
+      <Modified>2018-04-09T04:13:14.259</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\TravelApplication.xr.xml">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\TravelApplication.xr.xml">
       <PackagePath>TravelApplication.xr.xml</PackagePath>
-      <Modified>2018-04-09T02:36:37.837</Modified>
+      <Modified>2018-04-15T22:08:48.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-28T21:28:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T02:36:45.108</Modified>
+      <Modified>2018-04-16T00:52:59.075</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\Core\TravelApplication.exe">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Core\TravelApplication.exe">
       <PackagePath>TravelApplication.exe</PackagePath>
-      <Modified>2018-04-09T02:36:47.608</Modified>
+      <Modified>2018-04-16T00:52:59.380</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -20,6 +20,7 @@ using System.Data.Common;
 using System.Diagnostics;
 using System.Data.SqlClient;
 using Microsoft.Data.Sqlite;
+using System.Threading.Tasks;
 
 namespace TravelApplication
 { 
@@ -36,11 +37,8 @@ namespace TravelApplication
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
-            //Calls the Initialize database method of the Package.cs class
-            Package.InitializeDatabase();    
+            DatabaseHelper.InitializeDatabase(); 
         }
-
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -106,8 +104,6 @@ namespace TravelApplication
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-
-    } 
-   
+    }   
 }
 

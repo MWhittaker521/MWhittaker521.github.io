@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,7 +25,7 @@ namespace TravelApplication
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
-    {
+    {        
         public MainPage()
         {
             this.InitializeComponent();
@@ -39,8 +40,11 @@ namespace TravelApplication
             InitialPage.OnSignUpButtonPushed += OnSignUpButtonPushed;
             //Delegate method that listens for Guest Button Push event from the Initial Page. 
             InitialPage.OnGuestButtonPushed += OnGuestButtonPushed;
-            SearchPage.OnSearchButtonPushed += OnSearchButtonPushed; 
+            SearchPage.OnSearchButtonPushed += OnSearchButtonPushed;
+
         }
+
+
 
         //Opens the search results in the Main Frame upon search button pushed event. 
         private void OnSearchButtonPushed(object sender, string category, RoutedEventArgs e)

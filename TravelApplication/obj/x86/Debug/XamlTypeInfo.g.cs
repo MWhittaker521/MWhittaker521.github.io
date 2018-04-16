@@ -132,43 +132,45 @@ namespace TravelApplication.TravelApplication_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[17];
-            _typeNameTable[0] = "TravelApplication.AboutPage";
+            _typeNameTable = new string[18];
+            _typeNameTable[0] = "TravelApplication.Models.TravelAppViewModel";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "TravelApplication.Controls.AllResultsControl";
-            _typeNameTable[4] = "TravelApplication.Controls.AppOptionsControl";
-            _typeNameTable[5] = "TravelApplication.MainPage";
-            _typeNameTable[6] = "TravelApplication.Pages.AccountOverviewPage";
-            _typeNameTable[7] = "TravelApplication.Pages.AccountPrefPage";
-            _typeNameTable[8] = "TravelApplication.Pages.FAQPage";
-            _typeNameTable[9] = "TravelApplication.Pages.FeaturedDestPage";
-            _typeNameTable[10] = "TravelApplication.Pages.HotelsPage";
-            _typeNameTable[11] = "TravelApplication.Pages.InitialPage";
-            _typeNameTable[12] = "TravelApplication.Pages.LogInPage";
-            _typeNameTable[13] = "TravelApplication.Pages.SearchPage";
-            _typeNameTable[14] = "TravelApplication.TravelPackagesPage";
-            _typeNameTable[15] = "TravelApplication.SignUpPage";
-            _typeNameTable[16] = "TravelApplication.SearchResult";
+            _typeNameTable[3] = "TravelApplication.AboutPage";
+            _typeNameTable[4] = "TravelApplication.Controls.AllResultsControl";
+            _typeNameTable[5] = "TravelApplication.Controls.AppOptionsControl";
+            _typeNameTable[6] = "TravelApplication.MainPage";
+            _typeNameTable[7] = "TravelApplication.Pages.AccountOverviewPage";
+            _typeNameTable[8] = "TravelApplication.Pages.AccountPrefPage";
+            _typeNameTable[9] = "TravelApplication.Pages.FAQPage";
+            _typeNameTable[10] = "TravelApplication.Pages.FeaturedDestPage";
+            _typeNameTable[11] = "TravelApplication.Pages.HotelsPage";
+            _typeNameTable[12] = "TravelApplication.Pages.InitialPage";
+            _typeNameTable[13] = "TravelApplication.Pages.LogInPage";
+            _typeNameTable[14] = "TravelApplication.Pages.SearchPage";
+            _typeNameTable[15] = "TravelApplication.TravelPackagesPage";
+            _typeNameTable[16] = "TravelApplication.SignUpPage";
+            _typeNameTable[17] = "TravelApplication.SearchResult";
 
-            _typeTable = new global::System.Type[17];
-            _typeTable[0] = typeof(global::TravelApplication.AboutPage);
+            _typeTable = new global::System.Type[18];
+            _typeTable[0] = typeof(global::TravelApplication.Models.TravelAppViewModel);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::TravelApplication.Controls.AllResultsControl);
-            _typeTable[4] = typeof(global::TravelApplication.Controls.AppOptionsControl);
-            _typeTable[5] = typeof(global::TravelApplication.MainPage);
-            _typeTable[6] = typeof(global::TravelApplication.Pages.AccountOverviewPage);
-            _typeTable[7] = typeof(global::TravelApplication.Pages.AccountPrefPage);
-            _typeTable[8] = typeof(global::TravelApplication.Pages.FAQPage);
-            _typeTable[9] = typeof(global::TravelApplication.Pages.FeaturedDestPage);
-            _typeTable[10] = typeof(global::TravelApplication.Pages.HotelsPage);
-            _typeTable[11] = typeof(global::TravelApplication.Pages.InitialPage);
-            _typeTable[12] = typeof(global::TravelApplication.Pages.LogInPage);
-            _typeTable[13] = typeof(global::TravelApplication.Pages.SearchPage);
-            _typeTable[14] = typeof(global::TravelApplication.TravelPackagesPage);
-            _typeTable[15] = typeof(global::TravelApplication.SignUpPage);
-            _typeTable[16] = typeof(global::TravelApplication.SearchResult);
+            _typeTable[3] = typeof(global::TravelApplication.AboutPage);
+            _typeTable[4] = typeof(global::TravelApplication.Controls.AllResultsControl);
+            _typeTable[5] = typeof(global::TravelApplication.Controls.AppOptionsControl);
+            _typeTable[6] = typeof(global::TravelApplication.MainPage);
+            _typeTable[7] = typeof(global::TravelApplication.Pages.AccountOverviewPage);
+            _typeTable[8] = typeof(global::TravelApplication.Pages.AccountPrefPage);
+            _typeTable[9] = typeof(global::TravelApplication.Pages.FAQPage);
+            _typeTable[10] = typeof(global::TravelApplication.Pages.FeaturedDestPage);
+            _typeTable[11] = typeof(global::TravelApplication.Pages.HotelsPage);
+            _typeTable[12] = typeof(global::TravelApplication.Pages.InitialPage);
+            _typeTable[13] = typeof(global::TravelApplication.Pages.LogInPage);
+            _typeTable[14] = typeof(global::TravelApplication.Pages.SearchPage);
+            _typeTable[15] = typeof(global::TravelApplication.TravelPackagesPage);
+            _typeTable[16] = typeof(global::TravelApplication.SignUpPage);
+            _typeTable[17] = typeof(global::TravelApplication.SearchResult);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -203,21 +205,22 @@ namespace TravelApplication.TravelApplication_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_AboutPage() { return new global::TravelApplication.AboutPage(); }
-        private object Activate_3_AllResultsControl() { return new global::TravelApplication.Controls.AllResultsControl(); }
-        private object Activate_4_AppOptionsControl() { return new global::TravelApplication.Controls.AppOptionsControl(); }
-        private object Activate_5_MainPage() { return new global::TravelApplication.MainPage(); }
-        private object Activate_6_AccountOverviewPage() { return new global::TravelApplication.Pages.AccountOverviewPage(); }
-        private object Activate_7_AccountPrefPage() { return new global::TravelApplication.Pages.AccountPrefPage(); }
-        private object Activate_8_FAQPage() { return new global::TravelApplication.Pages.FAQPage(); }
-        private object Activate_9_FeaturedDestPage() { return new global::TravelApplication.Pages.FeaturedDestPage(); }
-        private object Activate_10_HotelsPage() { return new global::TravelApplication.Pages.HotelsPage(); }
-        private object Activate_11_InitialPage() { return new global::TravelApplication.Pages.InitialPage(); }
-        private object Activate_12_LogInPage() { return new global::TravelApplication.Pages.LogInPage(); }
-        private object Activate_13_SearchPage() { return new global::TravelApplication.Pages.SearchPage(); }
-        private object Activate_14_TravelPackagesPage() { return new global::TravelApplication.TravelPackagesPage(); }
-        private object Activate_15_SignUpPage() { return new global::TravelApplication.SignUpPage(); }
-        private object Activate_16_SearchResult() { return new global::TravelApplication.SearchResult(); }
+        private object Activate_0_TravelAppViewModel() { return new global::TravelApplication.Models.TravelAppViewModel(); }
+        private object Activate_3_AboutPage() { return new global::TravelApplication.AboutPage(); }
+        private object Activate_4_AllResultsControl() { return new global::TravelApplication.Controls.AllResultsControl(); }
+        private object Activate_5_AppOptionsControl() { return new global::TravelApplication.Controls.AppOptionsControl(); }
+        private object Activate_6_MainPage() { return new global::TravelApplication.MainPage(); }
+        private object Activate_7_AccountOverviewPage() { return new global::TravelApplication.Pages.AccountOverviewPage(); }
+        private object Activate_8_AccountPrefPage() { return new global::TravelApplication.Pages.AccountPrefPage(); }
+        private object Activate_9_FAQPage() { return new global::TravelApplication.Pages.FAQPage(); }
+        private object Activate_10_FeaturedDestPage() { return new global::TravelApplication.Pages.FeaturedDestPage(); }
+        private object Activate_11_HotelsPage() { return new global::TravelApplication.Pages.HotelsPage(); }
+        private object Activate_12_InitialPage() { return new global::TravelApplication.Pages.InitialPage(); }
+        private object Activate_13_LogInPage() { return new global::TravelApplication.Pages.LogInPage(); }
+        private object Activate_14_SearchPage() { return new global::TravelApplication.Pages.SearchPage(); }
+        private object Activate_15_TravelPackagesPage() { return new global::TravelApplication.TravelPackagesPage(); }
+        private object Activate_16_SignUpPage() { return new global::TravelApplication.SignUpPage(); }
+        private object Activate_17_SearchResult() { return new global::TravelApplication.SearchResult(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -229,9 +232,9 @@ namespace TravelApplication.TravelApplication_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  TravelApplication.AboutPage
+            case 0:   //  TravelApplication.Models.TravelAppViewModel
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_AboutPage;
+                userType.Activator = Activate_0_TravelAppViewModel;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -244,100 +247,107 @@ namespace TravelApplication.TravelApplication_XamlTypeInfo
                 xamlType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  TravelApplication.Controls.AllResultsControl
+            case 3:   //  TravelApplication.AboutPage
+                userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_AboutPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  TravelApplication.Controls.AllResultsControl
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_3_AllResultsControl;
+                userType.Activator = Activate_4_AllResultsControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  TravelApplication.Controls.AppOptionsControl
+            case 5:   //  TravelApplication.Controls.AppOptionsControl
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_4_AppOptionsControl;
+                userType.Activator = Activate_5_AppOptionsControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  TravelApplication.MainPage
+            case 6:   //  TravelApplication.MainPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_MainPage;
+                userType.Activator = Activate_6_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  TravelApplication.Pages.AccountOverviewPage
+            case 7:   //  TravelApplication.Pages.AccountOverviewPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_AccountOverviewPage;
+                userType.Activator = Activate_7_AccountOverviewPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  TravelApplication.Pages.AccountPrefPage
+            case 8:   //  TravelApplication.Pages.AccountPrefPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_AccountPrefPage;
+                userType.Activator = Activate_8_AccountPrefPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  TravelApplication.Pages.FAQPage
+            case 9:   //  TravelApplication.Pages.FAQPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_FAQPage;
+                userType.Activator = Activate_9_FAQPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  TravelApplication.Pages.FeaturedDestPage
+            case 10:   //  TravelApplication.Pages.FeaturedDestPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_FeaturedDestPage;
+                userType.Activator = Activate_10_FeaturedDestPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  TravelApplication.Pages.HotelsPage
+            case 11:   //  TravelApplication.Pages.HotelsPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_HotelsPage;
+                userType.Activator = Activate_11_HotelsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  TravelApplication.Pages.InitialPage
+            case 12:   //  TravelApplication.Pages.InitialPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_InitialPage;
+                userType.Activator = Activate_12_InitialPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  TravelApplication.Pages.LogInPage
+            case 13:   //  TravelApplication.Pages.LogInPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_LogInPage;
+                userType.Activator = Activate_13_LogInPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  TravelApplication.Pages.SearchPage
+            case 14:   //  TravelApplication.Pages.SearchPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_SearchPage;
+                userType.Activator = Activate_14_SearchPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  TravelApplication.TravelPackagesPage
+            case 15:   //  TravelApplication.TravelPackagesPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_TravelPackagesPage;
+                userType.Activator = Activate_15_TravelPackagesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  TravelApplication.SignUpPage
+            case 16:   //  TravelApplication.SignUpPage
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_SignUpPage;
+                userType.Activator = Activate_16_SignUpPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  TravelApplication.SearchResult
+            case 17:   //  TravelApplication.SearchResult
                 userType = new global::TravelApplication.TravelApplication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_SearchResult;
+                userType.Activator = Activate_17_SearchResult;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

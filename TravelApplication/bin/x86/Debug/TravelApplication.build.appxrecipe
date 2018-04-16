@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>e0e7b7d0-fb18-4d18-b7e8-2856601d2e4e</PackageIdentityName>
     <PackageIdentityPublisher>CN=melis</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\TravelApplication.exe">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\TravelApplication.exe">
       <PackagePath>entrypoint\TravelApplication.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\NuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -391,128 +391,128 @@
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\NuGetPackages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Backgrounds\Notebook2.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Backgrounds\Notebook2.png">
       <PackagePath>Assets\Backgrounds\Notebook2.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\InformationImage.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\InformationImage.png">
       <PackagePath>Assets\Buttons\Button Icons\InformationImage.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\MyActImage.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\MyActImage.png">
       <PackagePath>Assets\Buttons\Button Icons\MyActImage.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\plane-clipart-free-16.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\plane-clipart-free-16.png">
       <PackagePath>Assets\Buttons\Button Icons\plane-clipart-free-16.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Button Icons\Plane03.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Button Icons\Plane03.png">
       <PackagePath>Assets\Buttons\Button Icons\Plane03.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\NavButton_Green.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\NavButton_Green.png">
       <PackagePath>Assets\Buttons\NavButton_Green.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Buttons\Navigation\BlueNavButton.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Buttons\Navigation\BlueNavButton.png">
       <PackagePath>Assets\Buttons\Navigation\BlueNavButton.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\Arrow.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\Arrow.png">
       <PackagePath>Assets\DesignElements\Arrow.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\ArrowDown.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\ArrowDown.png">
       <PackagePath>Assets\DesignElements\ArrowDown.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\DownArrow.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\DownArrow.png">
       <PackagePath>Assets\DesignElements\DownArrow.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\Plane02.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\Plane02.png">
       <PackagePath>Assets\DesignElements\Plane02.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\Plane_01.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\Plane_01.png">
       <PackagePath>Assets\DesignElements\Plane_01.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\DesignElements\SideBar.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\SideBar.png">
       <PackagePath>Assets\DesignElements\SideBar.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\NavButton.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\NavButton.png">
       <PackagePath>Assets\NavButton.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\NavButtonGreen.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\NavButtonGreen.png">
       <PackagePath>Assets\NavButtonGreen.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\TravelLogo.PNG">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\TravelLogo.PNG">
       <PackagePath>Assets\TravelLogo.PNG</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Backgrounds\Notebook4.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Backgrounds\Notebook4.jpg">
       <PackagePath>Assets\Backgrounds\Notebook4.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Lane.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Lane.jpg">
       <PackagePath>Assets\Pictures\Lane.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Me.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Me.jpg">
       <PackagePath>Assets\Pictures\Me.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Melissa.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Melissa.jpg">
       <PackagePath>Assets\Pictures\Melissa.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\MyCrew.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\MyCrew.jpg">
       <PackagePath>Assets\Pictures\MyCrew.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Padme.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Padme.jpg">
       <PackagePath>Assets\Pictures\Padme.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\ThreeKids.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\ThreeKids.jpg">
       <PackagePath>Assets\Pictures\ThreeKids.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Us.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Us.jpg">
       <PackagePath>Assets\Pictures\Us.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Pictures\Us2.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Us2.jpg">
       <PackagePath>Assets\Pictures\Us2.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\TravelLogo.jpg">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\TravelLogo.jpg">
       <PackagePath>Assets\TravelLogo.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Assets\Travel.gif">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Travel.gif">
       <PackagePath>Assets\Travel.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\TravelApplication.xr.xml">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\TravelApplication.xr.xml">
       <PackagePath>TravelApplication.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\TravelApplication\bin\x86\Debug\Core\TravelApplication.exe">
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Core\TravelApplication.exe">
       <PackagePath>TravelApplication.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

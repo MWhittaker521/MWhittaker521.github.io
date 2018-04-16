@@ -92,6 +92,11 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ViewModels\DatabaseHelper.cs" />
+    <Compile Include="ViewModels\ReadPackages.cs" />
+    <Compile Include="ViewModels\TravelAppViewModel.xaml.cs">
+      <DependentUpon>TravelAppViewModel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -104,15 +109,15 @@
     <Compile Include="Controls\AppOptionsControl.xaml.cs">
       <DependentUpon>AppOptionsControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data\Adventure.cs" />
-    <Compile Include="Data\Cruises.cs" />
-    <Compile Include="Data\Family.cs" />
-    <Compile Include="Data\HealthWellness.cs" />
-    <Compile Include="Data\Wedding.cs" />
+    <Compile Include="Models\Adventure.cs" />
+    <Compile Include="Models\Cruises.cs" />
+    <Compile Include="Models\Family.cs" />
+    <Compile Include="Models\HealthWellness.cs" />
+    <Compile Include="Models\Wedding.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data\Package.cs" />
+    <Compile Include="Models\Package.cs" />
     <Compile Include="Pages\AccountOverviewPage.xaml.cs">
       <DependentUpon>AccountOverviewPage.xaml</DependentUpon>
     </Compile>
@@ -196,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ViewModels\TravelAppViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -275,9 +284,7 @@
       <Version>4.4.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

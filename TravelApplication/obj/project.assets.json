@@ -28394,11 +28394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melis\\source\\repos\\TravelApplication\\TravelApplication\\TravelApplication.csproj",
+      "projectUniqueName": "C:\\Users\\melis\\source\\repos\\TravelApplication\\MWhittaker521.github.io\\TravelApplication\\TravelApplication.csproj",
       "projectName": "TravelApplication",
-      "projectPath": "C:\\Users\\melis\\source\\repos\\TravelApplication\\TravelApplication\\TravelApplication.csproj",
+      "projectPath": "C:\\Users\\melis\\source\\repos\\TravelApplication\\MWhittaker521.github.io\\TravelApplication\\TravelApplication.csproj",
       "packagesPath": "C:\\Users\\melis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melis\\source\\repos\\TravelApplication\\TravelApplication\\obj\\",
+      "outputPath": "C:\\Users\\melis\\source\\repos\\TravelApplication\\MWhittaker521.github.io\\TravelApplication\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
