@@ -1,8 +1,10 @@
-﻿<Page
+﻿<Page DataContext="{StaticResource MainDataViewModel}"
     x:Class="TravelApplication.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TravelApplication"
+    xmlns:local="using:TravelApplication.ViewModels"
+    xmlns:other ="using:TravelApplication.Models"
+    xmlns:model ="using:TravelApplication.Models"
     xmlns:control="using:TravelApplication.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -119,13 +121,14 @@
                             Background="Transparent"                        >
                         <RelativePanel x:ConnectionId='18'  x:Name="SearchBtnPanel">
                             <AppBarButton x:ConnectionId='19' x:Name="SearchBtn" Background="Transparent" 
-                                      ToolTipService.ToolTip="Search Travel Package Offerings"                           
-                                      Icon="Find"
-                                      MaxHeight="50"
-                                      MaxWidth="35"
-                                      RelativePanel.AlignLeftWithPanel="True"
-                                      RelativePanel.AlignVerticalCenterWithPanel="True"
-                                     >
+                                          ToolTipService.ToolTip="Search Travel Package Offerings"                           
+                                          Icon="Find"
+                                          MaxHeight="50"
+                                          MaxWidth="35"
+                                          RelativePanel.AlignLeftWithPanel="True"
+                                          RelativePanel.AlignVerticalCenterWithPanel="True"
+                                          DataContext="{Binding ElementName=BindingListView}"
+                                          >
                             </AppBarButton>
                             <TextBlock x:ConnectionId='20' RelativePanel.RightOf="SearchBtn" RelativePanel.AlignVerticalCenterWith="SearchBtn" 
                                    x:Name="SearchBtnText" Text="Search Travel Packages" 

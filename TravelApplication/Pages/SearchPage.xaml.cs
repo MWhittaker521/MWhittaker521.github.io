@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TravelApplication.Models;
+using TravelApplication.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,19 +25,24 @@ namespace TravelApplication.Pages
     /// </summary>
     public sealed partial class SearchPage : Page
     {
-        private string destCategory; 
+        private string destCategory;
         //Event Handler to let the main page know of the search button click 
         public delegate void SearchEventHandler(object sender, string category, RoutedEventArgs e);
         //Delegate method which the receiving page must listen for
         public static SearchEventHandler OnSearchButtonPushed;
 
-        public string queryString; 
+        public string queryString;
         public SearchPage()
         {
-            this.InitializeComponent(); 
+            this.InitializeComponent();
+            MainPage.SetDataContext += SetDataContext; 
         }
         
-
+        public void SetDataContext(TravelPack pack)
+        {
+            this.DataContext = pack; 
+        }
+       
         /// <summary>
         /// Changes the destination category when the Health/Wellness Radio Button is selected. 
         /// </summary>

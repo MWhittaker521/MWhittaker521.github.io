@@ -16,6 +16,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TravelApplication.Models;
+using TravelApplication.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,7 +27,10 @@ namespace TravelApplication
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
-    {        
+    {
+        public delegate void SetContextHandler(TravelPack pack);
+        public static event SetContextHandler SetDataContext; 
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -41,10 +46,10 @@ namespace TravelApplication
             //Delegate method that listens for Guest Button Push event from the Initial Page. 
             InitialPage.OnGuestButtonPushed += OnGuestButtonPushed;
             SearchPage.OnSearchButtonPushed += OnSearchButtonPushed;
-
+            this.ViewModel = new TravelPack();
         }
 
-
+        public TravelPack ViewModel { get; set;  }
 
         //Opens the search results in the Main Frame upon search button pushed event. 
         private void OnSearchButtonPushed(object sender, string category, RoutedEventArgs e)
@@ -106,8 +111,8 @@ namespace TravelApplication
 
         //Navigates back to the home page when the Main Icon is clicked
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
-        { 
-            MainFrame.Navigate(typeof(InitialPage), e);
+        {
+            MainFrame.Navigate(typeof(InitialPage),e);
         }
         //Navigates to the Travel Packages Page
         private void TravelPackagesBtn_Click(object sender, RoutedEventArgs e)
@@ -119,7 +124,7 @@ namespace TravelApplication
         {
             MainFrame.Navigate(typeof(HotelsPage), e);
         }
-        //Navigates to the Flights Page
+        //Navigates to the Featured Destination Page
         private void FeaturedBtn_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(FeaturedDestPage), e);

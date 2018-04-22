@@ -298,7 +298,6 @@ C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Debug\qu
 C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\App.xbf
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\ViewModels\TravelAppViewModel.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\AboutPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Controls\AllResultsControl.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Controls\AppOptionsControl.xbf
@@ -447,8 +446,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\TravelApplication.csprojResolveAssemblyReference.cache
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\App.g.i.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\App.g.cs
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\ViewModels\TravelAppViewModel.g.i.cs
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\ViewModels\TravelAppViewModel.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.g.i.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AllResultsControl.g.i.cs
@@ -481,7 +478,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchResult.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\App.xaml
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\ViewModels\TravelAppViewModel.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AllResultsControl.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AppOptionsControl.xaml
@@ -499,7 +495,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchResult.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\TravelResourceDictionary.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\App.xbf
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\ViewModels\TravelAppViewModel.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AllResultsControl.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AppOptionsControl.xbf
@@ -602,3 +597,10 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\SQLitePCLRaw.batteries_winsqlite3.dll
+C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\SQLitePCLRaw.core.dll
+C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\SQLitePCLRaw.provider.winsqlite3.dll
+C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\DataAccessLibrary.dll
+C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\DataAccessLibrary.pdb
+C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\DataAccessLibrary.pri

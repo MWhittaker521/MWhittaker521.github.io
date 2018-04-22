@@ -4,6 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TravelApplication"
     xmlns:control="using:TravelApplication.Controls"
+    xmlns:models="using:TravelApplication.ViewModels"
+    xmlns:model ="using:TravelApplication.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -11,7 +13,7 @@
         <!--Reusable Text Style for Page -->
         <Style x:Name="SearchResultTextStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Georgia"/>
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -41,6 +43,9 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
     </Page.Resources>
+    <Page.DataContext>
+        <models:ViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
@@ -51,7 +56,7 @@
             </RelativePanel>
             <Border BorderBrush="MidnightBlue" BorderThickness="2"/>
             <ListView x:Name="ResultsListView" ScrollViewer.IsVerticalRailEnabled="True" ScrollViewer.VerticalScrollMode="Auto" 
-                      Margin="10" >
+                      Margin="10" DataContext="{StaticResource TravelPack}">
                 <ListView.HeaderTemplate>
                     <!-- Data Template for ListView Items-->
                     <DataTemplate x:Name="ResultHeaderDataTemplate">
@@ -65,13 +70,13 @@
                     </DataTemplate>
                 </ListView.HeaderTemplate>
                 <ListView.ItemTemplate>
-                    <DataTemplate x:Name="ResultDataTemplate">
+                    <DataTemplate x:Name="ResultDataTemplate" x:DataType="model:TravelPack">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Name="DestID" Text="{Binding idReader}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestCode" Text="{Binding dcode}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestName" Text="{Binding dest}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestLoc" Text="{Binding locate}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestDescription" Text="{Binding descript}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestID" Text="{x:Bind DESTId}" Style="{StaticResource SearchResultTextStyle}" DataContext="{StaticResource TravelPack}"/>
+                            <TextBlock Name="DestCode" Text="{x:Bind dcode}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestName" Text="{x:Bind dest}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestLoc" Text="{x:Bind locate}" Style="{StaticResource SearchResultTextStyle}"/>
+                            <TextBlock Name="DestDescription" Text="{x:Bind descript}" Style="{StaticResource SearchResultTextStyle}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -589,6 +589,46 @@
           }
         }
       },
+      "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.0",
+          "SQLitePCLRaw.provider.winsqlite3.uwp10": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2604,6 +2644,20 @@
             "rid": "aot"
           }
         }
+      },
+      "DataAccessLibrary/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "1.1.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
@@ -3368,6 +3422,46 @@
         },
         "native": {
           "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.0",
+          "SQLitePCLRaw.provider.winsqlite3.uwp10": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -5168,6 +5262,20 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "DataAccessLibrary/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "1.1.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-arm-aot": {
@@ -5968,6 +6076,46 @@
         },
         "native": {
           "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.0",
+          "SQLitePCLRaw.provider.winsqlite3.uwp10": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -7768,6 +7916,20 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "DataAccessLibrary/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "1.1.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
@@ -8544,6 +8706,46 @@
         },
         "native": {
           "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.0",
+          "SQLitePCLRaw.provider.winsqlite3.uwp10": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -10343,6 +10545,20 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "DataAccessLibrary/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "1.1.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
         }
       }
     },
@@ -11158,6 +11374,46 @@
           "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll": {}
         }
       },
+      "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.0",
+          "SQLitePCLRaw.provider.winsqlite3.uwp10": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -12956,6 +13212,20 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "DataAccessLibrary/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "1.1.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
@@ -13732,6 +14002,46 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.0",
+          "SQLitePCLRaw.provider.winsqlite3.uwp10": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -15532,6 +15842,20 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "DataAccessLibrary/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "1.1.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x86-aot": {
@@ -16344,6 +16668,46 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.0",
+          "SQLitePCLRaw.provider.winsqlite3.uwp10": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -18143,6 +18507,20 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "DataAccessLibrary/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.Data.Sqlite": "1.1.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessLibrary.dll": {}
         }
       }
     }
@@ -23232,6 +23610,50 @@
         "sqlite-version.txt",
         "sqlite.3.13.0.nupkg.sha512",
         "sqlite.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_winsqlite3/1.1.0": {
+      "sha512": "KevnCHbAAs5g9ku3rE1Luahz6wgYz+0BrA7zfzLsQ5ZJ1q3kIkO9V1oAFghNcW8PfP4FaKGNqrw45s6Mmw13Ow==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_winsqlite3/1.1.0",
+      "files": [
+        "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/uap10.0/SQLitePCLRaw.batteries_winsqlite3.dll",
+        "sqlitepclraw.bundle_winsqlite3.1.1.0.nupkg.sha512",
+        "sqlitepclraw.bundle_winsqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/1.1.0": {
+      "sha512": "e5Bm2K2B2v9z8jHm1nyEN1M8pH6GG8emIboMhsqDzuLIf9uWvGPsdNm0WzWeG6oxSmTgSQsLajcuqA1gDAIMJw==",
+      "type": "package",
+      "path": "sqlitepclraw.core/1.1.0",
+      "files": [
+        "lib/MonoAndroid/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/net35/SQLitePCLRaw.core.dll",
+        "lib/net40/SQLitePCLRaw.core.dll",
+        "lib/net45/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.0/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.core.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/uap10.0/SQLitePCLRaw.core.dll",
+        "lib/win8/SQLitePCLRaw.core.dll",
+        "lib/win81/SQLitePCLRaw.core.dll",
+        "lib/wpa81/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.1.1.0.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.winsqlite3.uwp10/1.1.0": {
+      "sha512": "KCbZGRqXUAEYbFnzooEQyqRRJVYfVchkuTHdS1qphEI4PdtuapaZBWAh3tK1hWbT6MuqYjs0TGf8ImC0irfWNQ==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.winsqlite3.uwp10/1.1.0",
+      "files": [
+        "lib/uap10.0/SQLitePCLRaw.provider.winsqlite3.dll",
+        "sqlitepclraw.provider.winsqlite3.uwp10.1.1.0.nupkg.sha512",
+        "sqlitepclraw.provider.winsqlite3.uwp10.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -28376,13 +28798,20 @@
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
+    },
+    "DataAccessLibrary/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessLibrary/DataAccessLibrary.csproj",
+      "msbuildProject": "../DataAccessLibrary/DataAccessLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.10586": [
+      "DataAccessLibrary >= 1.0.0",
       "Microsoft.Data.Sqlite >= 1.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.8",
       "ReadyRoll.MSBuild >= 1.16.18088.9228",
+      "SQLitePCLRaw.bundle_winsqlite3 >= 1.1.0",
       "System.Data.SqlClient >= 4.4.3"
     ]
   },
@@ -28419,7 +28848,11 @@
       },
       "frameworks": {
         "uap10.0.10586": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\melis\\source\\repos\\TravelApplication\\MWhittaker521.github.io\\DataAccessLibrary\\DataAccessLibrary.csproj": {
+              "projectPath": "C:\\Users\\melis\\source\\repos\\TravelApplication\\MWhittaker521.github.io\\DataAccessLibrary\\DataAccessLibrary.csproj"
+            }
+          }
         }
       }
     },
@@ -28437,6 +28870,10 @@
           "ReadyRoll.MSBuild": {
             "target": "Package",
             "version": "[1.16.18088.9228, )"
+          },
+          "SQLitePCLRaw.bundle_winsqlite3": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",

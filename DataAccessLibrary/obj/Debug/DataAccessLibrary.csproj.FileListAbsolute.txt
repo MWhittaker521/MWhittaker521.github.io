@@ -1,7 +1,6 @@
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\bin\Debug\DataAccessLibrary.dll
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\bin\Debug\DataAccessLibrary.pdb
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\bin\Debug\DataAccessLibrary.pri
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\obj\Debug\DataAccessLibrary.csprojResolveAssemblyReference.cache
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\obj\Debug\DataAccessLibrary.csproj.CoreCompileInputs.cache
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\obj\Debug\DataAccessLibrary.dll
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\obj\Debug\DataAccessLibrary.pdb

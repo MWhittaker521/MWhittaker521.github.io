@@ -160,6 +160,18 @@
     <AppxPackagedFile Include="C:\Users\melis\.nuget\packages\sqlite\3.13.0\runtimes\win10-x86\nativeassets\uap10.0\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\.nuget\packages\sqlitepclraw.bundle_winsqlite3\1.1.0\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\.nuget\packages\sqlitepclraw.bundle_winsqlite3\1.1.0\lib\uap10.0\SQLitePCLRaw.batteries_winsqlite3.dll">
+      <PackagePath>SQLitePCLRaw.batteries_winsqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\.nuget\packages\sqlitepclraw.core\1.1.0\lib\uap10.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\.nuget\packages\sqlitepclraw.provider.winsqlite3.uwp10\1.1.0\lib\uap10.0\SQLitePCLRaw.provider.winsqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.winsqlite3.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\melis\.nuget\packages\system.appcontext\4.3.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
     </AppxPackagedFile>
@@ -390,6 +402,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\NuGetPackages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\bin\Debug\DataAccessLibrary.dll">
+      <PackagePath>DataAccessLibrary.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Backgrounds\Notebook2.png">
       <PackagePath>Assets\Backgrounds\Notebook2.png</PackagePath>

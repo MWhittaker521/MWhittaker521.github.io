@@ -21,6 +21,8 @@ using System.Diagnostics;
 using System.Data.SqlClient;
 using Microsoft.Data.Sqlite;
 using System.Threading.Tasks;
+using TravelApplication.Models;
+using TravelApplication.ViewModels; 
 
 namespace TravelApplication
 { 
@@ -37,7 +39,7 @@ namespace TravelApplication
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            DatabaseHelper.InitializeDatabase(); 
+            ViewModel.InitializeDatabase();          
         }
 
         /// <summary>

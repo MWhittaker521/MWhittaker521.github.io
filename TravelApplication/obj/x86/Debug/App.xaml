@@ -2,9 +2,13 @@
     x:Class="TravelApplication.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    RequestedTheme="Light">
+    xmlns:viewmodel="using:TravelApplication"
+    RequestedTheme="Light"
+    xmlns:Custom="using:TravelApplication.ViewModels">
     <Application.Resources >
-       
+        <Custom:ViewModel x:Key="MainDataViewModel"/>
+        <Custom:ViewModel x:Key="TravelPack"/>
+        <Custom:ViewModel x:Key="HealthTravel"/>
     </Application.Resources>
 
 </Application>
