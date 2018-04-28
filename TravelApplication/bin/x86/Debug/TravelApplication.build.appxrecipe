@@ -403,9 +403,6 @@
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\NuGetPackages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\DataAccessLibrary\bin\Debug\DataAccessLibrary.dll">
-      <PackagePath>DataAccessLibrary.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Backgrounds\Notebook2.png">
       <PackagePath>Assets\Backgrounds\Notebook2.png</PackagePath>
     </AppxPackagedFile>
@@ -445,6 +442,9 @@
     <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DesignElements\SideBar.png">
       <PackagePath>Assets\DesignElements\SideBar.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\download.png">
+      <PackagePath>Assets\DestinationImages\download.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\NavButton.png">
       <PackagePath>Assets\NavButton.png</PackagePath>
     </AppxPackagedFile>
@@ -483,6 +483,117 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Backgrounds\Notebook4.jpg">
       <PackagePath>Assets\Backgrounds\Notebook4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\10-red-mountain-resort.jpg">
+      <PackagePath>Assets\DestinationImages\10-red-mountain-resort.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Amazon.jpg">
+      <PackagePath>Assets\DestinationImages\Amazon.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Amsterdam.jpg">
+      <PackagePath>Assets\DestinationImages\Amsterdam.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Bonaire.jpg">
+      <PackagePath>Assets\DestinationImages\Bonaire.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Branson.jpg">
+      <PackagePath>Assets\DestinationImages\Branson.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\CaveDiving.jpg">
+      <PackagePath>Assets\DestinationImages\CaveDiving.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Cozumel.jpg">
+      <PackagePath>Assets\DestinationImages\Cozumel.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\DC.jpg">
+      <PackagePath>Assets\DestinationImages\DC.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Disney.jpg">
+      <PackagePath>Assets\DestinationImages\Disney.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\DisneyLand.jpg">
+      <PackagePath>Assets\DestinationImages\DisneyLand.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\GlacierBay.jpg">
+      <PackagePath>Assets\DestinationImages\GlacierBay.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\GlacierWalking.jpg">
+      <PackagePath>Assets\DestinationImages\GlacierWalking.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\GrandCanyon.jpg">
+      <PackagePath>Assets\DestinationImages\GrandCanyon.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Heli.jpg">
+      <PackagePath>Assets\DestinationImages\Heli.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\HiltonHead.jpg">
+      <PackagePath>Assets\DestinationImages\HiltonHead.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\LakeAustin.jpg">
+      <PackagePath>Assets\DestinationImages\LakeAustin.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\LakeBaikal.jpg">
+      <PackagePath>Assets\DestinationImages\LakeBaikal.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Laos.jpg">
+      <PackagePath>Assets\DestinationImages\Laos.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Maui.jpg">
+      <PackagePath>Assets\DestinationImages\Maui.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\MongolDerby.jpg">
+      <PackagePath>Assets\DestinationImages\MongolDerby.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\MountFuji.jpg">
+      <PackagePath>Assets\DestinationImages\MountFuji.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\MysteryIsland.jpg">
+      <PackagePath>Assets\DestinationImages\MysteryIsland.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\no-image.jpg">
+      <PackagePath>Assets\DestinationImages\no-image.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\ojai620.jpg">
+      <PackagePath>Assets\DestinationImages\ojai620.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Philipines.jpg">
+      <PackagePath>Assets\DestinationImages\Philipines.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\pritikin-longevity-center.jpg">
+      <PackagePath>Assets\DestinationImages\pritikin-longevity-center.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\RanchMalibu.jpg">
+      <PackagePath>Assets\DestinationImages\RanchMalibu.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Regent7seas.jpg">
+      <PackagePath>Assets\DestinationImages\Regent7seas.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Rhino.jpg">
+      <PackagePath>Assets\DestinationImages\Rhino.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\SanDiego.jpg">
+      <PackagePath>Assets\DestinationImages\SanDiego.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\SriLanka.jpg">
+      <PackagePath>Assets\DestinationImages\SriLanka.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\StMaarten.jpg">
+      <PackagePath>Assets\DestinationImages\StMaarten.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\StPetersburg.jpg">
+      <PackagePath>Assets\DestinationImages\StPetersburg.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Sydney.jpg">
+      <PackagePath>Assets\DestinationImages\Sydney.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Venice2.jpg">
+      <PackagePath>Assets\DestinationImages\Venice2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\WhaleSharks.jpg">
+      <PackagePath>Assets\DestinationImages\WhaleSharks.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\DestinationImages\Yellowstone.jpg">
+      <PackagePath>Assets\DestinationImages\Yellowstone.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\Assets\Pictures\Lane.jpg">
       <PackagePath>Assets\Pictures\Lane.jpg</PackagePath>

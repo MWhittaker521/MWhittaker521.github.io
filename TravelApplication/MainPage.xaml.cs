@@ -27,10 +27,7 @@ namespace TravelApplication
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
-    {
-        public delegate void SetContextHandler(TravelPack pack);
-        public static event SetContextHandler SetDataContext; 
-        
+    {         
         public MainPage()
         {
             this.InitializeComponent();
@@ -45,17 +42,46 @@ namespace TravelApplication
             InitialPage.OnSignUpButtonPushed += OnSignUpButtonPushed;
             //Delegate method that listens for Guest Button Push event from the Initial Page. 
             InitialPage.OnGuestButtonPushed += OnGuestButtonPushed;
-            SearchPage.OnSearchButtonPushed += OnSearchButtonPushed;
+            SearchPage.OnSearchNavigation += OnSearchNavigation; 
             this.ViewModel = new TravelPack();
         }
 
-        public TravelPack ViewModel { get; set;  }
-
         //Opens the search results in the Main Frame upon search button pushed event. 
-        private void OnSearchButtonPushed(object sender, string category, RoutedEventArgs e)
+        private void OnSearchNavigation(object sender, int category, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(SearchResult), e); 
+            if(category == 6)
+            {
+                MainFrame.Navigate(typeof(SearchResult), e);
+            }
+            else if (category == 1)
+            {
+                MainFrame.Navigate(typeof(HealthWellnessResultsPage), e); 
+            }
+            else if(category == 2)
+            {
+                MainFrame.Navigate(typeof(FamilyResultsPage), e);
+            }
+            else if (category == 3)
+            {
+                MainFrame.Navigate(typeof(AdventureResultsPage), e);
+            }
+            else if (category == 4)
+            {
+                MainFrame.Navigate(typeof(CruiseResultsPage), e);
+            }
+            else if (category == 5)
+            {
+                MainFrame.Navigate(typeof(WeddingResultsPage), e);
+            }
+            else
+            {
+                MainFrame.Navigate(typeof(SearchResult), e);
+            }
+
         }
+
+        public TravelPack ViewModel { get; set;  }    
+     
         //Opens the Generic search in the Main Frame upon guest button pushed event. 
         private void OnGuestButtonPushed(object sender, RoutedEventArgs e)
         {

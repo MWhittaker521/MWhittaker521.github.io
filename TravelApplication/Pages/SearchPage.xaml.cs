@@ -18,29 +18,20 @@ using TravelApplication.ViewModels;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TravelApplication.Pages
-
-{
-    /// <summary>
+{    /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class SearchPage : Page
     {
-        private string destCategory;
         //Event Handler to let the main page know of the search button click 
-        public delegate void SearchEventHandler(object sender, string category, RoutedEventArgs e);
+        public delegate void SearchNavigationHandler(object sender, int category, RoutedEventArgs e);
         //Delegate method which the receiving page must listen for
-        public static SearchEventHandler OnSearchButtonPushed;
+        public static event SearchNavigationHandler OnSearchNavigation;
+        public int category = 0; 
 
-        public string queryString;
         public SearchPage()
         {
             this.InitializeComponent();
-            MainPage.SetDataContext += SetDataContext; 
-        }
-        
-        public void SetDataContext(TravelPack pack)
-        {
-            this.DataContext = pack; 
         }
        
         /// <summary>
@@ -50,7 +41,7 @@ namespace TravelApplication.Pages
         /// <param name="e"></param>
         private void HealthWellness_Click(object sender, RoutedEventArgs e)
         {
-            destCategory = "healthwell"; 
+            category = 1;
         }
         /// <summary>
         /// Changes the destination category when the Family Radio Button is selected. 
@@ -59,7 +50,7 @@ namespace TravelApplication.Pages
         /// <param name="e"></param>
         private void Family_Click(object sender, RoutedEventArgs e)
         {
-            destCategory = "fam";
+            category = 2; 
         }
         /// <summary>
         /// Changes the destination category when the Adventure Radio Button is selected. 
@@ -68,7 +59,7 @@ namespace TravelApplication.Pages
         /// <param name="e"></param>
         private void Adventure_Click(object sender, RoutedEventArgs e)
         {
-            destCategory = "adv";
+            category = 3; 
         }
         /// <summary>
         /// Changes the destination category when the Cruise Radio Button is selected. 
@@ -77,7 +68,7 @@ namespace TravelApplication.Pages
         /// <param name="e"></param>
         private void Cruise_Click(object sender, RoutedEventArgs e)
         {
-            destCategory = "cruise";
+            category = 4; 
         }
         /// <summary>
         /// Changes the destination category when the Destination Wedding Radio Button is selected. 
@@ -86,8 +77,20 @@ namespace TravelApplication.Pages
         /// <param name="e"></param>
         private void DestinationWedding_Click(object sender, RoutedEventArgs e)
         {
-            destCategory = "wedding";
+            category = 5; 
         }
+
+        /// <summary>
+        /// Changes the destination category when the All Travel Packages Radio Button is selected. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AllTravelPackages_Click(object sender, RoutedEventArgs e)
+        {
+
+            category = 6; 
+        }
+
         /// <summary>
         /// Search button click event
         /// </summary>
@@ -95,9 +98,16 @@ namespace TravelApplication.Pages
         /// <param name="e"></param>
         private void StartSearchBtn_Click(object sender, RoutedEventArgs e)
         {
+            Page page = this.DataContext as Page;
+            RoutedEventArgs newEventArgs = new RoutedEventArgs();
             //Delegates the rest of the method to the pages listening for the event. 
-            OnSearchButtonPushed(sender, destCategory, e); 
+            OnSearchNavigation(page, category, newEventArgs);
+            ResetPage();
         }
 
+        private void ResetPage()
+        {
+            category = 0; 
+        }
     }
 }

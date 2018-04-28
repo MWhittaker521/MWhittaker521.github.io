@@ -17,18 +17,16 @@
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="Margin" Value="3,0,0,5"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         <!--Reusable Text Style for Sub Headers on Page -->
         <Style x:Name="SearchResultSubHeaderStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Georgia"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="Margin" Value="3,0,0,5"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
@@ -42,7 +40,9 @@
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+
     </Page.Resources>
+    
     <Page.DataContext>
         <models:ViewModel/>
     </Page.DataContext>
@@ -55,32 +55,7 @@
                            RelativePanel.AlignVerticalCenterWithPanel="True"/>
             </RelativePanel>
             <Border BorderBrush="MidnightBlue" BorderThickness="2"/>
-            <ListView x:Name="ResultsListView" ScrollViewer.IsVerticalRailEnabled="True" ScrollViewer.VerticalScrollMode="Auto" 
-                      Margin="10" DataContext="{StaticResource TravelPack}">
-                <ListView.HeaderTemplate>
-                    <!-- Data Template for ListView Items-->
-                    <DataTemplate x:Name="ResultHeaderDataTemplate">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="ID" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Code" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Name" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Location" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Description" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}" Width="300"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.HeaderTemplate>
-                <ListView.ItemTemplate>
-                    <DataTemplate x:Name="ResultDataTemplate" x:DataType="model:TravelPack">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Name="DestID" Text="{x:Bind DESTId}" Style="{StaticResource SearchResultTextStyle}" DataContext="{StaticResource TravelPack}"/>
-                            <TextBlock Name="DestCode" Text="{x:Bind dcode}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestName" Text="{x:Bind dest}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestLoc" Text="{x:Bind locate}" Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock Name="DestDescription" Text="{x:Bind descript}" Style="{StaticResource SearchResultTextStyle}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <control:AllResultsControl  x:Name="AllResultsCntrl"/>
         </StackPanel>
     </Grid>
 </Page>

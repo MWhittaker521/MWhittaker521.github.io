@@ -4,12 +4,11 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccessLibrary;
 using TravelApplication.ViewModels;
 
 namespace TravelApplication.Models
 {
-    public class TravelPack : INotifyPropertyChanged
+    public class TravelPack : INotifyPropertyChanged, IComparable
     {
         public string dcode { get; set; }
         public string dest { get; set; }
@@ -33,7 +32,8 @@ namespace TravelApplication.Models
         public int priceLow { get; set; }
         public int priceHigh { get; set; }
         public int DESTId { get; set; }
-        public string refLink { get; set; }
+        public string refLink { get; set; }       
+        public string imageSource { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
@@ -51,6 +51,7 @@ namespace TravelApplication.Models
                 throw new ArgumentException("Object is not a Travel Package");
             }
             return this.priceLow.CompareTo(package.priceLow);
+
         }
     }
 }

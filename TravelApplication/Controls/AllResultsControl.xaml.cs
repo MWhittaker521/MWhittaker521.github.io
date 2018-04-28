@@ -12,18 +12,20 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using TravelApplication.Controls; 
+using TravelApplication.Controls;
+using TravelApplication.Models;
+using TravelApplication.ViewModels;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace TravelApplication
+namespace TravelApplication.Controls
 {
     public sealed partial class AllResultsControl : UserControl
     {
         public AllResultsControl()
         {
-            
-           
+            this.InitializeComponent();
+            ResultsListView.ItemsSource = ViewModel.GetData();                       
         }
     }
 }

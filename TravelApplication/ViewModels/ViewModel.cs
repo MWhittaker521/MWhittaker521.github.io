@@ -12,6 +12,7 @@ namespace TravelApplication.ViewModels
 {
     public class ViewModel
     {
+
         public static void InitializeDatabase()
         {
             using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
@@ -19,7 +20,7 @@ namespace TravelApplication.ViewModels
                 db.Open();
 
                 String tableCommand = "CREATE TABLE IF NOT " +
-                    "EXISTS PackageTable (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "EXISTS TravelTable (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "Code TEXT NULL, " +
                     "Destination TEXT NULL, " +
                     "Location TEXT NULL, " +
@@ -42,7 +43,8 @@ namespace TravelApplication.ViewModels
                     "LowPrice INT NULL, " +
                     "HighPrice INT NULL, " +
                     "DestId INT NULL, " +
-                    "Link TEXT NULL)";
+                    "Link TEXT NULL, " +
+                    "Image TEXT NULL)";
 
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
 
@@ -53,25 +55,25 @@ namespace TravelApplication.ViewModels
                 AddData("PLCS", "Pritikin Longevity Center + Spa", "Miami, FL", "More than 100, 000 guests worldwide have visited the Pritikin Longevity Center and Spa in Miami, both to prevent and reverse problems such as excess weight, heart disease, diabetes, high blood pressure, high cholesterol and cancer risk factors." +
                     " Certified physicians provide each guest with the expert medical attention required for achieving major life changes, while faculty --leaders in the fields of medicine, nutrition, psychology and exercise – lead eye-opening classes focused on " +
                     "subjects including dining out, reading labels and calorie density.", 6, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 69,
-                    499, 1, "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/");
+                    499, 1, "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/", "ms-appx:///Assets/DestinationImages/pritikin-longevity-center.jpg");
                 //Add The Oaks Ojai
                 AddData("OAO", "The Oaks at Ojai", "Ojai, CA", "Beautiful Ojai, California sets the stage for wellness for guests of " +
                     "The Oaks at Ojai. Casual and welcoming, stays at this all-inclusive wellness retreat include accommodation, 15 " +
                     "optional daily fitness activities (think yoga, hiking, pilates, boot camp or belly dancing), three daily meals, " +
                     "evening programs and access to the resort's fitness equipment, pool, sauna and hot tubs.", 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0,
-                    0, 399, 2999, 2, "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/");
+                    0, 399, 2999, 2, "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/", "ms-appx:///Assets/DestinationImages/ojai620.jpg");
                 //Add The Ranch Malibu
                 AddData("TRM", "The Ranch Malibu", "Malibu, CA", "The Ranch Malibu, an intensive one-week luxury boot camp, eliminates " +
                     "decision fatigue with a no-option daily fitness routine featuring group hiking, yoga, weight training and ab work," +
                     " all amid spectacular hills above the Pacific Ocean. Healthy meals prepared with fresh, organic ingredients " +
                     "exclude processed sugars, alcohol and caffeine.", 5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 259, 799, 3,
-                    "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/");
+                    "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/", "ms-appx:///Assets/DestinationImages/RanchMalibu.jpg");
                 //Add Red Mountain Resort 
                 AddData("RMR", "Red Mountain Resort", "Ivins, Utah", "Fitting for its Utah location, Red Mountain Resort specializes in what it calls " +
                     "Adventure Vacations. Surrounded by red rock cliffs and canyons, guests enjoy three healthy meals per day, as well as guided " +
                     "activities, like hiking, yoga and fitness classes. Part- and full-day excursions equip guests to actively explore the nearby " +
                     "national parks.", 4, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 299, 999, 4,
-                    "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/");
+                    "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/", "ms-appx:///Assets/DestinationImages/10-red-mountain-resort.jpg");
                 //Add Lake Austin
                 AddData("LASR", "Lake Austin Spa Resort", "Austin, TX", "Lake Austin Spa Resort is an award-winning destination spa " +
                     "tucked away in the beautiful Texas Hill Country, offering more than 100 treatments alongside luxurious " +
@@ -79,13 +81,13 @@ namespace TravelApplication.ViewModels
                     "thoughtfully-appointed guest rooms have been completely updated, and dogs are allowed in the cottages. " +
                     "Rates include three gourmet meals daily and a variety of fitness activities and daily events, from yoga and " +
                     "paddle boarding to culinary classes and life skills workshops.", 3, 0, 0, 0, 28, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0,
-                    359, 1299, 5, "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/");
+                    359, 1299, 5, "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/", "ms-appx:///Assets/DestinationImages/LakeAustin.jpg");
                 //Add Hilton Head
                 AddData("HHH", "Hilton Head Health", "Hilton Head Island, SC", "Eat right. Move more. Less Stress. Those are the pillars supporting the wellness," +
                     " weight loss and longevity programs at Hilton Head Health on South Carolina's beautiful Hilton Head Island." +
                     " True Restaurant serves Mediterranean-style menus during all programs, and visitors can unwind between activities" +
                     " at the Indigo Spa.Hilton Head Island, SC", 2, 0, 0, 0, 29, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 379, 1399, 6,
-                    "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/");
+                    "http://www.10best.com/awards/travel/best-health-wellness-resort-2016/", "ms-appx:///Assets/DestinationImages/HiltonHead.jpg");
 
                 //Add Initial Family Packages
                 //Add Orlando-Walt Disney World
@@ -93,52 +95,52 @@ namespace TravelApplication.ViewModels
                     " World of Harry Potter lures Muggles in droves, but the epic Walt Disney World resort still treats kids of " +
                     "all ages to a range of rides and attractions. Parents may find Orlando exhausting, but a Disney trip is a rite" +
                     " of passage for kids. ", 0, 1, 0, 0, 4, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 199, 1450, 7,
-                    "https://travel.usnews.com/rankings/best-family-vacations/");
+                    "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/Disney.jpg");
                 //Add DisneyLand
                 AddData("ADC", "Anaheim Disneyland", "Malibu, CA", "This area of Southern California isn't home to as many amusement " +
                     "parks as its Florida counterpart, but the original Disney resort is still fun for the whole family. Plus," +
                     " after a day at the theme park it's just a short drive to the beach. If you plan to travel in the summer, " +
                     "make sure to book your hotel early to secure the best rates.", 0, 2, 0, 0, 5, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 150, 950, 8,
-                     "https://travel.usnews.com/rankings/best-family-vacations/");
+                     "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/DisneyLand.jpg");
                 //Add Branson
                 AddData("BMS", "Branson", "Branson, MS", "Families travel to this charming Missouri city for its affordability and " +
                     "quirky, themed attractions. Families can transport themselves back to the 19th century at the Silver Dollar " +
                     "City amusement park or tour a life-size replica of the Titanic before cooling off with a dip in Table Rock Lake.",
                     0, 9, 0, 0, 15, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 70, 599, 9,
-                    "https://travel.usnews.com/rankings/best-family-vacations/");
+                    "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/Branson.jpg");
                 //Add Sydney Australia
                 AddData("SAUS", "Sydney", "Sydney, AUS", "While the city's most popular sights may not appeal to the entire family, " +
                     "its kid-friendly attractions will. Darling Harbour alone boasts the Sydney Aquarium and the Australian" +
                     " National Maritime Museum. When temperatures rise, hit Coogee and Bondi beaches. Travel during the shoulder" +
                     " seasons (fall and spring) to avoid the summer crowds. ", 0, 5, 0, 0, 6, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 325, 2500,
-                    10, "https://travel.usnews.com/rankings/best-family-vacations/");
+                    10, "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/Sydney.jpg");
                 //Add SanDiego
                 AddData("SDC", "SanDiego", "SanDiego, CA", "Year-round pleasant temperatures and miles of beaches are just part of the reason" +
                     " families love to vacation in San Diego. The city offers an abundance of outdoor activities and attractions like " +
                     "SeaWorld and the San Diego Zoo, so both kids and adults will be entertained.", 0, 3, 0, 0, 16, 0, 1, 0, 0, 1, 0, 1,
-                    0, 0, 1, 125, 899, 11, "https://travel.usnews.com/rankings/best-family-vacations/");
+                    0, 0, 1, 125, 899, 11, "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/SanDiego.jpg");
                 //Add Grand Canyon
                 AddData("GCA", "Grand Canyon", "Grand Canyon, AZ", "The beauty of the Grand Canyon should not be understated, and " +
                     "neither should the many ways to enjoy it. Whether you and the kids raft down the Colorado River or camp near " +
                     "Havasu Falls, your family will never forget the adventures and memories made here", 0, 4, 12, 0, 17, 0, 0, 1, 1,
-                    0, 0, 1, 1, 0, 1, 89, 650, 12, "https://travel.usnews.com/rankings/best-family-vacations/");
+                    0, 0, 1, 1, 0, 1, 89, 650, 12, "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/GrandCanyon.jpg");
                 //Add Yellowstone
                 AddData("YNPW", "Yellowstone National Park", "Yellowstone, WY", "There's no replacement for family bonding in a tent " +
                     "or under the stars. When you're not roasting marshmallows around the fire, your family can spend time at famous " +
                     "sights like the Grand Prismatic Spring and Old Faithful.", 0, 6, 13, 0, 18, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 59, 600,
-                    13, "https://travel.usnews.com/rankings/best-family-vacations/");
+                    13, "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/Yellowstone.jpg");
                 //Add Washington D.C.
                 AddData("WDC", "Washington, D.C.", "Washington, D.C. ", "Families looking to add an educational bent to their vacation" +
                     " should seek out Washington, D.C., for its countless ties to U.S. history. Kids and adults can both enjoy a visit" +
                     " to the Lincoln Memorial or an afternoon spent at the National Zoo. Plus, most major attractions are free to " +
                     "explore and there are a wealth of hotels to choose from.", 0, 7, 0, 0, 19, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 100, 752,
-                    14, "https://travel.usnews.com/rankings/best-family-vacations/");
+                    14, "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/DC.jpg");
                 //Add Maui
                 AddData("MHI", "Maui", "Maui, HI", "This Hawaiian island offers a little something for each member of the family." +
                     " Nature enthusiasts can snap photos of the beautiful landscape along the road to Hana, sports lovers can spend " +
                     "the day on the golf course and culture hounds can participate in a traditional luau. You won't regret splurging " +
                     "on a stay in an oceanfront hotel suite.", 0, 8, 0, 0, 3, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 320, 2520,
-                    15, "https://travel.usnews.com/rankings/best-family-vacations/");
+                    15, "https://travel.usnews.com/rankings/best-family-vacations/", "ms-appx:///Assets/DestinationImages/Maui.jpg");
 
                 //Add Initial Adventure Packages to Table
                 //Add Philipines
@@ -147,21 +149,21 @@ namespace TravelApplication.ViewModels
                     "skippered paraw trimaran around uninhabited islands near Borocay in the Philippines. Intrepid travelers are given " +
                     "daily challenges to complete, with the aim of learning seagoing skills and meeting local people. This jaunt is the " +
                     "ultimate sailing trip for non-sailors.", 0, 0, 1, 0, 20, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 500, 3500,
-                    16, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    16, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.htmlg", "ms-appx:///Assets/DestinationImages/Philipines.jpg");
                 //Add Mongolia
                 AddData("MDHR", "Mongol Derby -- the toughest horse race in the world", "Mongolia", "A 1,000-kilometer course through " +
                     "some of the most remote country in the world, the Mongol Derby offers a challenge for those who have plenty of " +
                     "vacation and a serious dose of gumption to boot. Recreating Genghis Khan's horse messenger system, experienced " +
                     "riders will travel up to 160 kilometers a day, herding horses between 25 traditional morin urtuus (horse stations)." +
                     " A huge support team of medics and veterinarians is on hand throughout.", 0, 0, 5, 0, 21, 0, 0, 0, 1, 0, 0, 0, 1, 0,
-                    1, 550, 3850, 17, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    1, 550, 3850, 17, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/MongolDerby.jpg");
                 //Add Shark Swimming
                 AddData("SWSM", "Swimming with whale sharks in the Maldives", "Maldive's South Ari Atoll", "Whale sharks are abundant" +
                     " just off the Maldives' South Ari Atoll. Local experts lead expeditions from the Mirihi Island Resort on a 55-foot" +
                     " wooden yacht, with the opportunity to strap on a mask and snorkel and swim alongside the largest fish in the " +
                     "world. These gentle giants are often surrounded by other fish and sea creatures looking for protection from " +
                     "predators, making entering the water with them a truly stunning spectacle.", 0, 0, 8, 0, 22, 0, 0, 0, 0, 0, 0, 0,
-                    1, 0, 1, 450, 3150, 18, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    1, 0, 1, 450, 3150, 18, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/WhaleSharks.jpg");
                 //Add Cycling Mount Fuji
                 AddData("CMFK", "Cycling from Mount Fuji to Kyoto", "Mount Fuji, Japan", "Rather than zipping straight to Kyoto from Tokyo " +
                     "in a matter of hours on the shinkansen high-speed train, intrepid travelers can saddle up and take the slow road" +
@@ -169,20 +171,20 @@ namespace TravelApplication.ViewModels
                     "Five Lakes, with Japan's most iconic mountain as a backdrop.The route also takes in traditional villages near" +
                     " Lake Biwa, before ending in the ancient capital of Kyoto, with its abundance of peaceful temples and traditional" +
                     " ryokan, or inns.", 0, 0, 9, 0, 23, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 600, 4200,
-                    19, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    19, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/MountFuji.jpg");
                 //Add Piranha Fishing in Amazon
                 AddData("KPFA", "Kayaking and piranha fishing in the distant Amazon", "Columbia, Peru, & Brazil", "Traveling in a dugout canoe through" +
                     " some of the most remote parts of the Amazon in Colombia, Peru and Brazil, this trip is not for the faint of" +
                     " heart. Bedding down in the middle of the jungle, there's the opportunity to fish for piranhas, meet indigenous " +
                     "tribes and trek through the forest at night, when the wildlife is at its most vociferous.", 0, 0, 6, 0, 0, 0, 0, 1,
-                    1, 0, 0, 0, 1, 0, 0, 1000, 6000, 20, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    1, 0, 0, 0, 1, 0, 0, 1000, 6000, 20, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/Amazon.jpg");
                 //Add Sri Lanka
                 AddData("TTCSL", "A 1,000km tuk-tuk challenge across Sri Lanka", "Sri Lanka", "On this 10-day trip teams of travelers " +
                     "are challenged to find local hotspots and glean information from locals, all in the name of friendly competition. " +
                     "Covering a massive 1,000 kilometers in notoriously unreliable tuk-tuks makes things more interesting.Support teams " +
                     "are on hand throughout, while there's a chance of encountering local wildlife, including elephants. A portion of " +
                     "the trip's cost is donated to local charities.", 0, 0, 11, 0, 24, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 999, 5999,
-                    21, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    21, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/SriLanka.jpg");
                 //Add Ice Run
                 AddData("IRMB", "The Ice Run: Motor biking across frozen Lake Baikal", "Lake Baikal, Russia", "With a Russian motorbike" +
                     " and sidecar for transport, the Ice Run is a dream trip for adventure fiends. Starting and finishing in Irkutsk," +
@@ -190,27 +192,27 @@ namespace TravelApplication.ViewModels
                     " to the icy expanse of Lake Baikal, the deepest lake in the world. 4x4 support vehicles are on hand, as is GPS to " +
                     "help find essential stops for food and fuel. There are classes on ice riding and motorcycle maintenance before " +
                     "the trip sets out.", 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1599, 7999,
-                    22, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    22, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/LakeBaikal.jpg");
                 //Add Glacier Walking
                 AddData("GWN", "Glacier walking in Norway", "Norway", "Adventure company Flash Pack's singles trips put together " +
                     "like-minded individuals on exciting jaunts, with the chance to meet fellow travelers before hitting the road." +
                     "Its Norway adventure requires some stamina, with guests strapping on crampons and wielding ice axes for a hike " +
                     "across the vast Haugabreen glacier. Nerves settled, there's then the chance to go sea kayaking among towering " +
                     "fjords and hike through the spectacular Jostedalsbreen National Park.", 0, 0, 10, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1,
-                    0, 0, 899, 4500, 23, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    0, 0, 899, 4500, 23, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/GlacierWalking.jpg");
                 //Add Cave Diving
                 AddData("CDT", "Cave diving in Tuscany", "Tuscany, Italy", "A luxury Tuscan villa might not seem the most obvious place" +
                     " for adrenaline junkies to find their fix. But then Grotta Giusti isn't your average luxury Tuscan villa. " +
                     "Beneath its stunning rooms is an underground thermal hot spring lake, where guests can try cave diving. After " +
                     "clambering down a cleft in the rock, instructors lead adventurers through crystal-clear water, past stalagmites " +
                     "and stalactites via a network of labyrinthine tunnels to a series of large caves.", 0, 0, 3, 0, 25, 0, 0, 1, 0, 0,
-                    0, 0, 1, 0, 1, 1999, 9599, 24, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    0, 0, 1, 0, 1, 1999, 9599, 24, "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/CaveDiving.jpg");
                 //Add Rhino Trekking
                 AddData("RTN", "Rhino trekking in Namibia ", "Namibia, Africa", "Setting off before sunrise in 4x4s from Namibia's " +
                     "remote Desert Rhino Camp, this trek takes searching for endangered rhinos to another level. With experts from " +
                     "Save The Rhinos, travelers can join trackers on foot to get up close to these majestic creatures once they've " +
                     "been located.", 0, 0, 4, 0, 26, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2500, 9000, 25,
-                    "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/Rhino.jpg");
                 //Add Heli-Exploring
                 AddData("HECR", "Heli-exploring the Canadian Rockies ", "Canada", "A week-long adventure in the Canadian Rockies is " +
                     "likely to be many outdoor types' idea of a dream vacation. Throw in a private helicopter to allow access to some " +
@@ -218,7 +220,7 @@ namespace TravelApplication.ViewModels
                     " spent acclimatizing in Banff National Park, the chopper takes travelers into the high country of the Purcell " +
                     "Mountains for a 72-hour adventure, with experts leading hikes across snow fields and valleys.", 0, 0, 2, 0, 27, 0,
                     0, 1, 1, 0, 0, 0, 1, 0, 1, 2550, 9500, 26,
-                    "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html");
+                    "https://www.cnn.com/travel/article/best-adventure-vacations-2018/index.html", "ms-appx:///Assets/DestinationImages/Heli.jpg");
 
                 //Add Initial Cruise Packages
                 //Add Regent Seven Seas
@@ -232,7 +234,7 @@ namespace TravelApplication.ViewModels
                     " be a butler in your penthouse suite or exclusive premium bath amenities designed by the L'Occitane line. The" +
                     " 750-passenger Seven Seas Explorer has over-the-top suites and the highest staff-to-passenger ratios in the " +
                     "industry. Wherever in the world you choose to sail, you will be truly pampered. ", 0, 0, 0, 6, 7, 1, 0, 0, 0, 1,
-                    0, 0, 0, 1, 1, 2000, 5025, 27, "https://www.rssc.com/");
+                    0, 0, 0, 1, 1, 2000, 5025, 27, "https://www.rssc.com/", "ms-appx:///Assets/DestinationImages/Regent7seas.jpg");
                 //Add  Laos Cruise
                 AddData("LCMC", "Laos Cruise - Avalon Waterways", "Laos Mekong, Cambodia/Thailand", "This relatively small country is the next" +
                     " big thing in Asia river cruising. Touching Vietnam, Cambodia, Thailand, Myanmar (Burma) and the southern tip of " +
@@ -242,7 +244,7 @@ namespace TravelApplication.ViewModels
                     "Pandaw River Cruises offers itineraries in Laos and on the Upper Mekong, with 10-night sailings upstream or" +
                     " downstream. The line will add Sabei Pandaw, its third ship in the region, in November 2018. Avalon Waterways " +
                     "also offers Cambodia/Vietnam cruises that end in Luang Prabang.", 0, 0, 0, 1, 8, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1,
-                    4530, 9030, 28, "https://www.pandaw.com/expeditions/laos-mekong/");
+                    4530, 9030, 28, "https://www.pandaw.com/expeditions/laos-mekong/", "ms-appx:///Assets/DestinationImages/Laos.jpg");
                 //Add  Glacier Bay
                 AddData("GBAC", "Glacier Bay - Carnival Cruise Lines", "Glacier Bay, Alaska", "A destination eons in the making, " +
                     "Glacier Bay’s pristine landscape makes it one of the top spots on an Alaska traveler’s must-see list. Your Glacier" +
@@ -251,7 +253,7 @@ namespace TravelApplication.ViewModels
                     "best way to get right in the middle of it! Your experience begins with complimentary maps to help get the most " +
                     "out of the day’s sightseeing. Then we invite local park rangers to board the ship, narrate your journey and point" +
                     " out the best sights along the way, throughout the day.", 0, 0, 0, 7, 9, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1510, 6410,
-                    29, "https://www.carnival.com/cruise-to/alaska-cruises/glacier-bay-cruises.aspx");
+                    29, "https://www.carnival.com/cruise-to/alaska-cruises/glacier-bay-cruises.aspx", "ms-appx:///Assets/DestinationImages/GlacierBay.jpg");
                 //Add  Mystery Island
                 AddData("MIVC", "Mystery Island - Princess Cruises", "Mystery Island, Vanuatu", "This tiny, uninhabited inlet," +
                     " originally named Inyeug, is located at the southernmost end of the Vanuatu archipelago approximately half a " +
@@ -261,14 +263,14 @@ namespace TravelApplication.ViewModels
                     " waters, Mystery Island still holds the allure of a secret oasis. For the adventurous, aquatic activities," +
                     " snorkeling, kayaking ,stand-up paddleboards, and a glass bottom boat offer various way to enjoy the surrounding" +
                     " coral reef.", 0, 0, 0, 8, 11, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1,
-                    1045, 7065, 30, "https://www.princess.com/excursion/exlistfordestination.do?portid=MY2&exType=S&t=I");
+                    1045, 7065, 30, "https://www.princess.com/excursion/exlistfordestination.do?portid=MY2&exType=S&t=I", "ms-appx:///Assets/DestinationImages/MysteryIsland.jpg");
                 //Add  St. Petersburg Cruise
                 AddData("SPRC", "St. Petersburg - Norwegian Cruise Line", "St. Petersburg, Russia", "Founded by the Russian Tsar," +
                     " Peter the Great, St. Petersburg has for centuries been the cultural center of Russia, with its spectacular " +
                     "architecture, Tchaikovsky operas and the famous Kirov ballet. It has undergone many changes over the decades," +
                     " but “The Venice of the North” remains a dazzling cruise destination, a Russian city with a European flair, a " +
                     "city with more than 200 museums, and one of the largest English gardens in Europe.", 0, 0, 0, 2, 10, 1, 0, 1, 0, 1,
-                    0, 0, 0, 1, 1, 1675, 8540, 31, "https://www.ncl.com/port-of-call/cruises-to-st-petersburg");
+                    0, 0, 0, 1, 1, 1675, 8540, 31, "https://www.ncl.com/port-of-call/cruises-to-st-petersburg", "ms-appx:///Assets/DestinationImages/StPetersburg.jpg");
                 //Add  St. Maarten Cruise
                 AddData("SMNC", "St. Maarten - Carnival Cruise", "St. Maarten, NA", "Explore two colorful nations on one exotic island " +
                     "on one vacation. Split down the middle centuries ago by two European powers, this 37-mile isle offers cosmopolitan" +
@@ -277,14 +279,14 @@ namespace TravelApplication.ViewModels
                     "silky crescents of sand framed by green undulating hills. Enjoy the laidback vibe of the beach or put on your " +
                     "hiking shoes and explore ruins of historic forts. One thing’s for sure, when you cruise to St. Maarten you will" +
                     " come home with amazing memories that will last a lifetime.", 0, 9, 0, 10, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1,
-                    895, 5365, 32, "https://www.carnival.com/cruise-to/caribbean-cruises/st-maarten-cruises.aspx");
+                    895, 5365, 32, "https://www.carnival.com/cruise-to/caribbean-cruises/st-maarten-cruises.aspx", "ms-appx:///Assets/DestinationImages/StMaarten.jpg");
                 //Add Bonaire
                 AddData("BKC", "Bonaire - Royal Carribean Cruise", "Bonaire, Kralenduk", "You'll definitely want to see Sorobon Beach, " +
                     "on the east side of Bonaire located within a large protected bay. Enjoy sunbathing or windsurfing, which has " +
                     "become quite popular in Sorobon Beach thanks to the warm shallow water, steady trade winds and abundance of " +
                     "sunshine. Sorobon Beach has hosted both local and international windsurfing competitions. Also a must-see are " +
                     "Bonaire's famous pink flamingos which, in mating season, number in the 15,000s.", 0, 0, 0, 9, 12, 1, 0, 0, 0, 1,
-                    0, 0, 0, 1, 1, 1075, 8310, 33, "http://www.royalcaribbean.com/findacruise/ports/group/home.do?portCode=BON");
+                    0, 0, 0, 1, 1, 1075, 8310, 33, "http://www.royalcaribbean.com/findacruise/ports/group/home.do?portCode=BON", "ms-appx:///Assets/DestinationImages/Bonaire.jpg");
                 //Add Cozumel Mexico Cruise
                 AddData("CMC", "Cozumel - Princess Cruises ", "Cozumel, Mexico", "Mayan myth claims that Cozumel was home to the gods." +
                     " Truly Cozumel is a place fit for the gods, with its dazzling white-sand beaches, ruined Mayan temples, exotic " +
@@ -294,7 +296,7 @@ namespace TravelApplication.ViewModels
                     "to pirates, buccaneers, and freebooters, including Sir Henry Morgan and Jean Lafitte. Today's traveler will " +
                     "discover the same ravishing beauty and relaxation that entertained gods and pirates alike.", 0, 0, 0, 3, 2, 1, 0,
                     1, 0, 1, 0, 0, 0, 1, 1, 435, 3475, 34,
-                    "https://www.princess.com/excursion/exlistfordestination.do?portid=CZM&exType=S&t=C");
+                    "https://www.princess.com/excursion/exlistfordestination.do?portid=CZM&exType=S&t=C", "ms-appx:///Assets/DestinationImages/Cozumel.jpg");
                 //Add Amsterdam Cruise
                 AddData("AMHC", "Amsterdam - Royal Carribean Cruise Line", "Amsterdam, Holland", "Life in Amsterdam is centered on its " +
                     "many canals. So the best way to see the city is aboard a glass-topped canal boat, gliding through the town center." +
@@ -303,7 +305,7 @@ namespace TravelApplication.ViewModels
                     "past beautiful old churches to the Anne Frank House. Journey by the Jordaan, the old French Quarter that is now a" +
                     " popular artists' haunt with a wide assortment of cafés, antique shops, boutiques and galleries. Visit the " +
                     "world's largest flower auction in the city of Aalsmeer, and more.", 0, 0, 0, 5, 13, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1,
-                    1960, 7690, 35, "http://www.royalcaribbean.com/findacruise/ports/group/home.do?portCode=AMS");
+                    1960, 7690, 35, "http://www.royalcaribbean.com/findacruise/ports/group/home.do?portCode=AMS", "ms-appx:///Assets/DestinationImages/Amsterdam.jpg");
                 //Add Venice Cruise
                 AddData("VIC", "Venice - Princess Cruise Lines", "Venice, Italy", "Rising from the waters of the Laguna Veneta, " +
                     "Venice has long - and rightly - been regarded as one of the world's most beautiful cities. Napoleon, who had an" +
@@ -314,26 +316,26 @@ namespace TravelApplication.ViewModels
                     "for 500 years - Venice is an unparalleled experience. The city began life as a refuge from barbarian invasions. " +
                     "By the Crusades, Venice's dominion extended throughout the Adriatic and Mediterranean. The winged lion - symbol " +
                     "of St. Mark - flew over palaces and fortresses from Gibraltar to the Black Sea. ", 0, 0, 0, 4, 14, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1,
-                    1960, 7690, 36, "https://www.princess.com/excursion/exlistfordestination.do?portid=VCE&exType=S&t=E");
+                    1960, 7690, 36, "https://www.princess.com/excursion/exlistfordestination.do?portid=VCE&exType=S&t=E", "ms-appx:///Assets/DestinationImages/Venice2.jpg");
 
             }
         }
 
         public static void AddData(string value1, string value2, string value3, string value4, int value5, int value6, int value7,
-            int value8, int value9, int value10, int value11, int value12, int value13, int value14, int value15, int value16, int value17,
-            int value18, int value19, int value20, int value21, int value22, string value23)
+        int value8, int value9, int value10, int value11, int value12, int value13, int value14, int value15, int value16, int value17,
+        int value18, int value19, int value20, int value21, int value22, string value23, string value24)
         {
             using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
             {
                 db.Open();
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
-                insertCommand.CommandText = "INSERT INTO PackageTable (Id, Code, Destination, Location, Description, HWRank, FAMRank, " +
+                insertCommand.CommandText = "INSERT INTO TravelTable (Id, Code, Destination, Location, Description, HWRank, FAMRank, " +
                     "ADVRank, CRURank, WEDRank, SPA, AMUSEMENT, HISTORY, CAMPING, ENTERTAINMENT, " +
-                    "HealthWell, Family, Adventure, Cruise, Wedding, LowPrice, HighPrice, DestId, Link) " +
+                    "HealthWell, Family, Adventure, Cruise, Wedding, LowPrice, HighPrice, DestId, Link, Image) " +
                     "VALUES (NULL, @value1, @value2, @value3, @value4, @value5, @value6, @value7, @value8, @value9, @value10, @value11, " +
                     "@value12, @value13, @value14, @value15, @value16, @value17, @value18, @value19, @value20, @value21, @value22, " +
-                    "@value23);"; 
+                    "@value23, @value24);";
 
                 insertCommand.Parameters.AddWithValue("@value1", value1);
                 insertCommand.Parameters.AddWithValue("@value2", value2);
@@ -358,9 +360,10 @@ namespace TravelApplication.ViewModels
                 insertCommand.Parameters.AddWithValue("@value21", value21);
                 insertCommand.Parameters.AddWithValue("@value22", value22);
                 insertCommand.Parameters.AddWithValue("@value23", value23);
+                insertCommand.Parameters.AddWithValue("@value24", value24);
 
                 insertCommand.ExecuteReader();
-                db.Close(); 
+                db.Close();
             }
         }
 
@@ -368,7 +371,9 @@ namespace TravelApplication.ViewModels
         public static ObservableCollection<TravelPack> GetData()
         {
             var travelPackages = new ObservableCollection<TravelPack>();
-            const string GetTravelQuery = "SELECT * FROM PackageTable";
+            travelPackages.OrderBy(p => p.priceLow);
+
+            const string GetTravelQuery = "SELECT * FROM TravelTable";
             try
             {
                 using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
@@ -383,7 +388,6 @@ namespace TravelApplication.ViewModels
                             {
                                 while (reader.Read())
                                 {
-
                                     var package = new TravelPack();
                                     package.dcode = reader.GetString(1);
                                     package.dest = reader.GetString(2);
@@ -408,7 +412,9 @@ namespace TravelApplication.ViewModels
                                     package.priceHigh = reader.GetInt32(21);
                                     package.DESTId = reader.GetInt32(22);
                                     package.refLink = reader.GetString(23);
+                                    package.imageSource = reader.GetString(24);
                                     travelPackages.Add(package);
+                                    travelPackages.OrderBy(p => p.priceLow);
 
                                 }
                             }
@@ -416,7 +422,7 @@ namespace TravelApplication.ViewModels
                         db.Close();
                     }
                 }
-                return travelPackages;
+                return travelPackages;              
             }
             catch
             {
@@ -424,11 +430,12 @@ namespace TravelApplication.ViewModels
             }
         }
 
-        //Create a sortable observable collection to hold the Health & Wellness TravelPackage data 
-        public static ObservableCollection<HealthTravel> GetHealthData()
+            //Create a sortable observable collection to hold the Health & Wellness TravelPackage data 
+            public static ObservableCollection<HealthTravel> GetHealthData()
         {
             var healthPackages = new ObservableCollection<HealthTravel>();
-            const string GetHealthQuery = "SELECT * FROM PackageTable WHERE HealthWell=1";
+            healthPackages.OrderBy(p => p.rank);
+            const string GetHealthQuery = "SELECT * FROM TravelTable WHERE HealthWell=1";
             try
             {
                 using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
@@ -460,7 +467,9 @@ namespace TravelApplication.ViewModels
                                     health.priceHigh = reader.GetInt32(21);
                                     health.destid = reader.GetInt32(22);
                                     health.refLink = reader.GetString(23);
+                                    health.imageSource = reader.GetString(24); 
                                     healthPackages.Add(health);
+                                    healthPackages.OrderBy(p => p.rank);
                                 }
                             }
                         }
@@ -474,6 +483,347 @@ namespace TravelApplication.ViewModels
                 return null;
             }
         }
+
+        //Create a sortable observable collection to hold the Wedding TravelPackage data 
+        public static ObservableCollection<Wedding> GetWeddingData()
+        {
+            var weddingPackages = new ObservableCollection<Wedding>();
+            weddingPackages.OrderBy(p => p.rank);
+            const string GetWeddingQuery = "SELECT * FROM TravelTable WHERE Wedding=1";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetWeddingQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    var wedding = new Wedding();
+                                    wedding.dcode = reader.GetString(1);
+                                    wedding.dest = reader.GetString(2);
+                                    wedding.locate = reader.GetString(3);
+                                    wedding.descript = reader.GetString(4);
+                                    wedding.rank = reader.GetInt32(9);
+                                    wedding.SPA = reader.GetInt32(10);
+                                    wedding.AMUSE = reader.GetInt32(11);
+                                    wedding.HISTORIC = reader.GetInt32(12);
+                                    wedding.CAMP = reader.GetInt32(13);
+                                    wedding.ENTERTAIN = reader.GetInt32(14);
+                                    wedding.cat = reader.GetInt32(15);
+                                    wedding.priceLow = reader.GetInt32(20);
+                                    wedding.priceHigh = reader.GetInt32(21);
+                                    wedding.destid = reader.GetInt32(22);
+                                    wedding.refLink = reader.GetString(23);
+                                    wedding.imageSource = reader.GetString(24);
+                                    weddingPackages.Add(wedding);
+                                    weddingPackages.OrderBy(p => p.rank);
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return weddingPackages;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        //Create a sortable observable collection to hold the Adventure TravelPackage data 
+        public static ObservableCollection<Adventure> GetAdventureData()
+        {
+            var adventurePackages = new ObservableCollection<Adventure>();
+            adventurePackages.OrderBy(p => p.rank);
+            const string GetAdventureQuery = "SELECT * FROM TravelTable WHERE Adventure=1";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetAdventureQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    var adventure = new Adventure();
+                                    adventure.dcode = reader.GetString(1);
+                                    adventure.dest = reader.GetString(2);
+                                    adventure.locate = reader.GetString(3);
+                                    adventure.descript = reader.GetString(4);
+                                    adventure.rank = reader.GetInt32(7);
+                                    adventure.SPA = reader.GetInt32(10);
+                                    adventure.AMUSE = reader.GetInt32(11);
+                                    adventure.HISTORIC = reader.GetInt32(12);
+                                    adventure.CAMP = reader.GetInt32(13);
+                                    adventure.ENTERTAIN = reader.GetInt32(14);
+                                    adventure.category = reader.GetInt32(15);
+                                    adventure.priceLow = reader.GetInt32(20);
+                                    adventure.priceHigh = reader.GetInt32(21);
+                                    adventure.destid = reader.GetInt32(22);
+                                    adventure.refLink = reader.GetString(23);
+                                    adventure.imageSource = reader.GetString(24); 
+                                    adventurePackages.Add(adventure);
+                                    adventurePackages.OrderBy(p => p.rank);
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return adventurePackages;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        //Create a sortable observable collection to hold the Family TravelPackage data 
+        public static ObservableCollection<Family> GetFamilyData()
+        {
+            var familyPackages = new ObservableCollection<Family>();
+            familyPackages.OrderBy(p => p.rank);
+            const string GetFamilyQuery = "SELECT * FROM TravelTable WHERE Family=1";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetFamilyQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    var family = new Family();
+                                    family.dcode = reader.GetString(1);
+                                    family.dest = reader.GetString(2);
+                                    family.locate = reader.GetString(3);
+                                    family.descript = reader.GetString(4);
+                                    family.rank = reader.GetInt32(6);
+                                    family.SPA = reader.GetInt32(10);
+                                    family.AMUSE = reader.GetInt32(11);
+                                    family.HISTORIC = reader.GetInt32(12);
+                                    family.CAMP = reader.GetInt32(13);
+                                    family.ENTERTAIN = reader.GetInt32(14);
+                                    family.cat = reader.GetInt32(15);
+                                    family.priceLow = reader.GetInt32(20);
+                                    family.priceHigh = reader.GetInt32(21);
+                                    family.destid = reader.GetInt32(22);
+                                    family.refLink = reader.GetString(23);
+                                    family.imageSource = reader.GetString(24);
+                                    familyPackages.Add(family);
+                                    familyPackages.OrderBy(p => p.rank);
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return familyPackages;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        //Create a sortable observable collection to hold the Cruise TravelPackage data 
+        public static ObservableCollection<Cruises> GetCruiseData()
+        {
+            var cruisePackages = new ObservableCollection<Cruises>();
+            cruisePackages.OrderBy(p => p.Crank);
+            const string GetCruiseQuery = "SELECT * FROM TravelTable WHERE Cruise=1";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetCruiseQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    var cruise = new Cruises();
+                                    cruise.dcode = reader.GetString(1);
+                                    cruise.dest = reader.GetString(2);
+                                    cruise.locate = reader.GetString(3);
+                                    cruise.descript = reader.GetString(4);
+                                    cruise.Crank = reader.GetInt32(6);
+                                    cruise.SPA = reader.GetInt32(10);
+                                    cruise.AMUSE = reader.GetInt32(11);
+                                    cruise.HISTORIC = reader.GetInt32(12);
+                                    cruise.CAMP = reader.GetInt32(13);
+                                    cruise.ENTERTAIN = reader.GetInt32(14);
+                                    cruise.categor = reader.GetInt32(15);
+                                    cruise.priceLow = reader.GetInt32(20);
+                                    cruise.priceHigh = reader.GetInt32(21);
+                                    cruise.destid = reader.GetInt32(22);
+                                    cruise.refLink = reader.GetString(23);
+                                    cruise.imageSource = reader.GetString(24); 
+                                    cruisePackages.Add(cruise);
+                                    cruisePackages.OrderBy(p => p.Crank);
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return cruisePackages;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
+        public static void InitializeUserDatabase()
+        {
+            using (SqliteConnection db = new SqliteConnection("Filename=UserData.db"))
+            {
+                db.Open();
+                String userTableCommand = "CREATE TABLE IF NOT " +
+                    "EXISTS UserTable (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "FirstName TEXT NULL, " +
+                    "LastName TEXT NULL, " +
+                    "userId TEXT NULL, " +
+                    "Password TEXT NULL, " +
+                    "Health INT NULL, " +
+                    "Family INT NULL, " +
+                    "Adventure INT NULL, " +
+                    "Cruises INT NULL, " +
+                    "Wedding INT NULL, " +
+                    "SPA INT NULL, " +
+                    "AMUSE INT NULL, " +
+                    "HISTORIC INT NULL, " +
+                    "CAMPING INT NULL, " +
+                    "ENTERTAIN INT NULL)";
+                ;
+
+                SqliteCommand createTable = new SqliteCommand(userTableCommand, db);
+
+                createTable.ExecuteReader();
+
+                //Add Initial User Data
+                //Add Test User 1
+                AddUserData("Anakin", "Skywalker", "IamVader", "LordVader01", 0, 0, 1, 1, 0, 0, 0, 0, 0, 1);
+                //Add Test User 2
+                AddUserData("Luke", "Skywalker", "JediWarrior", "JediPunk743", 0, 1, 1, 0, 0, 0, 1, 0, 1, 1);
+                //Add Test User 3
+                AddUserData("Leigha", "Organa", "GeneralLeigha", "PrincessGeneral4", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+                //Add Test User 4
+                AddUserData("Han", "Solo", "ScoundrelHan", "IKnow556677", 0, 0, 1, 1, 1, 0, 1, 0, 0, 1);
+                //Add Test User 5
+                AddUserData("Ben", "Solo", "KyloRenToYou", "KilledMyDad2", 0, 0, 1, 1, 1, 0, 1, 0, 0, 1);
+            }
+        }
+
+        public static void AddUserData(string value1, string value2, string value3, string value4, int value5, int value6, int value7, int value8,
+            int value9, int value10, int value11, int value12, int value13, int value14)
+        {
+            using (SqliteConnection db = new SqliteConnection("Filename=UserData.db"))
+            {
+                db.Open();
+                SqliteCommand insertCommand = new SqliteCommand();
+                insertCommand.Connection = db;
+                insertCommand.CommandText = "INSERT INTO UserTable (Id, FirstName, LastName, userId, Password, Health, " +
+                    "Family, Adventure, Cruises, Wedding, SPA, AMUSE, HISTORIC, CAMPING, ENTERTAIN) " +
+                    "VALUES (NULL, @value1, @value2, @value3, @value4, @value5, @value6, @value7, @value8, @value9, " +
+                    "@value10, @value11, @value12, @value13, @value14);";
+
+                insertCommand.Parameters.AddWithValue("@value1", value1);
+                insertCommand.Parameters.AddWithValue("@value2", value2);
+                insertCommand.Parameters.AddWithValue("@value3", value3);
+                insertCommand.Parameters.AddWithValue("@value4", value4);
+                insertCommand.Parameters.AddWithValue("@value5", value5);
+                insertCommand.Parameters.AddWithValue("@value6", value6);
+                insertCommand.Parameters.AddWithValue("@value7", value7);
+                insertCommand.Parameters.AddWithValue("@value8", value8);
+                insertCommand.Parameters.AddWithValue("@value9", value9);
+                insertCommand.Parameters.AddWithValue("@value10", value10);
+                insertCommand.Parameters.AddWithValue("@value11", value11);
+                insertCommand.Parameters.AddWithValue("@value12", value12);
+                insertCommand.Parameters.AddWithValue("@value13", value13);
+                insertCommand.Parameters.AddWithValue("@value14", value14);
+
+                insertCommand.ExecuteReader();
+                db.Close();
+            }
+        }
+        //Create a sortable observable collection to hold the User data
+        public static ObservableCollection<User> GetUserData()
+        {
+            var userData = new ObservableCollection<User>();
+            const string GetUserQuery = "SELECT * FROM UserTable";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=UserData.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetUserQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    var user = new User();
+                                    user.first = reader.GetString(1);
+                                    user.last = reader.GetString(2);
+                                    user.userId = reader.GetString(3);
+                                    user.password= reader.GetString(4);
+                                    user.HW = reader.GetInt32(5);
+                                    user.FAM = reader.GetInt32(6);
+                                    user.ADV = reader.GetInt32(7);
+                                    user.CRU = reader.GetInt32(8);
+                                    user.WED = reader.GetInt32(9);
+                                    user.SPA = reader.GetInt32(10);
+                                    user.AMUSE = reader.GetInt32(11);
+                                    user.HISTORIC = reader.GetInt32(12);
+                                    user.CAMP = reader.GetInt32(13);
+                                    user.ENTERTAIN = reader.GetInt32(14);
+                                    userData.Add(user);
+
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return userData;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 }
 

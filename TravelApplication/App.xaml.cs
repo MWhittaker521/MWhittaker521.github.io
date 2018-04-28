@@ -39,7 +39,8 @@ namespace TravelApplication
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            ViewModel.InitializeDatabase();          
+            ViewModel.InitializeDatabase();
+            ViewModel.InitializeUserDatabase(); 
         }
 
         /// <summary>

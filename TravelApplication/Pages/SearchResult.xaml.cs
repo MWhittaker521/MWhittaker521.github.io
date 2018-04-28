@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TravelApplication.Models; 
 using TravelApplication.ViewModels;
+using TravelApplication.Pages;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,9 +29,8 @@ namespace TravelApplication
     {
         public SearchResult()
         {
-            this.InitializeComponent();
-            ResultsListView.ItemsSource = ViewModel.GetData(); 
-
-        }
+            InitializeComponent();
+       
+        }             
     }
 }

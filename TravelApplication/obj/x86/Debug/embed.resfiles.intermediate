@@ -5,8 +5,12 @@ MainPage.xbf
 Pages\AboutPage.xbf
 Pages\AccountOverviewPage.xbf
 Pages\AccountPrefPage.xbf
+Pages\AdventureResultsPage.xbf
+Pages\CruiseResultsPage.xbf
+Pages\FamilyResultsPage.xbf
 Pages\FAQPage.xbf
 Pages\FeaturedDestPage.xbf
+Pages\HealthWellnessResultsPage.xbf
 Pages\HotelsPage.xbf
 Pages\InitialPage.xbf
 Pages\LogInPage.xbf
@@ -14,4 +18,5 @@ Pages\SearchPage.xbf
 Pages\SearchResult.xbf
 Pages\SignUpPage.xbf
 Pages\TravelPackagesPage.xbf
+Pages\WeddingResultsPage.xbf
 TravelResourceDictionary.xbf

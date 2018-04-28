@@ -9,6 +9,11 @@
         <Custom:ViewModel x:Key="MainDataViewModel"/>
         <Custom:ViewModel x:Key="TravelPack"/>
         <Custom:ViewModel x:Key="HealthTravel"/>
+        <Custom:ViewModel x:Key="Adventure"/>
+        <Custom:ViewModel x:Key="Family"/>
+        <Custom:ViewModel x:Key="Cruises"/>
+        <Custom:ViewModel x:Key="Wedding"/>
+        <Custom:ViewModel x:Key="User"/>
     </Application.Resources>
 
 </Application>

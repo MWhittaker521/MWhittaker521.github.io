@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="TravelApplication.Pages.HealthWellnessResultsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TravelApplication.Pages"
+    xmlns:control="using:TravelApplication.Controls"
+    xmlns:models="using:TravelApplication.ViewModels"
+    xmlns:model ="using:TravelApplication.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <!--Reusable Text Style for Headers -->
+        <Style x:Name="SearchResultHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="38"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="Foreground" Value="MidnightBlue"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+    <Page.DataContext>
+        <models:ViewModel/>
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <RelativePanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock x:Name="ResultHeader" Text="Health and Wellness Travel Results" Style="{StaticResource SearchResultHeaderStyle}"
+                           RelativePanel.AlignHorizontalCenterWithPanel="True"
+                           RelativePanel.AlignVerticalCenterWithPanel="True"/>
+            </RelativePanel>
+            <Border BorderBrush="MidnightBlue" BorderThickness="2"/>
+            <ListView x:Name="HealthResultsListView" 
+                   Margin="20" DataContext="{StaticResource HealthTravel}"
+                  MaxHeight="600"
+                  MaxWidth="1100">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:Name="HealthDataTemplate" x:DataType="model:HealthTravel">
+                        <StackPanel>
+                            <Image Width="200" Height="200" Source="{Binding imageSource}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding rank}"
+                                    FontFamily="Georgia"
+                                           FontSize="14"
+                                           TextWrapping="Wrap"
+                                           FontWeight="Bold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                            <TextBlock Name="DestName" Text="{Binding dest}" 
+                                           FontFamily="Georgia"
+                                           FontSize="14"
+                                           TextWrapping="Wrap"
+                                           FontWeight="Bold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                            <TextBlock Name="DestLoc" Text="{Binding locate}" 
+                                           FontFamily="Georgia"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           FontWeight="SemiBold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                            <TextBlock Name="DestDescription" Text="{Binding descript}" 
+                                   FontFamily="Georgia"
+                                   FontSize="12"
+                                   TextWrapping="Wrap"
+                                   FontWeight="SemiBold"
+                                   Foreground="MidnightBlue"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="15"
+                                   TextTrimming="CharacterEllipsis"
+                                   />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>

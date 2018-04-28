@@ -13,22 +13,20 @@
         <!--Reusable Text Style for Page -->
         <Style x:ConnectionId='1' x:Name="SearchResultTextStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Georgia"/>
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="Margin" Value="3,0,0,5"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         <!--Reusable Text Style for Sub Headers on Page -->
         <Style x:ConnectionId='2' x:Name="SearchResultSubHeaderStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Georgia"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="Margin" Value="3,0,0,5"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
@@ -42,7 +40,9 @@
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+
     </Page.Resources>
+    
     <Page.DataContext>
         <models:ViewModel/>
     </Page.DataContext>
@@ -50,37 +50,12 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
             <RelativePanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <TextBlock x:ConnectionId='11' x:Name="ResultHeader" Text="Travel Package Search Results" Style="{StaticResource SearchResultHeaderStyle}"
+                <TextBlock x:ConnectionId='5' x:Name="ResultHeader" Text="Travel Package Search Results" Style="{StaticResource SearchResultHeaderStyle}"
                            RelativePanel.AlignHorizontalCenterWithPanel="True"
                            RelativePanel.AlignVerticalCenterWithPanel="True"/>
             </RelativePanel>
             <Border BorderBrush="MidnightBlue" BorderThickness="2"/>
-            <ListView x:ConnectionId='4' x:Name="ResultsListView" ScrollViewer.IsVerticalRailEnabled="True" ScrollViewer.VerticalScrollMode="Auto" 
-                      Margin="10" DataContext="{StaticResource TravelPack}">
-                <ListView.HeaderTemplate>
-                    <!-- Data Template for ListView Items-->
-                    <DataTemplate x:Name="ResultHeaderDataTemplate">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="ID" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Code" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Name" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Location" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}"/>
-                            <TextBlock Text="Description" Margin="8,0" Style="{StaticResource SearchResultSubHeaderStyle}" Width="300"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.HeaderTemplate>
-                <ListView.ItemTemplate>
-                    <DataTemplate x:Name="ResultDataTemplate"                              >
-                        <StackPanel x:ConnectionId='5' Orientation="Horizontal">
-                            <TextBlock x:ConnectionId='6' Name="DestID"                        Style="{StaticResource SearchResultTextStyle}" DataContext="{StaticResource TravelPack}"/>
-                            <TextBlock x:ConnectionId='7' Name="DestCode"                       Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock x:ConnectionId='8' Name="DestName"                      Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock x:ConnectionId='9' Name="DestLoc"                        Style="{StaticResource SearchResultTextStyle}"/>
-                            <TextBlock x:ConnectionId='10' Name="DestDescription"                          Style="{StaticResource SearchResultTextStyle}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <control:AllResultsControl x:ConnectionId='4'  x:Name="AllResultsCntrl"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccessLibrary;
 
 namespace TravelApplication.Models
 {
@@ -26,6 +25,7 @@ namespace TravelApplication.Models
         public int priceHigh { get; set; }
         public int destid { get; set; }
         public string refLink { get; set; }
+        public string imageSource { get; set;  }
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)

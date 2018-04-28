@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Models\HealthTravel.cs" />
     <Compile Include="Models\TravelPack.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -119,11 +120,23 @@
     <Compile Include="Pages\AccountPrefPage.xaml.cs">
       <DependentUpon>AccountPrefPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AdventureResultsPage.xaml.cs">
+      <DependentUpon>AdventureResultsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CruiseResultsPage.xaml.cs">
+      <DependentUpon>CruiseResultsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FamilyResultsPage.xaml.cs">
+      <DependentUpon>FamilyResultsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\FAQPage.xaml.cs">
       <DependentUpon>FAQPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\FeaturedDestPage.xaml.cs">
       <DependentUpon>FeaturedDestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HealthWellnessResultsPage.xaml.cs">
+      <DependentUpon>HealthWellnessResultsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\HotelsPage.xaml.cs">
       <DependentUpon>HotelsPage.xaml</DependentUpon>
@@ -136,6 +149,9 @@
     </Compile>
     <Compile Include="Pages\SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WeddingResultsPage.xaml.cs">
+      <DependentUpon>WeddingResultsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\TravelPackagesPage.xaml.cs">
@@ -170,6 +186,44 @@
     <Content Include="Assets\DesignElements\Plane02.png" />
     <Content Include="Assets\DesignElements\Plane_01.png" />
     <Content Include="Assets\DesignElements\SideBar.png" />
+    <Content Include="Assets\DestinationImages\10-red-mountain-resort.jpg" />
+    <Content Include="Assets\DestinationImages\Amazon.jpg" />
+    <Content Include="Assets\DestinationImages\Amsterdam.jpg" />
+    <Content Include="Assets\DestinationImages\Bonaire.jpg" />
+    <Content Include="Assets\DestinationImages\Branson.jpg" />
+    <Content Include="Assets\DestinationImages\CaveDiving.jpg" />
+    <Content Include="Assets\DestinationImages\Cozumel.jpg" />
+    <Content Include="Assets\DestinationImages\DC.jpg" />
+    <Content Include="Assets\DestinationImages\Disney.jpg" />
+    <Content Include="Assets\DestinationImages\DisneyLand.jpg" />
+    <Content Include="Assets\DestinationImages\download.png" />
+    <Content Include="Assets\DestinationImages\GlacierBay.jpg" />
+    <Content Include="Assets\DestinationImages\GlacierWalking.jpg" />
+    <Content Include="Assets\DestinationImages\GrandCanyon.jpg" />
+    <Content Include="Assets\DestinationImages\Heli.jpg" />
+    <Content Include="Assets\DestinationImages\HiltonHead.jpg" />
+    <Content Include="Assets\DestinationImages\LakeAustin.jpg" />
+    <Content Include="Assets\DestinationImages\LakeBaikal.jpg" />
+    <Content Include="Assets\DestinationImages\Laos.jpg" />
+    <Content Include="Assets\DestinationImages\Maui.jpg" />
+    <Content Include="Assets\DestinationImages\MongolDerby.jpg" />
+    <Content Include="Assets\DestinationImages\MountFuji.jpg" />
+    <Content Include="Assets\DestinationImages\MysteryIsland.jpg" />
+    <Content Include="Assets\DestinationImages\no-image.jpg" />
+    <Content Include="Assets\DestinationImages\ojai620.jpg" />
+    <Content Include="Assets\DestinationImages\Philipines.jpg" />
+    <Content Include="Assets\DestinationImages\pritikin-longevity-center.jpg" />
+    <Content Include="Assets\DestinationImages\RanchMalibu.jpg" />
+    <Content Include="Assets\DestinationImages\Regent7seas.jpg" />
+    <Content Include="Assets\DestinationImages\Rhino.jpg" />
+    <Content Include="Assets\DestinationImages\SanDiego.jpg" />
+    <Content Include="Assets\DestinationImages\SriLanka.jpg" />
+    <Content Include="Assets\DestinationImages\StMaarten.jpg" />
+    <Content Include="Assets\DestinationImages\StPetersburg.jpg" />
+    <Content Include="Assets\DestinationImages\Sydney.jpg" />
+    <Content Include="Assets\DestinationImages\Venice2.jpg" />
+    <Content Include="Assets\DestinationImages\WhaleSharks.jpg" />
+    <Content Include="Assets\DestinationImages\Yellowstone.jpg" />
     <Content Include="Assets\NavButton.png" />
     <Content Include="Assets\NavButtonGreen.png" />
     <Content Include="Assets\Pictures\Lane.jpg" />
@@ -221,11 +275,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AdventureResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CruiseResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FamilyResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\FAQPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\FeaturedDestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HealthWellnessResultsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -257,6 +327,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\WeddingResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TravelResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -278,12 +352,6 @@
     <PackageReference Include="System.Data.SqlClient">
       <Version>4.4.3</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataAccessLibrary\DataAccessLibrary.csproj">
-      <Project>{86d3deca-a9df-4bdc-b9f9-0d6f21882676}</Project>
-      <Name>DataAccessLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

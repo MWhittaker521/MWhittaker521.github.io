@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="descript" />
+    <RootPropertyPathName Name="locate" />
+    <RootPropertyPathName Name="dest" />
+    <RootPropertyPathName Name="imageSource" />
+    <RootPropertyPathName Name="rank" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
@@ -33,8 +40,6 @@
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
-      <RootMethod Name="GetRowSpan" />
-      <RootMethod Name="SetRowSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="HorizontalAlignment" />
@@ -45,10 +50,6 @@
       <RootMethod Name="SetHorizontalScrollBarVisibility" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
-      <RootMethod Name="GetIsVerticalRailEnabled" />
-      <RootMethod Name="SetIsVerticalRailEnabled" />
-      <RootMethod Name="GetVerticalScrollMode" />
-      <RootMethod Name="SetVerticalScrollMode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="HorizontalAlignment" />
@@ -95,6 +96,7 @@
       <RootProperty Name="MinHeight" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -113,29 +115,38 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Padding" />
       <RootProperty Name="MaxWidth" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Name" />
-      <RootProperty Name="DataContext" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="TextTrimming" />
+      <RootProperty Name="Style" />
     </RootType>
     <RootType FullName="TravelApplication.AboutPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
-      <RootProperty Name="Resources" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="MaxHeight" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="ElementName" />
+    </RootType>
+    <RootType FullName="TravelApplication.Controls.AllResultsControl" />
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />
       <RootProperty Name="Value" />
     </RootType>
-    <RootType FullName="TravelApplication.Controls.AllResultsControl" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Padding" />
       <RootProperty Name="Background" />
@@ -145,6 +156,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootEvent Name="Click" />
@@ -164,7 +176,6 @@
       <RootMethod Name="GetToolTip" />
       <RootMethod Name="SetToolTip" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
       <RootProperty Name="Placement" />
       <RootProperty Name="Items" />
@@ -188,9 +199,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="MinHeight" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="ElementName" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
       <RootProperty Name="EndPoint" />
       <RootProperty Name="StartPoint" />
@@ -206,8 +214,17 @@
     <RootType FullName="TravelApplication.MainPage" />
     <RootType FullName="TravelApplication.Pages.AccountOverviewPage" />
     <RootType FullName="TravelApplication.Pages.AccountPrefPage" />
+    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="TravelApplication.Pages.AdventureResultsPage" />
+    <RootType FullName="TravelApplication.Pages.CruiseResultsPage" />
+    <RootType FullName="TravelApplication.Pages.FamilyResultsPage" />
     <RootType FullName="TravelApplication.Pages.FAQPage" />
     <RootType FullName="TravelApplication.Pages.FeaturedDestPage" />
+    <RootType FullName="TravelApplication.Pages.HealthWellnessResultsPage" />
     <RootType FullName="TravelApplication.Pages.HotelsPage" />
     <RootType FullName="TravelApplication.Pages.InitialPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
@@ -220,13 +237,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="GroupName" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
       <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Click" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
-      <RootProperty Name="Padding" />
-      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="TravelApplication.Pages.SearchPage" />
     <RootType FullName="TravelApplication.TravelPackagesPage" />
@@ -235,17 +249,8 @@
       <RootMethod Name="SetIsRequiredForForm" />
     </RootType>
     <RootType FullName="TravelApplication.SignUpPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="HeaderTemplate" />
-      <RootProperty Name="ItemTemplate" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="TravelApplication.SearchResult" />
+    <RootType FullName="TravelApplication.Pages.WeddingResultsPage" />
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
       <RootProperty Name="Source" />
     </RootType>
