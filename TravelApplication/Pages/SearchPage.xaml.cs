@@ -32,8 +32,24 @@ namespace TravelApplication.Pages
         public SearchPage()
         {
             this.InitializeComponent();
+            LogInPage.OnLogInSuccess += OnLogInSuccess; 
         }
-       
+
+        private void OnLogInSuccess(string uId)
+        {
+            var dict = ViewModel.GetUserDictionary();
+            var userId = uId;
+            if(userId != null)
+            {
+                Welcome.Text = "Welcome " + userId; 
+            }
+            else
+            {
+                Welcome.Text = String.Empty; 
+            }
+             
+        }
+
         /// <summary>
         /// Changes the destination category when the Health/Wellness Radio Button is selected. 
         /// </summary>

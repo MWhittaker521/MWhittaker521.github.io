@@ -1,5 +1,4 @@
 App.xbf
-Controls\AllResultsControl.xbf
 Controls\AppOptionsControl.xbf
 MainPage.xbf
 Pages\AboutPage.xbf
@@ -17,6 +16,5 @@ Pages\LogInPage.xbf
 Pages\SearchPage.xbf
 Pages\SearchResult.xbf
 Pages\SignUpPage.xbf
-Pages\TravelPackagesPage.xbf
 Pages\WeddingResultsPage.xbf
 TravelResourceDictionary.xbf

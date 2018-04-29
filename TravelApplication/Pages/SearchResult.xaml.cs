@@ -18,6 +18,7 @@ using TravelApplication.ViewModels;
 using TravelApplication.Pages;
 using System.Diagnostics;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TravelApplication
@@ -27,10 +28,31 @@ namespace TravelApplication
     /// </summary>
     public sealed partial class SearchResult : Page
     {
+         
         public SearchResult()
         {
             InitializeComponent();
-       
-        }             
+            var allResults = ViewModel.GetData();
+            ResultsListView.ItemsSource = allResults.OrderBy(p => p.DESTId);      
+        }
+
+        private void RankSort_Click(object sender, RoutedEventArgs e)
+        {
+            var allResults = ViewModel.GetData();
+            ResultsListView.ItemsSource = allResults.OrderBy(p => p.DESTId);
+        }
+
+        private void PriceLHSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetData();
+            ResultsListView.ItemsSource = travelResults.OrderBy(p => p.priceLow);
+
+        }
+
+        private void PriceHLSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetData();
+            ResultsListView.ItemsSource = travelResults.OrderByDescending(p => p.priceHigh);
+        }
     }
 }

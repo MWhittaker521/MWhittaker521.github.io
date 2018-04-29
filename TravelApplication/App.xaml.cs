@@ -31,6 +31,7 @@ namespace TravelApplication
     /// </summary>
     sealed partial class App : Application
     {
+        private bool initialized; 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -39,8 +40,13 @@ namespace TravelApplication
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            ViewModel.InitializeDatabase();
-            ViewModel.InitializeUserDatabase(); 
+            Debug.WriteLine(initialized); 
+            if(!initialized)
+            {
+                ViewModel.InitializeDatabase();
+                ViewModel.InitializeUserDatabase();
+                initialized = true; 
+            }
         }
 
         /// <summary>

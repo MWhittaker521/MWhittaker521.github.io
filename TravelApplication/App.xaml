@@ -14,6 +14,7 @@
         <Custom:ViewModel x:Key="Cruises"/>
         <Custom:ViewModel x:Key="Wedding"/>
         <Custom:ViewModel x:Key="User"/>
+        <Custom:ViewModel x:Key="FeatureDest"/>
     </Application.Resources>
 
 </Application>

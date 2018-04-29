@@ -42,37 +42,39 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <RelativePanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,5,5,5">
-            <TextBlock x:ConnectionId='7' Text="Travel Category" x:Name="TravelCategoryText" Style="{StaticResource SearchPageHeaderStyle}" 
-                       RelativePanel.AlignHorizontalCenterWithPanel="True" />
-            <RadioButton x:ConnectionId='8' x:Name="HealthWellness" GroupName="CategoryGroup" RelativePanel.Below="TravelCategoryText"                               
+        <RelativePanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="20,5,5,5">
+            <TextBlock x:ConnectionId='7' RelativePanel.AlignHorizontalCenterWithPanel="True" x:Name="Welcome" FontFamily="Georgia" FontSize="16" FontWeight="Bold" FontStyle="Italic"
+                       Foreground="MidnightBlue"/>
+            <TextBlock x:ConnectionId='8' Text="Travel Category" x:Name="TravelCategoryText" Style="{StaticResource SearchPageHeaderStyle}" 
+                       RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="Welcome" />
+            <RadioButton x:ConnectionId='9' x:Name="HealthWellness" GroupName="CategoryGroup" RelativePanel.Below="TravelCategoryText"                               
                         Padding="5" Margin="5">
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Health and Wellness"/>
             </RadioButton>
-            <RadioButton x:ConnectionId='9' x:Name="Family" GroupName="CategoryGroup" RelativePanel.Below="HealthWellness"                       
+            <RadioButton x:ConnectionId='10' x:Name="Family" GroupName="CategoryGroup" RelativePanel.Below="HealthWellness"                       
                           Padding="5" Margin="5">
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Family Friendly"/>
             </RadioButton>
-            <RadioButton x:ConnectionId='10' x:Name="Adventure" GroupName="CategoryGroup" RelativePanel.Below="Family"                         
+            <RadioButton x:ConnectionId='11' x:Name="Adventure" GroupName="CategoryGroup" RelativePanel.Below="Family"                         
                           Padding="5" Margin="5" VerticalAlignment="Bottom">
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Adventure" />
             </RadioButton>
-            <RadioButton x:ConnectionId='11' x:Name="Cruises" GroupName="CategoryGroup" RelativePanel.Below="Adventure"                      
+            <RadioButton x:ConnectionId='12' x:Name="Cruises" GroupName="CategoryGroup" RelativePanel.Below="Adventure"                      
                           Padding="5" Margin="5">
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Cruises" />
             </RadioButton>
-            <RadioButton x:ConnectionId='12' x:Name="DestinationWedding" GroupName="CategoryGroup" RelativePanel.Below="Cruises"                                  
+            <RadioButton x:ConnectionId='13' x:Name="DestinationWedding" GroupName="CategoryGroup" RelativePanel.Below="Cruises"                                  
                           Padding="5" Margin="5">
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="Destination Wedding" />
             </RadioButton>
-            <RadioButton x:ConnectionId='13' x:Name="AllTravelPackages" GroupName="CategoryGroup" RelativePanel.Below="DestinationWedding" 
+            <RadioButton x:ConnectionId='14' x:Name="AllTravelPackages" GroupName="CategoryGroup" RelativePanel.Below="DestinationWedding" 
                           Padding="5" Margin="5"                                 >
                 <TextBlock Style="{StaticResource SearchPageTextStyle}" Text="All Travel Packages" />
             </RadioButton>
         </RelativePanel>
-        <Button x:ConnectionId='3'  Grid.Row ="1" x:Name="StartSearchBtn" Background="MidnightBlue" Padding="5" RelativePanel.AlignHorizontalCenterWithPanel="True"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="200"  Height="125"
-                    BorderBrush="MidnightBlue" BorderThickness="2"                              Margin="0,75,-1,0">
+        <Button x:ConnectionId='3'  Grid.Row ="1" x:Name="StartSearchBtn" Background="MidnightBlue" Padding="3"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"  Height="100"
+                    BorderBrush="MidnightBlue" BorderThickness="2"                              Margin="0,0,0,25" >
                 <RelativePanel>
                     <Image x:ConnectionId='5' x:Name="SearchIcon" RelativePanel.AlignLeftWithPanel="True" Source="ms-appx:///Assets/Buttons/Button Icons/Plane03.png" Width="45"/>
                     <TextBlock x:ConnectionId='6' RelativePanel.RightOf="SearchIcon" Padding="5"  x:Name="StartText" Text="Search Now" Style="{StaticResource SearchPageTextStyle}" Foreground="White"/>

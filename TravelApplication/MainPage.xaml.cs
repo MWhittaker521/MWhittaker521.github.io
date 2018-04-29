@@ -42,8 +42,14 @@ namespace TravelApplication
             InitialPage.OnSignUpButtonPushed += OnSignUpButtonPushed;
             //Delegate method that listens for Guest Button Push event from the Initial Page. 
             InitialPage.OnGuestButtonPushed += OnGuestButtonPushed;
-            SearchPage.OnSearchNavigation += OnSearchNavigation; 
+            SearchPage.OnSearchNavigation += OnSearchNavigation;
+            LogInPage.OnLogIn += OnLogIn; 
             this.ViewModel = new TravelPack();
+        }
+
+        private void OnLogIn(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(SearchPage), e);
         }
 
         //Opens the search results in the Main Frame upon search button pushed event. 
@@ -85,7 +91,7 @@ namespace TravelApplication
         //Opens the Generic search in the Main Frame upon guest button pushed event. 
         private void OnGuestButtonPushed(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(TravelPackagesPage), e); 
+            MainFrame.Navigate(typeof(SearchResult), e); 
         }
         //Opens the sign-up in the Main Frame upon Sign-up button pushed event. 
         private void OnSignUpButtonPushed(object sender, RoutedEventArgs e)
@@ -140,15 +146,10 @@ namespace TravelApplication
         {
             MainFrame.Navigate(typeof(InitialPage),e);
         }
-        //Navigates to the Travel Packages Page
+        //Navigates to the All Travel Package Result Page
         private void TravelPackagesBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(TravelPackagesPage), e);
-        }
-        //Navigates to the Hotels Page
-        private void HotelBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(typeof(HotelsPage), e);
+            MainFrame.Navigate(typeof(SearchResult), e);
         }
         //Navigates to the Featured Destination Page
         private void FeaturedBtn_Click(object sender, RoutedEventArgs e)

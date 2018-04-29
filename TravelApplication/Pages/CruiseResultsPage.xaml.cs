@@ -26,7 +26,27 @@ namespace TravelApplication.Pages
         public CruiseResultsPage()
         {
             this.InitializeComponent();
-            CruResultsListView.ItemsSource = ViewModel.GetCruiseData(); 
+            var travelResults = ViewModel.GetCruiseData();
+            CruResultsListView.ItemsSource = travelResults;
+        }
+
+        private void RankSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetCruiseData();
+            CruResultsListView.ItemsSource = travelResults.OrderBy(p => p.Crank);
+        }
+
+        private void PriceLHSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetCruiseData();
+            CruResultsListView.ItemsSource = travelResults.OrderBy(p => p.priceLow);
+
+        }
+
+        private void PriceHLSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetCruiseData();
+            CruResultsListView.ItemsSource = travelResults.OrderByDescending(p => p.priceHigh);
         }
     }
 }

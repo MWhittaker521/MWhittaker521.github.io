@@ -15,7 +15,7 @@ namespace TravelApplication.ViewModels
 
         public static void InitializeDatabase()
         {
-            using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+            using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
             {
                 db.Open();
 
@@ -44,7 +44,8 @@ namespace TravelApplication.ViewModels
                     "HighPrice INT NULL, " +
                     "DestId INT NULL, " +
                     "Link TEXT NULL, " +
-                    "Image TEXT NULL)";
+                    "Image TEXT NULL, " +
+                    "UNIQUE(Code, DestId))";
 
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
 
@@ -325,12 +326,12 @@ namespace TravelApplication.ViewModels
         int value8, int value9, int value10, int value11, int value12, int value13, int value14, int value15, int value16, int value17,
         int value18, int value19, int value20, int value21, int value22, string value23, string value24)
         {
-            using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+            using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
             {
                 db.Open();
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
-                insertCommand.CommandText = "INSERT INTO TravelTable (Id, Code, Destination, Location, Description, HWRank, FAMRank, " +
+                insertCommand.CommandText = "INSERT OR IGNORE INTO TravelTable (Id, Code, Destination, Location, Description, HWRank, FAMRank, " +
                     "ADVRank, CRURank, WEDRank, SPA, AMUSEMENT, HISTORY, CAMPING, ENTERTAINMENT, " +
                     "HealthWell, Family, Adventure, Cruise, Wedding, LowPrice, HighPrice, DestId, Link, Image) " +
                     "VALUES (NULL, @value1, @value2, @value3, @value4, @value5, @value6, @value7, @value8, @value9, @value10, @value11, " +
@@ -371,12 +372,10 @@ namespace TravelApplication.ViewModels
         public static ObservableCollection<TravelPack> GetData()
         {
             var travelPackages = new ObservableCollection<TravelPack>();
-            travelPackages.OrderBy(p => p.priceLow);
-
             const string GetTravelQuery = "SELECT * FROM TravelTable";
             try
             {
-                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
                 {
                     db.Open();
                     if (db.State == System.Data.ConnectionState.Open)
@@ -415,7 +414,6 @@ namespace TravelApplication.ViewModels
                                     package.imageSource = reader.GetString(24);
                                     travelPackages.Add(package);
                                     travelPackages.OrderBy(p => p.priceLow);
-
                                 }
                             }
                         }
@@ -430,15 +428,74 @@ namespace TravelApplication.ViewModels
             }
         }
 
-            //Create a sortable observable collection to hold the Health & Wellness TravelPackage data 
-            public static ObservableCollection<HealthTravel> GetHealthData()
+        //Create a sortable observable collection to hold the Featured Destination data 
+        public static ObservableCollection<FeaturedDest> GetFeatureData()
+        {
+            var featuredDest = new ObservableCollection<FeaturedDest>();
+            const string GetFeatureQuery = "SELECT * FROM TravelTable WHERE Code='ADC'";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetFeatureQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    var package = new FeaturedDest();
+                                    package.dcode = reader.GetString(1);
+                                    package.dest = reader.GetString(2);
+                                    package.locate = reader.GetString(3);
+                                    package.descript = reader.GetString(4);
+                                    package.HW = reader.GetInt32(5);
+                                    package.FAM = reader.GetInt32(6);
+                                    package.ADV = reader.GetInt32(7);
+                                    package.CRU = reader.GetInt32(8);
+                                    package.WED = reader.GetInt32(9);
+                                    package.SPA = reader.GetInt32(10);
+                                    package.AMUSE = reader.GetInt32(11);
+                                    package.HISTORIC = reader.GetInt32(12);
+                                    package.CAMP = reader.GetInt32(13);
+                                    package.ENTERTAIN = reader.GetInt32(14);
+                                    package.hw = reader.GetInt32(15);
+                                    package.fam = reader.GetInt32(16);
+                                    package.adv = reader.GetInt32(17);
+                                    package.cru = reader.GetInt32(18);
+                                    package.wed = reader.GetInt32(19);
+                                    package.priceLow = reader.GetInt32(20);
+                                    package.priceHigh = reader.GetInt32(21);
+                                    package.DESTId = reader.GetInt32(22);
+                                    package.refLink = reader.GetString(23);
+                                    package.imageSource = reader.GetString(24);
+                                    featuredDest.Add(package);
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return featuredDest;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        //Create a sortable observable collection to hold the Health & Wellness TravelPackage data 
+        public static ObservableCollection<HealthTravel> GetHealthData()
         {
             var healthPackages = new ObservableCollection<HealthTravel>();
             healthPackages.OrderBy(p => p.rank);
             const string GetHealthQuery = "SELECT * FROM TravelTable WHERE HealthWell=1";
             try
             {
-                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
                 {
                     db.Open();
                     if (db.State == System.Data.ConnectionState.Open)
@@ -492,7 +549,7 @@ namespace TravelApplication.ViewModels
             const string GetWeddingQuery = "SELECT * FROM TravelTable WHERE Wedding=1";
             try
             {
-                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
                 {
                     db.Open();
                     if (db.State == System.Data.ConnectionState.Open)
@@ -546,7 +603,7 @@ namespace TravelApplication.ViewModels
             const string GetAdventureQuery = "SELECT * FROM TravelTable WHERE Adventure=1";
             try
             {
-                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
                 {
                     db.Open();
                     if (db.State == System.Data.ConnectionState.Open)
@@ -600,7 +657,7 @@ namespace TravelApplication.ViewModels
             const string GetFamilyQuery = "SELECT * FROM TravelTable WHERE Family=1";
             try
             {
-                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
                 {
                     db.Open();
                     if (db.State == System.Data.ConnectionState.Open)
@@ -653,7 +710,7 @@ namespace TravelApplication.ViewModels
             const string GetCruiseQuery = "SELECT * FROM TravelTable WHERE Cruise=1";
             try
             {
-                using (SqliteConnection db = new SqliteConnection("Filename=PackagesData.db"))
+                using (SqliteConnection db = new SqliteConnection("Filename=TravelData.db"))
                 {
                     db.Open();
                     if (db.State == System.Data.ConnectionState.Open)
@@ -702,7 +759,7 @@ namespace TravelApplication.ViewModels
 
         public static void InitializeUserDatabase()
         {
-            using (SqliteConnection db = new SqliteConnection("Filename=UserData.db"))
+            using (SqliteConnection db = new SqliteConnection("Filename=UserDataSet.db"))
             {
                 db.Open();
                 String userTableCommand = "CREATE TABLE IF NOT " +
@@ -720,7 +777,8 @@ namespace TravelApplication.ViewModels
                     "AMUSE INT NULL, " +
                     "HISTORIC INT NULL, " +
                     "CAMPING INT NULL, " +
-                    "ENTERTAIN INT NULL)";
+                    "ENTERTAIN INT NULL, " +
+                    "UNIQUE(userId))";
                 ;
 
                 SqliteCommand createTable = new SqliteCommand(userTableCommand, db);
@@ -744,12 +802,12 @@ namespace TravelApplication.ViewModels
         public static void AddUserData(string value1, string value2, string value3, string value4, int value5, int value6, int value7, int value8,
             int value9, int value10, int value11, int value12, int value13, int value14)
         {
-            using (SqliteConnection db = new SqliteConnection("Filename=UserData.db"))
+            using (SqliteConnection db = new SqliteConnection("Filename=UserDataSet.db"))
             {
                 db.Open();
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
-                insertCommand.CommandText = "INSERT INTO UserTable (Id, FirstName, LastName, userId, Password, Health, " +
+                insertCommand.CommandText = "INSERT OR IGNORE INTO UserTable (Id, FirstName, LastName, userId, Password, Health, " +
                     "Family, Adventure, Cruises, Wedding, SPA, AMUSE, HISTORIC, CAMPING, ENTERTAIN) " +
                     "VALUES (NULL, @value1, @value2, @value3, @value4, @value5, @value6, @value7, @value8, @value9, " +
                     "@value10, @value11, @value12, @value13, @value14);";
@@ -780,7 +838,7 @@ namespace TravelApplication.ViewModels
             const string GetUserQuery = "SELECT * FROM UserTable";
             try
             {
-                using (SqliteConnection db = new SqliteConnection("Filename=UserData.db"))
+                using (SqliteConnection db = new SqliteConnection("Filename=UserDataSet.db"))
                 {
                     db.Open();
                     if (db.State == System.Data.ConnectionState.Open)
@@ -796,7 +854,7 @@ namespace TravelApplication.ViewModels
                                     var user = new User();
                                     user.first = reader.GetString(1);
                                     user.last = reader.GetString(2);
-                                    user.userId = reader.GetString(3);
+                                    user.userId = reader.GetString(3); 
                                     user.password= reader.GetString(4);
                                     user.HW = reader.GetInt32(5);
                                     user.FAM = reader.GetInt32(6);
@@ -809,14 +867,13 @@ namespace TravelApplication.ViewModels
                                     user.CAMP = reader.GetInt32(13);
                                     user.ENTERTAIN = reader.GetInt32(14);
                                     userData.Add(user);
-
                                 }
                             }
                         }
                         db.Close();
                     }
                 }
-                return userData;
+                return userData; 
             }
             catch
             {
@@ -824,6 +881,107 @@ namespace TravelApplication.ViewModels
             }
         }
 
+        public static Dictionary<string, string> GetDictionary()
+        {
+            var userDict = new Dictionary<string, string>();
+            const string GetUserQuery = "SELECT * FROM UserTable";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=UserDataSet.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetUserQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    var user = new UserDictionaryItem();
+                                    string id = reader.GetString(3);
+                                    string passcode = reader.GetString(4);
+                                    string first = reader.GetString(1);
+                                    string last = reader.GetString(2); 
+                                    userDict.Add(id, passcode); 
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return userDict;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
+        public static Dictionary<string, string> GetUserDictionary()
+        {
+            var userDictionary = new Dictionary<string, string>();
+            const string GetDictQuery = "SELECT * FROM UserTable";
+            try
+            {
+                using (SqliteConnection db = new SqliteConnection("Filename=UserDataSet.db"))
+                {
+                    db.Open();
+                    if (db.State == System.Data.ConnectionState.Open)
+                    {
+                        using (SqliteCommand cmd = db.CreateCommand())
+                        {
+                            cmd.CommandText = GetDictQuery;
+                            using (SqliteDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    var user = new UserDictionaryItem();
+                                    string id = reader.GetString(3);
+                                    string passcode = reader.GetString(4);                                
+                                    string first = reader.GetString(1);
+                                    string last = reader.GetString(2);
+                                    string passFirstLast = passcode + " : " + first + " : " + last;
+                                    userDictionary.Add(id, passFirstLast);
+                                }
+                            }
+                        }
+                        db.Close();
+                    }
+                }
+                return userDictionary;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
+        public static void AddUser(string value1, string value2, string value3, string value4)
+        {
+            using (SqliteConnection db = new SqliteConnection("Filename=UserDataSet.db"))
+            {
+                db.Open();
+                SqliteCommand insertCommand = new SqliteCommand();
+                insertCommand.Connection = db;
+                insertCommand.CommandText = "INSERT OR IGNORE INTO UserTable (Id, FirstName, LastName, userId, Password) " +
+                    "VALUES (NULL, @value1, @value2, @value3, @value4);";
+
+                insertCommand.Parameters.AddWithValue("@value1", value1);
+                insertCommand.Parameters.AddWithValue("@value2", value2);
+                insertCommand.Parameters.AddWithValue("@value3", value3);
+                insertCommand.Parameters.AddWithValue("@value4", value4);
+
+                insertCommand.ExecuteReader();
+                db.Close();
+            }
+        }
     }
+
 }
 

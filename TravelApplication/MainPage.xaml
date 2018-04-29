@@ -80,24 +80,6 @@
                                        Style="{StaticResource MainPageTextStyle}"/>
                         </RelativePanel>
                     </Button>
-                    
-                    <!--Hotel Options Button -->
-                    <Button Padding="5" x:Name="HotelOptionBtn" 
-                            Background="Transparent" Click="HotelBtn_Click">
-                        <RelativePanel x:Name="HotelBtnPanel">
-                            <AppBarButton x:Name="HotelBtn" Background="Transparent" 
-                                      ToolTipService.ToolTip="View all Travel Packages"                           
-                                      Icon="Home"
-                                      MaxHeight="50"
-                                      MaxWidth="35"
-                                      RelativePanel.AlignLeftWithPanel="True"
-                                      RelativePanel.AlignVerticalCenterWithPanel="True">
-                            </AppBarButton>
-                            <TextBlock RelativePanel.RightOf="HotelBtn" RelativePanel.AlignVerticalCenterWith="HotelBtn"  
-                                       x:Name="HotelBtnText" Text="Hotels" 
-                                       Style="{StaticResource MainPageTextStyle}"/>
-                        </RelativePanel>
-                    </Button>
                     <!--Featured Destination Option Button -->
                     <Button Padding="5" x:Name="FeaturedOptionBtn" 
                             Background="Transparent" Click="FeaturedBtn_Click">

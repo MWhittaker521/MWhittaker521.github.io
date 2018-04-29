@@ -299,7 +299,6 @@ C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Debug\Mu
 C:\Users\melis\source\repos\TravelApplication\TravelApplication\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\App.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\AboutPage.xbf
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Controls\AllResultsControl.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Controls\AppOptionsControl.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\MainPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\AccountOverviewPage.xbf
@@ -310,7 +309,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\InitialPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\LogInPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\SearchPage.xbf
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\TravelPackagesPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\SignUpPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\SearchResult.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\TravelResourceDictionary.xbf
@@ -451,8 +449,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\App.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.g.i.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.g.cs
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AllResultsControl.g.i.cs
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AllResultsControl.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AppOptionsControl.g.i.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AppOptionsControl.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\MainPage.g.i.cs
@@ -473,8 +469,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\LogInPage.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchPage.g.i.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchPage.g.cs
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\TravelPackagesPage.g.i.cs
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\TravelPackagesPage.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SignUpPage.g.i.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SignUpPage.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchResult.g.i.cs
@@ -482,7 +476,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\App.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.xaml
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AllResultsControl.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AppOptionsControl.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\MainPage.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AccountOverviewPage.xaml
@@ -493,13 +486,11 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\InitialPage.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\LogInPage.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchPage.xaml
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\TravelPackagesPage.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SignUpPage.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchResult.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\TravelResourceDictionary.xaml
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\App.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AboutPage.xbf
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AllResultsControl.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Controls\AppOptionsControl.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\MainPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\AccountOverviewPage.xbf
@@ -510,7 +501,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\InitialPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\LogInPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchPage.xbf
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\TravelPackagesPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SignUpPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\SearchResult.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\TravelResourceDictionary.xbf
@@ -600,7 +590,6 @@ C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelAppl
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\TravelApplication.csprojResolveAssemblyReference.cache
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\bin\x86\Debug\Pages\HealthWellnessResultsPage.xbf
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\HealthWellnessResultsPage.g.i.cs
 C:\Users\melis\source\repos\TravelApplication\MWhittaker521.github.io\TravelApplication\obj\x86\Debug\Pages\HealthWellnessResultsPage.g.cs

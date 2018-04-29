@@ -92,17 +92,17 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Models\FeaturedDest.cs" />
     <Compile Include="Models\HealthTravel.cs" />
+    <Compile Include="Models\TravelData.cs" />
     <Compile Include="Models\TravelPack.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserDictionaryItem.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AllResultsControl.xaml.cs">
-      <DependentUpon>AllResultsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\AppOptionsControl.xaml.cs">
       <DependentUpon>AppOptionsControl.xaml</DependentUpon>
@@ -154,9 +154,6 @@
       <DependentUpon>WeddingResultsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pages\TravelPackagesPage.xaml.cs">
-      <DependentUpon>TravelPackagesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
@@ -255,10 +252,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\AllResultsControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\AppOptionsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -312,10 +305,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SearchPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\TravelPackagesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

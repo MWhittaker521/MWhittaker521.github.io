@@ -40,9 +40,7 @@
             <Setter Property="Foreground" Value="MidnightBlue"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
-
     </Page.Resources>
-    
     <Page.DataContext>
         <models:ViewModel/>
     </Page.DataContext>
@@ -50,12 +48,109 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
             <RelativePanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <TextBlock x:ConnectionId='5' x:Name="ResultHeader" Text="Travel Package Search Results" Style="{StaticResource SearchResultHeaderStyle}"
+                <TextBlock x:ConnectionId='8' x:Name="ResultHeader" Text="Travel Package Search Results" Style="{StaticResource SearchResultHeaderStyle}"
                            RelativePanel.AlignHorizontalCenterWithPanel="True"
                            RelativePanel.AlignVerticalCenterWithPanel="True"/>
             </RelativePanel>
             <Border BorderBrush="MidnightBlue" BorderThickness="2"/>
-            <control:AllResultsControl x:ConnectionId='4'  x:Name="AllResultsCntrl"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Sort By: " Foreground="MidnightBlue" FontFamily="Georgia" FontSize="12" FontWeight="SemiBold" Padding="10" Margin="0,0,25,0"/>
+                <RadioButton x:ConnectionId='5' GroupName="SortOptions" x:Name="RankSort"                       >
+                    <TextBlock Text="Destination Number" Foreground="MidnightBlue" FontFamily="Georgia" FontSize="12" FontWeight="SemiBold" Padding="3"/>
+                </RadioButton>
+                <RadioButton x:ConnectionId='6' GroupName="SortOptions" x:Name="PriceLHSort"                          >
+                    <TextBlock Text="Price Low-High" Foreground="MidnightBlue" FontFamily="Georgia" FontSize="12" FontWeight="SemiBold" Padding="3" Margin="0,0,25,0"/>
+                </RadioButton>
+                <RadioButton x:ConnectionId='7' GroupName="SortOptions" x:Name="PriceHLSort"                          >
+                    <TextBlock Text="Price High-Low" Foreground="MidnightBlue" FontFamily="Georgia" FontSize="12" FontWeight="SemiBold" Padding="3"/>
+                </RadioButton>
+            </StackPanel>
+            <ListView x:ConnectionId='4' x:Name="ResultsListView" 
+                   Margin="20" DataContext="{StaticResource TravelPack}"
+                  MaxHeight="600"
+                  MaxWidth="1100">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:Name="IDDataTemplate"                              >
+                        <StackPanel>
+                            <Image Width="200" Height="200" Source="{Binding imageSource}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Name="DestName" Text="{Binding dest}" 
+                                           FontFamily="Georgia"
+                                           FontSize="14"
+                                           TextWrapping="Wrap"
+                                           FontWeight="Bold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                            <TextBlock Name="DestLoc" Text="{Binding locate}" 
+                                           FontFamily="Georgia"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           FontWeight="SemiBold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Name="priceRange"
+                                           Text="Price Range (USD): "
+                                           FontFamily="Georgia"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           FontWeight="SemiBold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                                <TextBlock Name="priceLow" Text="{Binding priceLow}" 
+                                           FontFamily="Georgia"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           FontWeight="SemiBold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                                <TextBlock Name="hyphen" Text=" - " 
+                                           FontFamily="Georgia"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           FontWeight="SemiBold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                                <TextBlock Name="priceHigh" Text="{Binding priceHigh}"
+                                           FontFamily="Georgia"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           FontWeight="SemiBold"
+                                           Foreground="MidnightBlue"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="15"
+                                           />
+                            </StackPanel>
+                            <TextBlock Name="DestDescription" Text="{Binding descript}" 
+                                   FontFamily="Georgia"
+                                   FontSize="12"
+                                   TextWrapping="Wrap"
+                                   FontWeight="SemiBold"
+                                   Foreground="MidnightBlue"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="15"
+                                   TextTrimming="CharacterEllipsis"
+                                   />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
     </Grid>
 </Page>

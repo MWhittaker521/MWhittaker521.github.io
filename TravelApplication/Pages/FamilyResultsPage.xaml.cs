@@ -26,7 +26,26 @@ namespace TravelApplication.Pages
         public FamilyResultsPage()
         {
             this.InitializeComponent();
-            FamResultsListView.ItemsSource = ViewModel.GetFamilyData(); 
+            var travelResults = ViewModel.GetFamilyData();
+            FamResultsListView.ItemsSource = travelResults;
+        }
+        private void RankSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetFamilyData();
+            FamResultsListView.ItemsSource = travelResults.OrderBy(p => p.rank);
+        }
+
+        private void PriceLHSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetFamilyData();
+            FamResultsListView.ItemsSource = travelResults.OrderBy(p => p.priceLow);
+
+        }
+
+        private void PriceHLSort_Click(object sender, RoutedEventArgs e)
+        {
+            var travelResults = ViewModel.GetFamilyData();
+            FamResultsListView.ItemsSource = travelResults.OrderByDescending(p => p.priceHigh);
         }
     }
 }

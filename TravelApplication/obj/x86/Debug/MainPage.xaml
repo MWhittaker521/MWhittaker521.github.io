@@ -31,7 +31,7 @@
                     HorizontalAlignment="Stretch">
             <!--Top Application Border Bar -->
             <Border x:ConnectionId='4' x:Name="TravelAppBorder" Background="MidnightBlue">
-                <StackPanel x:ConnectionId='30' Orientation="Horizontal" x:Name="BorderStack">
+                <StackPanel x:ConnectionId='26' Orientation="Horizontal" x:Name="BorderStack">
                     <RelativePanel HorizontalAlignment="Right" VerticalAlignment="Center"
                        BorderBrush="MidnightBlue" BorderThickness="2" Padding="10" Background="LightBlue">
                         <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -43,7 +43,7 @@
                                 </LinearGradientBrush>
                             </RelativePanel.Background>
                             <!-- Image is set to Button. When User clicks it takes them back to home page-->
-                            <Button x:ConnectionId='32' x:Name="HomeBtn"                      >
+                            <Button x:ConnectionId='28' x:Name="HomeBtn"                      >
                                 <Image MaxWidth="50">
                                     <Image.Source>
                                         <BitmapImage UriSource="ms-appx:///Assets/Travel.gif"/>
@@ -52,7 +52,7 @@
                             </Button>
                         </RelativePanel>
                     </RelativePanel>
-                    <TextBlock x:ConnectionId='31' Text="Travel Application" 
+                    <TextBlock x:ConnectionId='27' Text="Travel Application" 
                                FontFamily="Georgia" FontSize="32" 
                                FontWeight="Bold"
                                Foreground="White" Margin="10,0,0,0"
@@ -66,8 +66,8 @@
                 <StackPanel x:ConnectionId='13' x:Name="TopMenuBarStack" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <!--Travel Package Button -->
                     <Button x:ConnectionId='14' Padding="5" x:Name="TravelBtn" Background="Transparent"                                >
-                        <RelativePanel x:ConnectionId='27' x:Name="TravelBtnStack">
-                            <AppBarButton x:ConnectionId='28' x:Name="TravelPackagesBtn" Background="Transparent" 
+                        <RelativePanel x:ConnectionId='23' x:Name="TravelBtnStack">
+                            <AppBarButton x:ConnectionId='24' x:Name="TravelPackagesBtn" Background="Transparent" 
                                       ToolTipService.ToolTip="View all Travel Packages"                           
                                       Icon="World"
                                       MaxHeight="50"
@@ -75,34 +75,16 @@
                                       RelativePanel.AlignLeftWithPanel="True"
                                       RelativePanel.AlignVerticalCenterWithPanel="True" >
                             </AppBarButton>
-                            <TextBlock x:ConnectionId='29' RelativePanel.RightOf="TravelPackagesBtn" RelativePanel.AlignVerticalCenterWith="TravelPackagesBtn"  x:Name="TravelBtnText"
+                            <TextBlock x:ConnectionId='25' RelativePanel.RightOf="TravelPackagesBtn" RelativePanel.AlignVerticalCenterWith="TravelPackagesBtn"  x:Name="TravelBtnText"
                                        Text="Travel Packages"
                                        Style="{StaticResource MainPageTextStyle}"/>
                         </RelativePanel>
                     </Button>
-                    
-                    <!--Hotel Options Button -->
-                    <Button x:ConnectionId='15' Padding="5" x:Name="HotelOptionBtn" 
-                            Background="Transparent"                       >
-                        <RelativePanel x:ConnectionId='24' x:Name="HotelBtnPanel">
-                            <AppBarButton x:ConnectionId='25' x:Name="HotelBtn" Background="Transparent" 
-                                      ToolTipService.ToolTip="View all Travel Packages"                           
-                                      Icon="Home"
-                                      MaxHeight="50"
-                                      MaxWidth="35"
-                                      RelativePanel.AlignLeftWithPanel="True"
-                                      RelativePanel.AlignVerticalCenterWithPanel="True">
-                            </AppBarButton>
-                            <TextBlock x:ConnectionId='26' RelativePanel.RightOf="HotelBtn" RelativePanel.AlignVerticalCenterWith="HotelBtn"  
-                                       x:Name="HotelBtnText" Text="Hotels" 
-                                       Style="{StaticResource MainPageTextStyle}"/>
-                        </RelativePanel>
-                    </Button>
                     <!--Featured Destination Option Button -->
-                    <Button x:ConnectionId='16' Padding="5" x:Name="FeaturedOptionBtn" 
+                    <Button x:ConnectionId='15' Padding="5" x:Name="FeaturedOptionBtn" 
                             Background="Transparent"                          >
-                        <RelativePanel x:ConnectionId='21'  x:Name="FeatureBtnPanel">
-                            <AppBarButton x:ConnectionId='22' x:Name="FeaturedBtn" Background="Transparent" 
+                        <RelativePanel x:ConnectionId='20'  x:Name="FeatureBtnPanel">
+                            <AppBarButton x:ConnectionId='21' x:Name="FeaturedBtn" Background="Transparent" 
                                       ToolTipService.ToolTip="View Flight Offerings"                           
                                       Icon="Map"
                                       MaxHeight="50"
@@ -111,16 +93,16 @@
                                       RelativePanel.AlignVerticalCenterWithPanel="True"
                                       >
                             </AppBarButton>
-                            <TextBlock x:ConnectionId='23' RelativePanel.RightOf="FeaturedBtn" RelativePanel.AlignVerticalCenterWith="FeaturedBtn" 
+                            <TextBlock x:ConnectionId='22' RelativePanel.RightOf="FeaturedBtn" RelativePanel.AlignVerticalCenterWith="FeaturedBtn" 
                                    x:Name="FeatureBtnText" Text="Featured Destination" 
                                    Style="{StaticResource MainPageTextStyle}"/>
                         </RelativePanel>
                     </Button>
                     <!--Search Travel Options Button -->
-                    <Button x:ConnectionId='17' Padding="5" x:Name="SearchOptBtn" 
+                    <Button x:ConnectionId='16' Padding="5" x:Name="SearchOptBtn" 
                             Background="Transparent"                        >
-                        <RelativePanel x:ConnectionId='18'  x:Name="SearchBtnPanel">
-                            <AppBarButton x:ConnectionId='19' x:Name="SearchBtn" Background="Transparent" 
+                        <RelativePanel x:ConnectionId='17'  x:Name="SearchBtnPanel">
+                            <AppBarButton x:ConnectionId='18' x:Name="SearchBtn" Background="Transparent" 
                                           ToolTipService.ToolTip="Search Travel Package Offerings"                           
                                           Icon="Find"
                                           MaxHeight="50"
@@ -130,7 +112,7 @@
                                           DataContext="{Binding ElementName=BindingListView}"
                                           >
                             </AppBarButton>
-                            <TextBlock x:ConnectionId='20' RelativePanel.RightOf="SearchBtn" RelativePanel.AlignVerticalCenterWith="SearchBtn" 
+                            <TextBlock x:ConnectionId='19' RelativePanel.RightOf="SearchBtn" RelativePanel.AlignVerticalCenterWith="SearchBtn" 
                                    x:Name="SearchBtnText" Text="Search Travel Packages" 
                                    Style="{StaticResource MainPageTextStyle}"
                                    Margin="0,0,10,0"/>

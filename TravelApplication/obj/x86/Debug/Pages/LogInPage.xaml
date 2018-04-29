@@ -40,14 +40,15 @@
             <TextBox x:ConnectionId='6' Grid.Column="1" Grid.Row="2" PlaceholderText="Enter Password" x:Name="PasswordTextBox" 
                      Style="{StaticResource AutoSuggestBoxTextBoxStyle}" Margin="10"
                      MinWidth="250"/>
-            <Button Grid.ColumnSpan="2" Grid.Row="3" Background="MidnightBlue" HorizontalAlignment="Center"
-                    VerticalAlignment="Center" Margin="20">
-                <TextBlock x:ConnectionId='9' x:Name="LoginButton" Text="Log-In" Style="{StaticResource LogInPageTextStyle}" Foreground="White" Margin="10"/>
+            <Button x:ConnectionId='7' Grid.ColumnSpan="2" Grid.Row="3" Background="MidnightBlue" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Margin="20"                          >
+                <TextBlock x:ConnectionId='11' x:Name="LoginButton" Text="Log-In" Style="{StaticResource LogInPageTextStyle}" Foreground="White" Margin="10"/>
             </Button>
-            <Button x:ConnectionId='7' x:Name="SignUpHere" Grid.Column="1" Grid.Row="4" Background="Transparent"                         >
-                <TextBlock x:ConnectionId='8' x:Name="SignUpTextBlock" Text="New? Sign-Up Now." FontFamily="Georgia" FontSize="14" FontWeight="Normal" 
+            <Button x:ConnectionId='8' x:Name="SignUpHere" Grid.Column="1" Grid.Row="4" Background="Transparent"                         >
+                <TextBlock x:ConnectionId='10' x:Name="SignUpTextBlock" Text="New? Sign-Up Now." FontFamily="Georgia" FontSize="14" FontWeight="Normal" 
                        Foreground="DarkSlateGray"/>
             </Button>
+            <TextBlock x:ConnectionId='9' Visibility="Collapsed" x:Name="passcodeText"/>
         </Grid>
     </Grid>
 </Page>

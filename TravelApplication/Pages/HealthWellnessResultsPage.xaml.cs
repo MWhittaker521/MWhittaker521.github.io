@@ -23,10 +23,31 @@ namespace TravelApplication.Pages
     /// </summary>
     public sealed partial class HealthWellnessResultsPage : Page
     {
+        
         public HealthWellnessResultsPage()
         {
             this.InitializeComponent();
-            HealthResultsListView.ItemsSource = ViewModel.GetHealthData();
+            var healthResults = ViewModel.GetHealthData();
+            HealthResultsListView.ItemsSource = healthResults;
+        }
+
+        private void RankSort_Click(object sender, RoutedEventArgs e)
+        {
+            var healthResults = ViewModel.GetHealthData();        
+            HealthResultsListView.ItemsSource = healthResults.OrderBy(p => p.rank); 
+        }
+
+        private void PriceLHSort_Click(object sender, RoutedEventArgs e)
+        {
+            var healthResults = ViewModel.GetHealthData();
+            HealthResultsListView.ItemsSource = healthResults.OrderBy(p => p.priceLow);
+
+        }
+
+        private void PriceHLSort_Click(object sender, RoutedEventArgs e)
+        {
+            var healthResults = ViewModel.GetHealthData();
+            HealthResultsListView.ItemsSource = healthResults.OrderByDescending(p => p.priceHigh); 
         }
     }
 }
